@@ -3,33 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Siddharth &amp; Ananya — Royal Maharashtrian Wedding</title>
-  <meta name="description" content="॥ शुभमंगल सावधान ॥ Together with their families, Siddharth & Ananya invite you to celebrate their royal Maharashtrian wedding in Pune." />
+  <title>Siddharth Weds Ananya — Royal Maharashtrian Wedding</title>
 
-  <!-- Luxury Editorial + Devanagari Typography -->
+  <!-- Editorial Serif Fonts matching the video's luxury typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&family=Rozha+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Rozha+One&display=swap" rel="stylesheet">
 
-  <!-- GSAP + ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
   <style>
     :root {
-      --night-indigo: #09111e;
-      --sahyadri-dusk: #1e2942;
-      --sunset-amber: #9e4b26;
-      --zari-gold: #e6b85c;
-      --zari-bright: #ffeaad;
-      --paithani-emerald: #0b3b2e;
-      --paithani-deep: #062119;
-      --kumkum-maroon: #5e1424;
-      --kumkum-dark: #360913;
-      --haldi-mustard: #9c6615;
-      --haldi-deep: #5e3b08;
-      --ivory-silk: #fdf6e9;
-      --ink-dark: #1f130a;
+      --sky-top: #14488c;
+      --sky-mid: #286db8;
+      --emerald-base: #1f6b56;
+      --emerald-dark: #144d3d;
+      --mauve-base: #b8849e;
+      --mauve-light: #cfa1b7;
+      --mustard-base: #d4b948;
+      --mustard-light: #e2cb6b;
+      --night-navy: #0e2442;
+      --cream-ink: #f7f1e3;
+      --gold-ink: #f5df9d;
+      --charcoal-ink: #2b2618;
     }
 
     * {
@@ -41,651 +38,573 @@
 
     html {
       scroll-behavior: smooth;
-      background: var(--night-indigo);
-      color: var(--ivory-silk);
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--sky-top);
+      color: var(--cream-ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
       overflow-x: hidden;
     }
 
     body {
       overflow-x: hidden;
-      background: var(--night-indigo);
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Fine Silk Weave Texture Overlay (High-DPI smooth grain) */
-    .silk-texture {
+    /* Realistic Watercolor / Mottled Plaster Paper Texture Overlay (SVG feTurbulence) */
+    .paper-grain {
       position: fixed;
       inset: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
-      z-index: 90;
-      opacity: 0.035;
-      background-image: radial-gradient(rgba(255, 234, 173, 0.35) 0.6px, transparent 0.6px);
-      background-size: 6px 6px;
+      z-index: 80;
+      opacity: 0.14;
+      mix-blend-mode: overlay;
     }
 
-    .font-royal { font-family: 'Cinzel Decorative', serif; }
-    .font-editorial { font-family: 'Cormorant Garamond', serif; }
+    .font-display { font-family: 'Cinzel', serif; font-weight: 400; }
     .font-marathi { font-family: 'Rozha One', serif; }
 
-    /* Floating Shehnai / Santoor Music Toggle */
-    .music-btn {
+    /* Floating Orange/Gold Music Toggle (Exact bottom-right placement from video) */
+    .music-fab {
       position: fixed;
       bottom: 22px;
-      right: 22px;
-      z-index: 100;
-      width: 54px;
-      height: 54px;
+      right: 20px;
+      z-index: 120;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: rgba(11, 59, 46, 0.88);
-      backdrop-filter: blur(12px);
-      border: 1.5px solid var(--zari-gold);
-      color: var(--zari-bright);
+      background: #e85d2a;
+      border: 1.5px solid rgba(255, 244, 224, 0.85);
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
-      transition: transform 0.25s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s ease;
     }
-    .music-btn:active { transform: scale(0.92); }
-    .music-waves {
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      height: 16px;
-    }
-    .music-waves span {
-      display: block;
-      width: 3px;
-      height: 6px;
-      background: var(--zari-bright);
-      border-radius: 2px;
-    }
-    .music-btn.playing .music-waves span:nth-child(1) { animation: wave 0.85s infinite ease-in-out; }
-    .music-btn.playing .music-waves span:nth-child(2) { animation: wave 0.6s infinite ease-in-out 0.15s; }
-    .music-btn.playing .music-waves span:nth-child(3) { animation: wave 0.9s infinite ease-in-out 0.3s; }
-    .music-btn.playing .music-waves span:nth-child(4) { animation: wave 0.7s infinite ease-in-out 0.1s; }
-    @keyframes wave {
-      0%, 100% { height: 5px; }
-      50% { height: 18px; }
-    }
+    .music-fab:active { transform: scale(0.92); }
+    .music-fab svg { width: 16px; height: 16px; fill: currentColor; }
 
-    /* ==================== ACT I: SAHYADRI WADA HERO ==================== */
-    .hero-wrapper {
+    /* =====================================================================
+       1. CONTINUOUS SKY -> WADA COURTYARD -> EMERALD CARPET DESCENT (0:00-0:11)
+       ===================================================================== */
+    .sky-to-carpet-stage {
       position: relative;
-      height: 195vh;
-      background: linear-gradient(180deg, #070d18 0%, #16243d 42%, #4a2c38 72%, #a65729 100%);
+      background: linear-gradient(180deg, #13468a 0%, #2466b0 28%, #5289b5 48%, #1f6b56 78%, #1b614e 100%);
+      overflow: hidden;
     }
 
-    .hero-sticky {
-      position: sticky;
+    #lanternCanvas {
+      position: absolute;
       top: 0;
-      height: 100vh;
+      left: 0;
       width: 100%;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    #atmosphereCanvas {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 3;
+      height: 115vh;
+      z-index: 4;
       pointer-events: none;
     }
 
-    /* Full Moon & Sahyadri Mountain Ridge Backdrop */
-    .moon-glow {
-      position: absolute;
-      top: 14%;
-      right: 16%;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,244,214,0.95) 0%, rgba(255,214,138,0.35) 45%, transparent 72%);
-      z-index: 1;
-      filter: blur(1px);
-    }
-
-    .hero-header {
+    /* Hero Sky Title */
+    .hero-sky-viewport {
       position: relative;
-      z-index: 12;
+      height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 9.5vh 20px 0;
-      max-width: 720px;
-    }
-
-    .marathi-mantra {
-      font-size: clamp(1rem, 2.6vw, 1.3rem);
-      color: var(--zari-gold);
-      letter-spacing: 0.08em;
-      margin-bottom: 6px;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
-    }
-
-    .sub-tag {
-      font-size: 0.72rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: rgba(253, 246, 233, 0.82);
-      margin-bottom: 12px;
-    }
-
-    .couple-names {
-      font-size: clamp(2.35rem, 6.8vw, 4.5rem);
-      line-height: 1.06;
-      color: var(--zari-bright);
-      text-shadow: 0 8px 32px rgba(0, 0, 0, 0.75);
-      margin-bottom: 12px;
-    }
-
-    .couple-names span.sang {
-      display: block;
-      font-family: 'Rozha One', serif;
-      font-size: clamp(1.25rem, 3.2vw, 1.85rem);
-      color: var(--zari-gold);
-      margin: 4px 0;
-      letter-spacing: 0.06em;
-    }
-
-    .hero-date-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 6px;
-      padding: 8px 22px;
-      border: 1px solid rgba(230, 184, 92, 0.55);
-      border-radius: 999px;
-      background: rgba(9, 17, 30, 0.62);
-      backdrop-filter: blur(8px);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      color: var(--ivory-silk);
-    }
-
-    /* High-Resolution Layered Peshwa Wada & Sahyadri Vector Architecture */
-    .wada-stage {
-      position: absolute;
-      bottom: -1%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(1240px, 175vw);
+      padding: 0 20px;
       z-index: 6;
-      pointer-events: none;
-      transform-origin: bottom center;
-      will-change: transform;
     }
 
-    .scroll-cue {
-      position: absolute;
-      bottom: 22px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 15;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 5px;
-      font-size: 0.7rem;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--zari-bright);
-      text-shadow: 0 2px 10px rgba(0,0,0,0.85);
-      animation: floatCue 2.1s infinite ease-in-out;
-    }
-    @keyframes floatCue {
-      0%, 100% { transform: translate(-50%, 0); }
-      50% { transform: translate(-50%, 7px); }
+    .hero-names {
+      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-size: clamp(2.3rem, 7.5vw, 4.4rem);
+      letter-spacing: 0.08em;
+      line-height: 1.15;
+      color: #ffffff;
+      text-shadow: 0 4px 28px rgba(10, 32, 68, 0.55);
     }
 
-    /* Paithani Zari Border Strip */
-    .paithani-border {
-      height: 14px;
+    .hero-weds {
+      display: block;
+      font-size: clamp(0.95rem, 2.5vw, 1.35rem);
+      letter-spacing: 0.42em;
+      margin: 6px 0;
+      opacity: 0.92;
+    }
+
+    /* Seamless Architectural Courtyard Transition */
+    .palace-courtyard-bridge {
+      position: relative;
       width: 100%;
-      background:
-        repeating-linear-gradient(
-          90deg,
-          #d99b26 0px,
-          #d99b26 14px,
-          #8f1d32 14px,
-          #8f1d32 28px,
-          #0f523e 28px,
-          #0f523e 42px
-        );
-      border-top: 1.5px solid var(--zari-bright);
-      border-bottom: 1.5px solid var(--zari-bright);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-    }
-
-    /* ==================== SHARED SECTION ARCHITECTURE ==================== */
-    section.act-section {
-      position: relative;
-      padding: 94px 20px;
-      overflow: hidden;
-    }
-
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      position: relative;
+      max-width: 900px;
+      margin: -14vh auto 0;
       z-index: 5;
     }
 
-    .act-eyebrow {
-      text-align: center;
-      font-size: 0.74rem;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-      color: var(--zari-gold);
-      margin-bottom: 8px;
-    }
-
-    .act-title {
-      text-align: center;
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      color: var(--zari-bright);
-      margin-bottom: 14px;
-      line-height: 1.15;
-    }
-
-    .act-subtitle {
-      text-align: center;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.18rem, 2.6vw, 1.45rem);
-      line-height: 1.65;
-      max-width: 650px;
-      margin: 0 auto 48px;
-      color: rgba(253, 246, 233, 0.92);
-    }
-
-    .zari-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      margin: 0 auto 34px;
-      width: 260px;
-    }
-    .zari-divider::before,
-    .zari-divider::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--zari-gold), transparent);
-    }
-    .zari-motif {
-      width: 10px;
-      height: 10px;
-      border: 1.5px solid var(--zari-bright);
-      background: var(--kumkum-maroon);
-      transform: rotate(45deg);
-    }
-
-    /* ==================== ACT II: PAITHANI EMERALD (COUPLE & FAMILIES) ==================== */
-    .section-paithani {
-      background: radial-gradient(circle at top center, #135442 0%, var(--paithani-deep) 100%);
-    }
-
-    .couple-showcase {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-      gap: 34px;
-      align-items: stretch;
-    }
-
-    /* Ornate Scalloped Peshwa Arch Frame */
-    .peshwa-arch-card {
-      background: linear-gradient(180deg, rgba(255, 248, 235, 0.08) 0%, rgba(6, 33, 25, 0.72) 100%);
-      border: 1.5px solid rgba(230, 184, 92, 0.55);
-      border-radius: 190px 190px 22px 22px;
-      padding: 40px 24px 32px;
-      text-align: center;
-      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.42);
+    .courtyard-photo-frame {
       position: relative;
-    }
-
-    .peshwa-arch-card::after {
-      content: "";
-      position: absolute;
-      inset: 7px;
-      border-radius: 184px 184px 16px 16px;
-      border: 1px dashed rgba(230, 184, 92, 0.32);
-      pointer-events: none;
-    }
-
-    .arch-portrait {
-      width: 180px;
-      height: 225px;
-      margin: 0 auto 22px;
-      border-radius: 150px 150px 16px 16px;
-      border: 2.5px solid var(--zari-gold);
+      width: 100%;
+      height: 68vh;
+      min-height: 460px;
       overflow: hidden;
-      position: relative;
-      background: #103d30;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+      /* Soft feathered top & bottom mask so it melts seamlessly into sky & emerald carpet */
+      -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 18%, black 80%, transparent 100%);
+      mask-image: linear-gradient(180deg, transparent 0%, black 18%, black 80%, transparent 100%);
     }
 
-    .arch-portrait img {
+    .courtyard-photo-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-    .peshwa-arch-card:hover .arch-portrait img {
-      transform: scale(1.05);
-    }
-
-    .marathi-prefix {
-      font-family: 'Rozha One', serif;
-      font-size: 1.05rem;
-      color: var(--zari-gold);
-      margin-bottom: 4px;
+      object-position: center 35%;
+      filter: saturate(1.18) contrast(1.04) brightness(0.95);
+      transform: scale(1.06);
     }
 
-    .person-name {
-      font-size: 1.75rem;
-      color: var(--zari-bright);
-      margin-bottom: 10px;
-    }
-
-    .person-lineage {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.12rem;
-      line-height: 1.55;
-      color: rgba(253, 246, 233, 0.88);
-    }
-
-    /* Vintage Premier Padmini Transition Bridge */
-    .vintage-bridge {
-      position: relative;
-      height: 76px;
-      background: linear-gradient(180deg, var(--paithani-deep) 50%, var(--kumkum-maroon) 50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 12;
-    }
-
-    .padmini-pill {
-      background: #13253b;
-      border: 1.5px solid var(--zari-gold);
-      padding: 9px 24px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-      color: var(--zari-bright);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-    }
-
-    /* ==================== ACT III: KUMKUM & HALDI FESTIVITIES ==================== */
-    .section-kumkum {
-      background: radial-gradient(circle at top right, #75192e 0%, var(--kumkum-dark) 100%);
-    }
-
-    .events-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 26px;
-    }
-
-    .event-arch-card {
-      background: linear-gradient(170deg, rgba(255, 246, 230, 0.09), rgba(255, 246, 230, 0.02));
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(230, 184, 92, 0.48);
-      border-radius: 24px;
-      padding: 32px 24px;
-      text-align: center;
-      position: relative;
-      transition: transform 0.35s ease, border-color 0.35s ease;
-    }
-
-    .event-arch-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--zari-bright);
-    }
-
-    .event-arch-card.haldi-featured {
-      background: linear-gradient(165deg, rgba(186, 124, 24, 0.42), rgba(94, 59, 8, 0.55));
-      border: 1.5px solid var(--zari-bright);
-    }
-
-    .event-emblem {
-      width: 58px;
-      height: 58px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
-      background: rgba(230, 184, 92, 0.16);
-      border: 1.5px solid var(--zari-gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-    }
-
-    .event-marathi-sub {
-      font-family: 'Rozha One', serif;
-      font-size: 0.98rem;
-      color: var(--zari-gold);
-      margin-bottom: 4px;
-    }
-
-    .event-title {
-      font-size: 1.55rem;
-      color: var(--zari-bright);
-      margin-bottom: 8px;
-    }
-
-    .event-schedule {
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #ffd88a;
-      margin-bottom: 12px;
-    }
-
-    .event-location {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.16rem;
-      line-height: 1.45;
-      color: var(--ivory-silk);
-      margin-bottom: 14px;
-    }
-
-    .attire-tag {
-      display: inline-block;
-      font-size: 0.78rem;
-      padding: 5px 14px;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, 0.32);
-      border: 1px dashed rgba(230, 184, 92, 0.55);
-      color: var(--zari-bright);
-      margin-bottom: 20px;
-    }
-
-    .route-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ink-dark);
-      background: linear-gradient(135deg, var(--zari-bright), var(--zari-gold));
-      padding: 10px 22px;
-      border-radius: 999px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-      transition: transform 0.2s ease;
-    }
-    .route-btn:active { transform: scale(0.95); }
-
-    /* ==================== ACT IV: THINGS TO KNOW (HALDI MUSTARD) ==================== */
-    .section-mustard {
-      background: radial-gradient(circle at top left, #a86f18 0%, var(--haldi-deep) 100%);
-      border-top: 1.5px solid rgba(230, 184, 92, 0.45);
-    }
-
-    .guide-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 20px;
-    }
-
-    .guide-item {
-      background: rgba(24, 14, 4, 0.38);
-      border: 1px solid rgba(255, 234, 173, 0.35);
-      border-radius: 20px;
-      padding: 26px 18px;
-      text-align: center;
-    }
-
-    .guide-icon {
-      font-size: 1.9rem;
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .guide-heading {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 1.05rem;
-      color: var(--zari-bright);
-      margin-bottom: 8px;
-    }
-
-    .guide-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.08rem;
-      line-height: 1.45;
-      color: rgba(253, 246, 233, 0.9);
-    }
-
-    /* ==================== ACT V: STARLIT COUNTDOWN & RSVP ==================== */
-    .section-finale {
-      background: linear-gradient(180deg, #101c33 0%, #070d18 100%);
-      border-top: 2px solid rgba(230, 184, 92, 0.4);
-      text-align: center;
-    }
-
-    .countdown-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      max-width: 520px;
-      margin: 0 auto 48px;
-    }
-
-    .cd-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(230, 184, 92, 0.45);
-      border-radius: 16px;
-      padding: 18px 8px;
-    }
-
-    .cd-val {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: clamp(1.6rem, 4.5vw, 2.45rem);
-      color: var(--zari-bright);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .cd-unit {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(253, 246, 233, 0.75);
-    }
-
-    /* Concentric Pulsing RSVP Button */
-    .rsvp-pulse-box {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin: 8px 0 36px;
-    }
-
-    .pulse-circle {
+    .courtyard-warm-tint {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 999px;
-      border: 1.5px solid var(--zari-gold);
-      animation: pulseRing 2.2s infinite ease-out;
-      pointer-events: none;
-    }
-    .pulse-circle:nth-child(2) { animation-delay: 1.1s; }
-
-    @keyframes pulseRing {
-      0% { transform: scale(1); opacity: 0.85; }
-      100% { transform: scale(1.42); opacity: 0; }
+      inset: 0;
+      background: linear-gradient(180deg, rgba(19, 70, 138, 0.15) 0%, rgba(214, 136, 42, 0.25) 55%, rgba(31, 107, 86, 0.92) 100%);
     }
 
-    .rsvp-cta {
+    /* =====================================================================
+       2. EMERALD GREEN WATERCOLOR SECTION: BLESSINGS & EVENTS (0:10-0:15)
+       ===================================================================== */
+    .section-emerald {
       position: relative;
-      z-index: 2;
-      background: linear-gradient(135deg, #ffeaad 0%, #d99b26 100%);
-      color: #1f130a;
-      border: none;
-      padding: 18px 44px;
-      border-radius: 999px;
-      font-family: 'Cinzel Decorative', serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      letter-spacing: 0.12em;
-      cursor: pointer;
-      box-shadow: 0 12px 32px rgba(230, 184, 92, 0.35);
-      transition: transform 0.2s ease;
+      background:
+        radial-gradient(circle at 20% 25%, rgba(56, 148, 121, 0.55) 0%, transparent 50%),
+        radial-gradient(circle at 80% 60%, rgba(16, 68, 53, 0.65) 0%, transparent 55%),
+        linear-gradient(180deg, #1b614e 0%, #1d6954 50%, #175745 100%);
+      padding: 20px 22px 130px;
+      text-align: center;
     }
-    .rsvp-cta:active { transform: scale(0.95); }
 
-    .quick-pills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
+    .ganpati-crest {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 14px;
+      color: var(--cream-ink);
+      opacity: 0.92;
+    }
+
+    .mantra-line {
+      font-size: 0.85rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-ink);
+      margin-bottom: 18px;
+    }
+
+    .parents-block {
+      font-size: clamp(1.12rem, 2.8vw, 1.35rem);
+      line-height: 1.55;
+      color: var(--cream-ink);
+      max-width: 460px;
+      margin: 0 auto 28px;
+    }
+
+    .invite-heading {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.3rem, 7vw, 3.6rem);
+      letter-spacing: 0.18em;
+      color: var(--cream-ink);
+      margin-bottom: 12px;
+    }
+
+    .invite-sub {
+      font-size: 1.15rem;
+      font-style: italic;
+      opacity: 0.9;
+      margin-bottom: 24px;
+    }
+
+    .emerald-couple-names {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 7.5vw, 4rem);
+      font-weight: 500;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+    .emerald-couple-names span {
+      display: block;
+      font-size: 1.8rem;
+      font-style: italic;
+      color: var(--gold-ink);
+    }
+
+    .daughter-of {
+      font-size: 1.12rem;
+      line-height: 1.5;
+      opacity: 0.92;
       margin-bottom: 48px;
     }
 
-    .pill-action {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(230, 184, 92, 0.45);
-      color: var(--zari-bright);
-      padding: 11px 22px;
-      border-radius: 999px;
-      font-size: 0.85rem;
+    /* Scalloped / Arch Event Cards with Corner Mogra & Marigold Florals */
+    .event-showcase {
+      max-width: 440px;
+      margin: 0 auto 64px;
+      position: relative;
+    }
+
+    .arch-photo-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 4.2;
+      border-radius: 220px 220px 18px 18px;
+      overflow: hidden;
+      border: 2px solid rgba(245, 223, 157, 0.55);
+      box-shadow: 0 20px 45px rgba(8, 36, 28, 0.45);
+      margin-bottom: 24px;
+    }
+
+    .circle-photo-box {
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+    }
+
+    .arch-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+    .event-showcase:hover .arch-photo-box img {
+      transform: scale(1.04);
+    }
+
+    /* Corner Floral Accent SVG */
+    .floral-corner-top {
+      position: absolute;
+      top: 12px;
+      right: -10px;
+      width: 92px;
+      z-index: 10;
+      pointer-events: none;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+    }
+    .floral-corner-bottom {
+      position: absolute;
+      bottom: 135px;
+      left: -12px;
+      width: 96px;
+      z-index: 10;
+      pointer-events: none;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+    }
+
+    .ev-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.85rem;
+      letter-spacing: 0.14em;
+      color: var(--cream-ink);
+      margin-bottom: 8px;
+    }
+
+    .ev-meta {
+      font-size: 1.15rem;
+      line-height: 1.5;
+      color: rgba(247, 241, 227, 0.92);
+      margin-bottom: 12px;
+    }
+
+    .underlined-route {
+      display: inline-block;
+      color: var(--gold-ink);
       text-decoration: none;
-      cursor: pointer;
+      font-size: 1.12rem;
+      border-bottom: 1px solid var(--gold-ink);
+      padding-bottom: 2px;
+      letter-spacing: 0.04em;
+    }
+
+    /* =====================================================================
+       OVERLAPPING VINTAGE CAR CUTOUTS STRADDLING SECTION BORDERS (0:15, 0:21, 0:27)
+       ===================================================================== */
+    .car-straddle {
+      position: relative;
+      z-index: 25;
+      width: min(370px, 84vw);
+      margin: -88px auto -78px;
+      pointer-events: none;
+      filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.38));
+    }
+
+    .car-straddle img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+
+    /* =====================================================================
+       3. DUSTY MAUVE / ROSE WATERCOLOR SECTION: COUPLE & RSVP (0:16-0:21)
+       ===================================================================== */
+    .section-mauve {
+      position: relative;
+      background:
+        radial-gradient(circle at 75% 20%, rgba(224, 178, 200, 0.5) 0%, transparent 50%),
+        radial-gradient(circle at 20% 75%, rgba(150, 96, 123, 0.55) 0%, transparent 55%),
+        linear-gradient(180deg, #b9869f 0%, #c695ad 50%, #b07b95 100%);
+      padding: 110px 22px 120px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .eyebrow-small {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      opacity: 0.92;
+    }
+
+    .mauve-heading {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 6.5vw, 3.2rem);
+      letter-spacing: 0.08em;
+      line-height: 1.12;
+      margin-bottom: 22px;
+    }
+
+    .mauve-story {
+      max-width: 540px;
+      margin: 0 auto 42px;
+      font-size: 1.18rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    /* Ornate Cream Scalloped Couple Portrait Frame (0:19) */
+    .ornate-scallop-wrap {
+      position: relative;
+      max-width: 340px;
+      margin: 0 auto 52px;
+      padding: 16px;
+      background: #f5ebd6;
+      border-radius: 180px 180px 24px 24px;
+      box-shadow: 0 22px 45px rgba(74, 34, 54, 0.35);
+    }
+
+    .ornate-scallop-inner {
+      width: 100%;
+      aspect-ratio: 3 / 3.8;
+      border-radius: 168px 168px 16px 16px;
+      overflow: hidden;
+      border: 3px dashed #d4b06a;
+    }
+
+    .ornate-scallop-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Concentric Target Tap Button (Exact match to 0:20 & 0:26) */
+    .target-cta-block {
+      margin-top: 12px;
+    }
+
+    .target-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.9rem, 6vw, 2.8rem);
+      letter-spacing: 0.1em;
+      line-height: 1.12;
+      margin-bottom: 8px;
+    }
+
+    .target-sub {
+      font-size: 1.08rem;
+      opacity: 0.92;
+      margin-bottom: 20px;
+    }
+
+    .concentric-btn {
+      position: relative;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1.5px solid currentColor;
+      color: inherit;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      transition: background 0.2s ease;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.25s ease;
     }
-    .pill-action:hover { background: rgba(230, 184, 92, 0.15); }
+    .concentric-btn::before {
+      content: "";
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid currentColor;
+    }
+    .concentric-btn::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.28;
+      animation: pulseCore 2s infinite ease-in-out;
+    }
+    @keyframes pulseCore {
+      0%, 100% { transform: scale(0.85); opacity: 0.25; }
+      50% { transform: scale(1.35); opacity: 0.55; }
+    }
+    .concentric-btn:active { transform: scale(0.9); }
 
-    footer {
-      border-top: 1px solid rgba(230, 184, 92, 0.22);
-      padding-top: 28px;
-      font-size: 0.86rem;
-      color: rgba(253, 246, 233, 0.68);
+    /* =====================================================================
+       4. MUSTARD YELLOW WATERCOLOR SECTION: THINGS TO KNOW (0:22-0:27)
+       ===================================================================== */
+    .section-mustard {
+      position: relative;
+      background:
+        radial-gradient(circle at 25% 18%, rgba(242, 222, 128, 0.65) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(186, 154, 45, 0.55) 0%, transparent 55%),
+        linear-gradient(180deg, #d7be52 0%, #dfc864 50%, #cbb042 100%);
+      padding: 112px 24px 124px;
+      text-align: center;
+      color: var(--charcoal-ink);
+    }
+
+    .mustard-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.1rem, 6.5vw, 3.2rem);
+      letter-spacing: 0.08em;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      color: #2b2614;
+    }
+
+    .mustard-intro {
+      max-width: 480px;
+      margin: 0 auto 48px;
+      font-size: 1.15rem;
+      line-height: 1.55;
+      color: #38311b;
+    }
+
+    .info-stack {
+      max-width: 420px;
+      margin: 0 auto 54px;
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+
+    .info-node svg {
+      width: 46px;
+      height: 46px;
+      stroke: #2b2614;
+      stroke-width: 1.3;
+      fill: none;
+      margin-bottom: 10px;
+    }
+
+    .info-node h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.55rem;
+      letter-spacing: 0.14em;
+      margin-bottom: 6px;
+      color: #241f0f;
+    }
+
+    .info-node p {
+      font-size: 1.12rem;
+      line-height: 1.48;
+      color: #38311b;
+    }
+
+    /* =====================================================================
+       5. TWILIGHT WADA COUNTDOWN FINALE (0:28-0:31)
+       ===================================================================== */
+    .section-twilight-finale {
+      position: relative;
+      background: linear-gradient(180deg, #0d2342 0%, #14325c 45%, #243854 100%);
+      padding: 112px 20px 0;
+      text-align: center;
+      color: var(--cream-ink);
+      overflow: hidden;
+    }
+
+    .countdown-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.85rem, 5.5vw, 2.7rem);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .countdown-digits {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.75rem, 6vw, 3rem);
+      letter-spacing: 0.14em;
+      color: var(--gold-ink);
+      margin-bottom: 22px;
+    }
+
+    .finale-note {
+      max-width: 460px;
+      margin: 0 auto 28px;
+      font-size: 1.12rem;
+      line-height: 1.55;
+      opacity: 0.9;
+    }
+
+    .finale-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+      font-size: 1.05rem;
+    }
+
+    .finale-links a, .finale-links button {
+      background: none;
+      border: none;
+      border-bottom: 1px solid var(--gold-ink);
+      color: var(--gold-ink);
+      font-family: inherit;
+      font-size: 1.05rem;
+      cursor: pointer;
+      text-decoration: none;
+      padding-bottom: 2px;
+    }
+
+    /* Illuminated Heritage Palace Backdrop at Bottom (0:29-0:31) */
+    .illuminated-palace-footer {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      height: 44vh;
+      min-height: 300px;
+      -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 26%, black 100%);
+      mask-image: linear-gradient(180deg, transparent 0%, black 26%, black 100%);
+    }
+
+    .illuminated-palace-footer img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+      filter: saturate(1.25) contrast(1.08);
     }
 
     /* ==================== WHATSAPP RSVP MODAL ==================== */
-    .modal-overlay {
+    .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(5, 10, 18, 0.84);
+      background: rgba(9, 20, 38, 0.84);
       backdrop-filter: blur(8px);
       z-index: 200;
       display: none;
@@ -693,668 +612,513 @@
       justify-content: center;
       padding: 20px;
     }
-    .modal-overlay.open { display: flex; }
+    .modal-backdrop.open { display: flex; }
 
-    .modal-box {
-      background: #102038;
-      border: 1.5px solid var(--zari-gold);
-      border-radius: 24px;
+    .modal-sheet {
+      background: #f7f1e3;
+      color: #261e12;
+      border: 2px solid #c99a45;
+      border-radius: 22px;
       width: 100%;
-      max-width: 430px;
+      max-width: 410px;
       padding: 30px 24px;
       position: relative;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
-      animation: popIn 0.28s ease;
-    }
-    @keyframes popIn {
-      from { transform: scale(0.92); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
     }
 
-    .close-modal {
+    .modal-x {
       position: absolute;
-      top: 16px;
+      top: 14px;
       right: 18px;
       background: none;
       border: none;
-      color: var(--zari-gold);
-      font-size: 1.65rem;
+      font-size: 1.7rem;
+      color: #5c4928;
       cursor: pointer;
     }
 
-    .field-wrap {
-      margin-bottom: 16px;
+    .m-field {
+      margin-bottom: 14px;
       text-align: left;
     }
-    .field-wrap label {
+    .m-field label {
       display: block;
+      font-family: 'Cinzel', serif;
       font-size: 0.76rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--zari-gold);
-      margin-bottom: 6px;
+      letter-spacing: 0.12em;
+      margin-bottom: 5px;
+      color: #5c4928;
     }
-    .field-wrap input, .field-wrap select {
+    .m-field input, .m-field select {
       width: 100%;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(230, 184, 92, 0.42);
-      background: rgba(7, 13, 24, 0.85);
-      color: var(--ivory-silk);
-      font-size: 0.95rem;
-      outline: none;
+      padding: 11px 13px;
+      border-radius: 10px;
+      border: 1px solid #cbb78e;
+      background: #fffdf8;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: #261e12;
     }
-    .field-wrap input:focus, .field-wrap select:focus {
-      border-color: var(--zari-bright);
+    .submit-wa-btn {
+      width: 100%;
+      margin-top: 8px;
+      padding: 14px;
+      border-radius: 999px;
+      border: none;
+      background: #1f6b56;
+      color: #fff;
+      font-family: 'Cinzel', serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.14em;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-  <div class="silk-texture"></div>
+  <!-- Organic Watercolor Paper Grain Filter -->
+  <svg class="paper-grain" xmlns="http://www.w3.org/2000/svg">
+    <filter id="watercolorNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" seed="8" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#watercolorNoise)" />
+  </svg>
 
-  <!-- Ambient Instrumental Audio -->
+  <!-- Background Instrumental Audio -->
   <audio id="bgMusic" loop preload="none">
     <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_946bc5301e.mp3?filename=indian-sitar-meditation-124041.mp3" type="audio/mpeg">
   </audio>
 
-  <button class="music-btn" id="musicToggle" aria-label="Toggle Music" title="Play / Pause Music">
-    <div class="music-waves">
-      <span></span><span></span><span></span><span></span>
-    </div>
+  <button class="music-fab" id="musicBtn" aria-label="Toggle Music">
+    <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
   </button>
 
-  <!-- ==================== ACT I: SAHYADRI PESHWA WADA HERO ==================== -->
-  <div class="hero-wrapper" id="heroSection">
-    <div class="hero-sticky">
-      <div class="moon-glow"></div>
-      <canvas id="atmosphereCanvas"></canvas>
+  <!-- ==================== 1. SKY LANTERNS -> WADA COURTYARD -> EMERALD CARPET ==================== -->
+  <div class="sky-to-carpet-stage">
+    <canvas id="lanternCanvas"></canvas>
 
-      <div class="hero-header" id="heroText">
-        <div class="marathi-mantra font-marathi" id="cfgMantra">॥ श्री गणेशाय नमः • शुभमंगल सावधान ॥</div>
-        <div class="sub-tag">Royal Maharashtrian Wedding Invitation</div>
-        <h1 class="couple-names font-royal">
-          <span id="cfgGroomFirst">Siddharth</span>
-          <span class="sang font-marathi">संग</span>
-          <span id="cfgBrideFirst">Ananya</span>
-        </h1>
-        <div class="hero-date-pill" id="cfgHeroDate">14 • 12 • 2026 • PUNE</div>
-      </div>
+    <div class="hero-sky-viewport" id="heroSky">
+      <h1 class="hero-names">
+        <span id="cfgGroomFirst">SIDDHARTH</span>
+        <span class="hero-weds">WEDS</span>
+        <span id="cfgBrideFirst">ANANYA</span>
+      </h1>
+    </div>
 
-      <!-- Crisp Vector Sahyadri Hills + Peshwa Wada Courtyard + Tulsi Vrindavan -->
-      <div class="wada-stage" id="wadaArt">
-        <svg viewBox="0 0 1280 560" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-          <defs>
-            <linearGradient id="sahyadriRidge" x1="640" y1="120" x2="640" y2="390" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#283552" stop-opacity="0.85"/>
-              <stop offset="100%" stop-color="#111829"/>
-            </linearGradient>
-            <linearGradient id="wadaStone" x1="640" y1="150" x2="640" y2="520" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#d49557"/>
-              <stop offset="55%" stop-color="#8f5329"/>
-              <stop offset="100%" stop-color="#47230d"/>
-            </linearGradient>
-            <linearGradient id="teakWood" x1="640" y1="180" x2="640" y2="480" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#5c2c12"/>
-              <stop offset="100%" stop-color="#2b1205"/>
-            </linearGradient>
-            <radialGradient id="mandapGlow" cx="50%" cy="45%" r="55%">
-              <stop offset="0%" stop-color="#fff0bd" stop-opacity="0.96"/>
-              <stop offset="65%" stop-color="#f2a93b" stop-opacity="0.45"/>
-              <stop offset="100%" stop-color="#b85d19" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="paithaniRunner" x1="640" y1="380" x2="640" y2="560" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#125e49"/>
-              <stop offset="100%" stop-color="#07261d"/>
-            </linearGradient>
-          </defs>
-
-          <!-- Distant Sahyadri Fort Silhouettes -->
-          <path d="M0 360 L140 245 L260 275 L410 195 L560 250 L720 185 L890 245 L1040 190 L1180 255 L1280 230 L1280 450 L0 450 Z" fill="url(#sahyadriRidge)"/>
-
-          <!-- Outer Wada Fortification Bastions (Buruj) -->
-          <path d="M165 215 L235 215 L245 500 L155 500 Z" fill="url(#wadaStone)" stroke="#381907" stroke-width="2"/>
-          <path d="M150 215 L250 215 L240 195 L160 195 Z" fill="#e6b85c"/>
-
-          <path d="M1045 215 L1115 215 L1125 500 L1035 500 Z" fill="url(#wadaStone)" stroke="#381907" stroke-width="2"/>
-          <path d="M1030 215 L1130 215 L1120 195 L1040 195 Z" fill="#e6b85c"/>
-
-          <!-- Main Peshwa Wada Structure -->
-          <rect x="245" y="210" width="790" height="290" fill="url(#wadaStone)" stroke="#381907" stroke-width="2.5"/>
-
-          <!-- Traditional Sloped Mangalore-Tile Roof & Chhatri -->
-          <polygon points="220,212 640,122 1060,212" fill="url(#teakWood)" stroke="#e6b85c" stroke-width="2"/>
-          <polygon points="495,154 640,94 785,154" fill="#703516" stroke="#ffeaad" stroke-width="2"/>
-          <!-- Kalash Spire -->
-          <circle cx="640" cy="84" r="7" fill="#ffeaad"/>
-          <line x1="640" y1="64" x2="640" y2="94" stroke="#ffeaad" stroke-width="3"/>
-
-          <!-- Marigold Toran Garlands Along Upper Balcony -->
-          <path d="M275 222 Q345 252 415 222 Q485 252 555 222 Q640 258 725 222 Q795 252 865 222 Q935 252 1005 222" stroke="#ff9d1c" stroke-width="6" stroke-linecap="round" fill="none"/>
-          <path d="M275 222 Q345 252 415 222 Q485 252 555 222 Q640 258 725 222 Q795 252 865 222 Q935 252 1005 222" stroke="#ffd23f" stroke-width="2.5" stroke-dasharray="4 8" fill="none"/>
-
-          <!-- Central Carved Meghadambari Arch (Couple in Traditional Attire) -->
-          <path d="M555 385 L555 275 Q595 245 640 232 Q685 245 725 275 L725 385 Z" fill="url(#mandapGlow)" stroke="#ffeaad" stroke-width="3"/>
-          <!-- Groom with Pheta & Bride in Nauvari Silhouette -->
-          <ellipse cx="620" cy="296" rx="12" ry="10" fill="#291206"/>
-          <path d="M608 291 Q622 281 634 293" stroke="#ff9d1c" stroke-width="4" stroke-linecap="round"/>
-          <path d="M602 368 L609 310 L631 310 L638 368 Z" fill="#291206"/>
-
-          <circle cx="662" cy="302" r="10" fill="#291206"/>
-          <path d="M645 368 L652 315 L672 315 L681 368 Z" fill="#291206"/>
-
-          <!-- Side Teakwood Jharokha Windows -->
-          <path d="M320 355 L320 275 Q370 245 420 275 L420 355 Z" fill="#2b1307" stroke="#e6b85c" stroke-width="2"/>
-          <path d="M860 355 L860 275 Q910 245 960 275 L960 355 Z" fill="#2b1307" stroke="#e6b85c" stroke-width="2"/>
-
-          <!-- Wada Courtyard Plinth & Paithani Carpet -->
-          <rect x="110" y="465" width="1060" height="95" fill="#211007"/>
-          <polygon points="545,385 735,385 885,560 395,560" fill="url(#paithaniRunner)" stroke="#e6b85c" stroke-width="3"/>
-          <line x1="560" y1="385" x2="420" y2="560" stroke="#ffeaad" stroke-width="2" stroke-dasharray="10 6"/>
-          <line x1="720" y1="385" x2="860" y2="560" stroke="#ffeaad" stroke-width="2" stroke-dasharray="10 6"/>
-
-          <!-- Brass Samai Lamps Flanking the Carpet -->
-          <rect x="492" y="410" width="6" height="42" fill="#ffeaad"/>
-          <ellipse cx="495" cy="404" rx="8" ry="12" fill="#ffae2b"/>
-          <rect x="782" y="410" width="6" height="42" fill="#ffeaad"/>
-          <ellipse cx="785" cy="404" rx="8" ry="12" fill="#ffae2b"/>
-        </svg>
-      </div>
-
-      <div class="scroll-cue">
-        <span>Scroll to Enter Wada</span>
-        <span>↓</span>
+    <!-- Photoreal Heritage Wada Courtyard melting directly into the Emerald Carpet -->
+    <div class="palace-courtyard-bridge" id="courtyardPan">
+      <div class="courtyard-photo-frame">
+        <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=85" alt="Royal Heritage Courtyard">
+        <div class="courtyard-warm-tint"></div>
       </div>
     </div>
   </div>
 
-  <!-- Traditional Paithani Silk Zari Border -->
-  <div class="paithani-border"></div>
+  <!-- ==================== 2. EMERALD GREEN SECTION: BLESSINGS & EVENTS ==================== -->
+  <section class="section-emerald">
+    <!-- Minimalist Lord Ganesha Line Motif -->
+    <svg class="ganpati-crest reveal" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M35 24 Q50 14 65 24" />
+      <path d="M30 32 Q50 22 70 32" />
+      <path d="M42 40 C36 46 36 58 46 62 C55 65 62 72 56 82 C52 88 42 86 44 79" />
+      <path d="M28 45 C18 48 18 64 30 64" />
+      <path d="M72 45 C82 48 82 64 70 64" />
+      <circle cx="43" cy="44" r="1.5" fill="currentColor" />
+      <circle cx="57" cy="44" r="1.5" fill="currentColor" />
+    </svg>
 
-  <!-- ==================== ACT II: PAITHANI EMERALD (COUPLE & BLESSINGS) ==================== -->
-  <section class="act-section section-paithani">
-    <div class="container">
-      <div class="act-eyebrow reveal-up">॥ शुभमंगल सावधान ॥</div>
-      <h2 class="act-title font-royal reveal-up">Two Families, One Heritage</h2>
-      <div class="zari-divider reveal-up"><div class="zari-motif"></div></div>
-      <p class="act-subtitle reveal-up" id="cfgInviteNote">
-        With the blessings of our elders and Chhatrapati’s sacred soil, we warmly invite you and your family to celebrate the sacred union of our children.
-      </p>
+    <div class="mantra-line reveal" id="cfgMantra">॥ श्री गणेशाय नमः ॥</div>
 
-      <div class="couple-showcase">
-        <!-- Groom Arch -->
-        <div class="peshwa-arch-card reveal-up">
-          <div class="arch-portrait">
-            <img id="cfgGroomImg" src="https://images.unsplash.com/photo-1597892657493-6847b9640bac?auto=format&fit=crop&w=600&q=85" alt="Groom Portrait">
-          </div>
-          <div class="marathi-prefix font-marathi">चि. (The Groom)</div>
-          <h3 class="person-name font-royal" id="cfgGroomFull">Siddharth Deshmukh</h3>
-          <p class="person-lineage" id="cfgGroomParents">
-            Eldest Son of Smt. Vandana &amp; Shri. Rajeshwar Deshmukh<br>
-            <em>Kothrud, Pune</em>
-          </p>
-        </div>
+    <p class="parents-block reveal" id="cfgGroomParents">
+      With the heavenly blessings of<br>
+      Smt. Vandana &amp; Shri. Rajeshwar Deshmukh
+    </p>
 
-        <!-- Bride Arch -->
-        <div class="peshwa-arch-card reveal-up">
-          <div class="arch-portrait">
-            <img id="cfgBrideImg" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=85" alt="Bride Portrait">
-          </div>
-          <div class="marathi-prefix font-marathi">चि. सौ. कां. (The Bride)</div>
-          <h3 class="person-name font-royal" id="cfgBrideFull">Ananya Kulkarni</h3>
-          <p class="person-lineage" id="cfgBrideParents">
-            Daughter of Smt. Madhuri &amp; Shri. Shrikant Kulkarni<br>
-            <em>Prabhat Road, Pune</em>
-          </p>
-        </div>
-      </div>
+    <h2 class="invite-heading reveal">INVITE</h2>
+    <p class="invite-sub reveal">You to join us in the wedding celebrations of</p>
+
+    <div class="emerald-couple-names reveal">
+      <div id="cfgGroomFull">Siddharth</div>
+      <span>&amp;</span>
+      <div id="cfgBrideFull">Ananya</div>
     </div>
+
+    <p class="daughter-of reveal" id="cfgBrideParents">
+      Daughter of<br>
+      Smt. Madhuri &amp; Shri. Shrikant Kulkarni
+    </p>
+
+    <p class="invite-sub reveal" style="margin-bottom: 38px;">On the following events</p>
+
+    <!-- Event 1: Arch Frame with Mogra/Marigold Corner Florals -->
+    <div id="eventsList"></div>
   </section>
 
-  <!-- Vintage Premier Padmini Transition Bridge -->
-  <div class="vintage-bridge">
-    <div class="padmini-pill">
-      <span>🚗</span>
-      <span>Royal Baraat Procession</span>
-      <span style="color:var(--zari-gold);" id="cfgHashtag">#SidChiAnanya</span>
-    </div>
+  <!-- VINTAGE CAR #1 STRADDLING EMERALD -> MAUVE BORDER (0:15-0:17) -->
+  <div class="car-straddle">
+    <img src="https://images.unsplash.com/photo-1566008885218-90abf9200ddb?auto=format&fit=crop&w=800&q=85" alt="Vintage Turquoise Classic Car">
   </div>
 
-  <!-- ==================== ACT III: KUMKUM & HALDI WEDDING EVENTS ==================== -->
-  <section class="act-section section-kumkum">
-    <div class="container">
-      <div class="act-eyebrow reveal-up">विवाह सोहळा • Celebrations</div>
-      <h2 class="act-title font-royal reveal-up">Sacred Rituals &amp; Festivities</h2>
-      <div class="zari-divider reveal-up"><div class="zari-motif"></div></div>
-      <p class="act-subtitle reveal-up">
-        From vibrant turmeric blessings to the sacred Antarpat moment, join us for every cherished Maharashtrian tradition.
-      </p>
+  <!-- ==================== 3. DUSTY MAUVE SECTION: MEET THE COUPLE & RSVP ==================== -->
+  <section class="section-mauve">
+    <div class="eyebrow-small reveal">MEET THE</div>
+    <h2 class="mauve-heading reveal">BRIDE AND GROOM</h2>
 
-      <div class="events-grid" id="eventsContainer">
-        <!-- Injected dynamically from INVITE_CONFIG -->
+    <p class="mauve-story reveal" id="cfgStory">
+      We are both so delighted that you are able to join us in celebrating what we hope will be one of the happiest days of our lives. From college days in Pune to building a lifetime together, your love and blessings make our sacred Maharashtrian union complete.
+    </p>
+
+    <!-- Ornate Cream Scalloped Couple Frame (0:19) -->
+    <div class="ornate-scallop-wrap reveal">
+      <div class="ornate-scallop-inner">
+        <img id="cfgCouplePhoto" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=700&q=85" alt="Bride and Groom">
       </div>
+    </div>
+
+    <!-- Concentric Target RSVP Trigger (0:20) -->
+    <div class="target-cta-block reveal">
+      <h3 class="target-title">PLEASE<br>RSVP</h3>
+      <p class="target-sub">Click to confirm your presence</p>
+      <button class="concentric-btn" id="openRsvpBtn" aria-label="Open RSVP Form"></button>
     </div>
   </section>
 
-  <!-- ==================== ACT IV: THINGS TO KNOW (HALDI MUSTARD) ==================== -->
-  <section class="act-section section-mustard">
-    <div class="container">
-      <div class="act-eyebrow reveal-up">आतिथ्य • Guest Hospitality</div>
-      <h2 class="act-title font-royal reveal-up">Things to Know</h2>
-      <div class="zari-divider reveal-up"><div class="zari-motif"></div></div>
+  <!-- VINTAGE CAR #2 STRADDLING MAUVE -> MUSTARD BORDER (0:21-0:22) -->
+  <div class="car-straddle">
+    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=85" alt="Vintage Heritage Sedan">
+  </div>
 
-      <div class="guide-grid">
-        <div class="guide-item reveal-up">
-          <span class="guide-icon">👘</span>
-          <h3 class="guide-heading">Traditional Attire</h3>
-          <p class="guide-text">Paithani sarees, Nauvari drapes, kurta-pyjamas, and traditional Puneri phetas are warmly encouraged.</p>
-        </div>
-        <div class="guide-item reveal-up">
-          <span class="guide-icon">🌤️</span>
-          <h3 class="guide-heading">December Weather</h3>
-          <p class="guide-text">Pleasant 24°C daytime sunshine with crisp 14°C Pune evenings—carry a light shawl for the outdoor Sangeet.</p>
-        </div>
-        <div class="guide-item reveal-up">
-          <span class="guide-icon">🅿️</span>
-          <h3 class="guide-heading">Valet &amp; Access</h3>
-          <p class="guide-text">Complimentary valet parking is arranged at Gate 1 of the Heritage Lawns for all family &amp; guests.</p>
-        </div>
-        <div class="guide-item reveal-up">
-          <span class="guide-icon">🏨</span>
-          <h3 class="guide-heading">Outstation Stay</h3>
-          <p class="guide-text">Rooms are reserved for outstation guests. Tap RSVP below to confirm your arrival dates.</p>
-        </div>
+  <!-- ==================== 4. MUSTARD YELLOW SECTION: THINGS TO KNOW ==================== -->
+  <section class="section-mustard">
+    <h2 class="mustard-title reveal">THINGS<br>TO KNOW</h2>
+    <p class="mustard-intro reveal">
+      To help you feel at ease and enjoy every moment of the celebrations, we’ve gathered a few thoughtful details we’d love for you to know before the big day.
+    </p>
+
+    <div class="info-stack">
+      <!-- Hashtag -->
+      <div class="info-node reveal">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+        <h3>HASHTAG</h3>
+        <p>While posting photos on social media please use the hashtag <strong id="cfgHashtag">#SidChiAnanya</strong></p>
       </div>
+
+      <!-- Weather -->
+      <div class="info-node reveal">
+        <svg viewBox="0 0 24 24"><circle cx="7" cy="7" r="2.2"/><path d="M18 16.5a4.5 4.5 0 0 1-8.4 2.2"/></svg>
+        <h3>WEATHER</h3>
+        <p>It will be mostly sunny with temperatures reaching up to 26 degrees at the venue in Pune.</p>
+      </div>
+
+      <!-- Attire / Staff -->
+      <div class="info-node reveal">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.5"/><path d="M8 12h8l-1 8H9l-1-8z"/></svg>
+        <h3>ATTIRE</h3>
+        <p>Traditional Maharashtrian weaves—Paithani sarees, Nauvari drapes, and Puneri phetas—are warmly welcomed.</p>
+      </div>
+
+      <!-- Parking -->
+      <div class="info-node reveal">
+        <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="7" rx="2"/><path d="M6 10l2-4h8l2 4"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg>
+        <h3>PARKING</h3>
+        <p>Valet parking for all our guests will be available at the main Wada entrance.</p>
+      </div>
+    </div>
+
+    <!-- Follow The Action Instagram Concentric Target (0:25-0:26) -->
+    <div class="target-cta-block reveal">
+      <h3 class="target-title">FOLLOW<br>THE<br>ACTION</h3>
+      <p class="target-sub">Click to open our Instagram page</p>
+      <a id="cfgInstaBtn" href="https://instagram.com" target="_blank" rel="noopener" class="concentric-btn" aria-label="Open Wedding Instagram"></a>
     </div>
   </section>
 
-  <div class="paithani-border"></div>
+  <!-- VINTAGE CAR #3 STRADDLING MUSTARD -> TWILIGHT NIGHT BORDER (0:27-0:29) -->
+  <div class="car-straddle">
+    <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=85" alt="Classic Heritage Coupe">
+  </div>
 
-  <!-- ==================== ACT V: COUNTDOWN & WHATSAPP RSVP ==================== -->
-  <section class="act-section section-finale">
-    <div class="container">
-      <div class="act-eyebrow reveal-up">शुभ मुहूर्त • Counting Down</div>
-      <h2 class="act-title font-royal reveal-up">Until The Antarpat Drops</h2>
-      <div class="zari-divider reveal-up"><div class="zari-motif"></div></div>
+  <!-- ==================== 5. TWILIGHT COUNTDOWN & ILLUMINATED PALACE FINALE ==================== -->
+  <section class="section-twilight-finale">
+    <h2 class="countdown-heading reveal">The countdown begins</h2>
+    <div class="countdown-digits reveal" id="countdownText">00D 00H 00M 00S</div>
 
-      <div class="countdown-grid reveal-up">
-        <div class="cd-card">
-          <div class="cd-val" id="cdDays">00</div>
-          <div class="cd-unit">Days</div>
-        </div>
-        <div class="cd-card">
-          <div class="cd-val" id="cdHours">00</div>
-          <div class="cd-unit">Hours</div>
-        </div>
-        <div class="cd-card">
-          <div class="cd-val" id="cdMins">00</div>
-          <div class="cd-unit">Mins</div>
-        </div>
-        <div class="cd-card">
-          <div class="cd-val" id="cdSecs">00</div>
-          <div class="cd-unit">Secs</div>
-        </div>
-      </div>
+    <p class="finale-note reveal">
+      Our families are excited that you are able to join us in celebrating what we hope will be one of the happiest days of our lives.
+    </p>
 
-      <!-- Signature Concentric Pulsing RSVP Button -->
-      <div class="rsvp-pulse-box reveal-up">
-        <span class="pulse-circle"></span>
-        <span class="pulse-circle"></span>
-        <button class="rsvp-cta" id="openRsvpBtn">CONFIRM RSVP</button>
-      </div>
+    <div class="finale-links reveal">
+      <button id="openRsvpFooter">Confirm RSVP</button>
+      <a id="cfgPrimaryMap" href="https://maps.google.com" target="_blank" rel="noopener">See Venue Route</a>
+      <button id="saveCalBtn">Save Muhurta Date</button>
+    </div>
 
-      <div class="quick-pills reveal-up">
-        <a id="cfgPrimaryMap" href="https://maps.google.com" target="_blank" rel="noopener" class="pill-action">
-          📍 See Venue Route
-        </a>
-        <button id="saveCalendarBtn" class="pill-action">
-          📅 Save Muhurta Date
-        </button>
-        <a id="cfgInstaLink" href="https://instagram.com" target="_blank" rel="noopener" class="pill-action">
-          ✨ Wedding Hashtag
-        </a>
-      </div>
-
-      <footer>
-        <p id="cfgFooterLine">आपल्या उपस्थितीची नम्र विनंती • With Warm Regards, Deshmukh &amp; Kulkarni Families</p>
-      </footer>
+    <!-- Warm Illuminated Palace Backdrop (0:29-0:31) -->
+    <div class="illuminated-palace-footer">
+      <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1400&q=85" alt="Illuminated Royal Heritage Palace at Twilight">
     </div>
   </section>
 
-  <!-- ==================== WHATSAPP RSVP MODAL (ZERO BACKEND) ==================== -->
-  <div class="modal-overlay" id="rsvpModal">
-    <div class="modal-box">
-      <button class="close-modal" id="closeRsvpBtn" aria-label="Close">&times;</button>
-      <div class="act-eyebrow" style="margin-bottom:4px;">निमंत्रण स्वीकार • RSVP</div>
-      <h3 class="font-royal" style="font-size:1.55rem; color:var(--zari-bright); margin-bottom:18px;">Send Your Blessings</h3>
+  <!-- ==================== WHATSAPP RSVP MODAL ==================== -->
+  <div class="modal-backdrop" id="rsvpModal">
+    <div class="modal-sheet">
+      <button class="modal-x" id="closeRsvpBtn">&times;</button>
+      <h3 class="font-display" style="font-size:1.55rem; margin-bottom:6px;">PLEASE RSVP</h3>
+      <p style="font-size:1.05rem; margin-bottom:18px; color:#5c4928;">Confirm your attendance directly via WhatsApp</p>
 
       <form id="rsvpForm">
-        <div class="field-wrap">
-          <label for="guestName">Guest / Family Name</label>
-          <input type="text" id="guestName" placeholder="e.g. Dr. Amit Joshi & Family" required />
+        <div class="m-field">
+          <label>GUEST / FAMILY NAME</label>
+          <input type="text" id="gName" placeholder="e.g. Deshpande Family" required />
         </div>
-        <div class="field-wrap">
-          <label for="guestStatus">Attendance</label>
-          <select id="guestStatus">
-            <option value="Joyfully Attending the Wedding">Joyfully Attending 🎉</option>
-            <option value="Sending Warm Blessings from Afar">Sending Warm Blessings from Afar 🙏</option>
+        <div class="m-field">
+          <label>ATTENDING</label>
+          <select id="gStatus">
+            <option value="Joyfully Attending">Joyfully Attending</option>
+            <option value="Sending Warm Blessings">Sending Warm Blessings</option>
           </select>
         </div>
-        <div class="field-wrap">
-          <label for="guestCount">Total Family Members</label>
-          <select id="guestCount">
+        <div class="m-field">
+          <label>NUMBER OF GUESTS</label>
+          <select id="gCount">
             <option value="1 Guest">1 Guest</option>
             <option value="2 Guests" selected>2 Guests</option>
             <option value="3 Guests">3 Guests</option>
-            <option value="4 Guests">4 Guests</option>
-            <option value="5+ Family Members">5+ Family Members</option>
+            <option value="4+ Family Members">4+ Family Members</option>
           </select>
         </div>
-        <div class="field-wrap">
-          <label for="guestSide">Invited From</label>
-          <select id="guestSide">
-            <option value="Groom's Side (Deshmukh Family)">Groom's Side (Deshmukh Family)</option>
-            <option value="Bride's Side (Kulkarni Family)">Bride's Side (Kulkarni Family)</option>
-          </select>
-        </div>
-        <button type="submit" class="rsvp-cta" style="width:100%; margin-top:8px; padding:15px;">
-          Send on WhatsApp →
-        </button>
+        <button type="submit" class="submit-wa-btn">SEND ON WHATSAPP →</button>
       </form>
     </div>
   </div>
 
   <script>
     /* =========================================================================
-       CLIENT CUSTOMIZATION CONFIG — SWAP DETAILS OR PHOTOS HERE IN 2 MINUTES
+       CUSTOMIZATION CONFIG — SWAP NAMES, PHOTOS, DATES & WHATSAPP HERE
        ========================================================================= */
     const INVITE_CONFIG = {
       mantra: "॥ श्री गणेशाय नमः • शुभमंगल सावधान ॥",
-      groomFirst: "Siddharth",
-      brideFirst: "Ananya",
-      groomFull: "Siddharth Deshmukh",
-      brideFull: "Ananya Kulkarni",
-      groomParents: "Eldest Son of Smt. Vandana &amp; Shri. Rajeshwar Deshmukh<br><em>Kothrud, Pune</em>",
-      brideParents: "Daughter of Smt. Madhuri &amp; Shri. Shrikant Kulkarni<br><em>Prabhat Road, Pune</em>",
-      // Replace these two URLs with the couple's portrait photos whenever ready:
-      groomPhoto: "https://images.unsplash.com/photo-1597892657493-6847b9640bac?auto=format&fit=crop&w=600&q=85",
-      bridePhoto: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=85",
-      heroDateText: "14 • 12 • 2026 • PUNE",
-      weddingISO: "2026-12-14T12:25:00+05:30", // Goraj / Abhijit Muhurta Time
+      groomFirst: "SIDDHARTH",
+      brideFirst: "ANANYA",
+      groomFull: "Siddharth",
+      brideFull: "Ananya",
+      groomParents: "With the heavenly blessings of<br>Smt. Vandana &amp; Shri. Rajeshwar Deshmukh",
+      brideParents: "Daughter of<br>Smt. Madhuri &amp; Shri. Shrikant Kulkarni",
+      story: "We are both so delighted that you are able to join us in celebrating what we hope will be one of the happiest days of our lives. From our roots in Maharashtra to building a lifetime together, your love and blessings make our sacred union complete.",
+      couplePhoto: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=700&q=85",
+      weddingISO: "2026-12-14T12:25:00+05:30",
       hashtag: "#SidChiAnanya",
-      whatsappNumber: "919876543210", // Client's WhatsApp number with country code (no +)
-      primaryVenueMap: "https://maps.google.com/?q=Fort+JadhavGADH+Pune",
-      instagramUrl: "https://www.instagram.com/",
-      inviteNote: "With the blessings of our elders and Chhatrapati’s sacred soil, we warmly invite you and your family to celebrate the sacred union of our children.",
-      footerLine: "आपल्या उपस्थितीची नम्र विनंती • With Warm Regards, Deshmukh & Kulkarni Families",
+      whatsappNumber: "919876543210",
+      primaryMap: "https://maps.google.com/?q=Fort+JadhavGADH+Pune",
+      instagramUrl: "https://instagram.com",
       events: [
         {
-          icon: "🌼",
-          marathiSub: "हळद व मेहंदी सोहळा",
-          name: "Haldi & Mehendi",
-          time: "13 Dec 2026 • 10:30 AM",
-          venue: "Aangan Courtyard, Fort JadhavGADH, Pune",
-          dressCode: "Attire: Sunshine Yellow & Marigold",
+          shape: "arch",
+          title: "MEHENDI & HALDI",
+          dateLine: "Sunday, December 13th 2026",
+          venueLine: "Fort JadhavGADH Courtyard, Pune<br>10:30 AM Onwards",
           mapUrl: "https://maps.google.com/?q=Fort+JadhavGADH+Pune",
-          featured: false
+          photo: "https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?auto=format&fit=crop&w=700&q=85"
         },
         {
-          icon: "🎶",
-          marathiSub: "संगीत संध्या",
-          name: "Sangeet Sandhya",
-          time: "13 Dec 2026 • 7:30 PM",
-          venue: "Royal Durbar Lawns, Hadapsar-Saswad Rd",
-          dressCode: "Attire: Jewel Tones & Indo-Western",
+          shape: "circle",
+          title: "SHUBH VIVAH",
+          dateLine: "Monday, December 14th 2026",
+          venueLine: "Peshwa Darbar Lawns, Pune<br>Goraj Muhurta • 12:25 PM",
           mapUrl: "https://maps.google.com/?q=Fort+JadhavGADH+Pune",
-          featured: true
-        },
-        {
-          icon: "🔥",
-          marathiSub: "शुभ विवाह व गोरज मुहूर्त",
-          name: "Shubh Vivah",
-          time: "14 Dec 2026 • Muhurta 12:25 PM",
-          venue: "Peshwa Mandap, Fort JadhavGADH, Pune",
-          dressCode: "Attire: Paithani, Nauvari & Pheta",
-          mapUrl: "https://maps.google.com/?q=Fort+JadhavGADH+Pune",
-          featured: false
+          photo: "https://images.unsplash.com/photo-1610173827043-9db50e0d5ef9?auto=format&fit=crop&w=700&q=85"
         }
       ]
     };
 
-    /* ================= BIND CONFIG TO PAGE ================= */
-    document.title = `${INVITE_CONFIG.groomFirst} & ${INVITE_CONFIG.brideFirst} — Royal Maharashtrian Wedding`;
-    document.getElementById("cfgMantra").textContent = INVITE_CONFIG.mantra;
+    /* ================= POPULATE CONTENT ================= */
     document.getElementById("cfgGroomFirst").textContent = INVITE_CONFIG.groomFirst;
     document.getElementById("cfgBrideFirst").textContent = INVITE_CONFIG.brideFirst;
-    document.getElementById("cfgHeroDate").textContent = INVITE_CONFIG.heroDateText;
-    document.getElementById("cfgInviteNote").textContent = INVITE_CONFIG.inviteNote;
-    document.getElementById("cfgGroomFull").textContent = INVITE_CONFIG.groomFull;
-    document.getElementById("cfgBrideFull").textContent = INVITE_CONFIG.brideFull;
+    document.getElementById("cfgMantra").textContent = INVITE_CONFIG.mantra;
     document.getElementById("cfgGroomParents").innerHTML = INVITE_CONFIG.groomParents;
     document.getElementById("cfgBrideParents").innerHTML = INVITE_CONFIG.brideParents;
-    document.getElementById("cfgGroomImg").src = INVITE_CONFIG.groomPhoto;
-    document.getElementById("cfgBrideImg").src = INVITE_CONFIG.bridePhoto;
+    document.getElementById("cfgGroomFull").textContent = INVITE_CONFIG.groomFull;
+    document.getElementById("cfgBrideFull").textContent = INVITE_CONFIG.brideFull;
+    document.getElementById("cfgStory").textContent = INVITE_CONFIG.story;
+    document.getElementById("cfgCouplePhoto").src = INVITE_CONFIG.couplePhoto;
     document.getElementById("cfgHashtag").textContent = INVITE_CONFIG.hashtag;
-    document.getElementById("cfgPrimaryMap").href = INVITE_CONFIG.primaryVenueMap;
-    document.getElementById("cfgInstaLink").href = INVITE_CONFIG.instagramUrl;
-    document.getElementById("cfgFooterLine").textContent = INVITE_CONFIG.footerLine;
+    document.getElementById("cfgPrimaryMap").href = INVITE_CONFIG.primaryMap;
+    document.getElementById("cfgInstaBtn").href = INVITE_CONFIG.instagramUrl;
 
-    document.getElementById("eventsContainer").innerHTML = INVITE_CONFIG.events.map(ev => `
-      <div class="event-arch-card reveal-up ${ev.featured ? 'haldi-featured' : ''}">
-        <div class="event-emblem">${ev.icon}</div>
-        <div class="event-marathi-sub font-marathi">${ev.marathiSub}</div>
-        <h3 class="event-title font-royal">${ev.name}</h3>
-        <div class="event-schedule">${ev.time}</div>
-        <p class="event-location">${ev.venue}</p>
-        <div class="attire-tag">${ev.dressCode}</div><br>
-        <a href="${ev.mapUrl}" target="_blank" rel="noopener" class="route-btn">See Route →</a>
+    // Render Event Arches & Circles with Corner Mogra/Marigold Florals
+    const floralSvg = `
+      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25 90 Q55 60 95 25" stroke="#2d5a3c" stroke-width="3" stroke-linecap="round"/>
+        <ellipse cx="42" cy="75" rx="12" ry="6" transform="rotate(-35 42 75)" fill="#3b754e"/>
+        <ellipse cx="75" cy="42" rx="12" ry="6" transform="rotate(-35 75 42)" fill="#3b754e"/>
+        <circle cx="62" cy="58" r="14" fill="#fffaf0"/>
+        <circle cx="62" cy="58" r="5" fill="#f5b82e"/>
+        <circle cx="82" cy="44" r="11" fill="#ffa726"/>
+        <circle cx="46" cy="72" r="10" fill="#fffaf0"/>
+      </svg>`;
+
+    document.getElementById("eventsList").innerHTML = INVITE_CONFIG.events.map(ev => `
+      <div class="event-showcase reveal">
+        <div class="floral-corner-top">${floralSvg}</div>
+        <div class="arch-photo-box ${ev.shape === 'circle' ? 'circle-photo-box' : ''}">
+          <img src="${ev.photo}" alt="${ev.title}">
+        </div>
+        <div class="floral-corner-bottom">${floralSvg}</div>
+        <h3 class="ev-title">${ev.title}</h3>
+        <div class="ev-meta">${ev.dateLine}<br>${ev.venueLine}</div>
+        <a href="${ev.mapUrl}" target="_blank" rel="noopener" class="underlined-route">See the route</a>
       </div>
     `).join("");
 
-    /* ================= RETINA-CRISP SKY LANTERNS & MARIGOLD PETALS ================= */
-    const canvas = document.getElementById("atmosphereCanvas");
+    /* ================= GLOWING SKY LANTERNS (0:00-0:10) ================= */
+    const canvas = document.getElementById("lanternCanvas");
     const ctx = canvas.getContext("2d");
-    let width, height, particles = [];
+    let w, h, lanterns = [];
 
-    function resizeCanvas() {
+    function resize() {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
+      w = canvas.offsetWidth;
+      h = canvas.offsetHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
+    window.addEventListener("resize", resize);
+    resize();
 
-    class AtmosphericParticle {
-      constructor(init = false) {
-        this.reset(init);
-      }
+    class SkyLantern {
+      constructor(init = false) { this.reset(init); }
       reset(init = false) {
-        this.isPetal = Math.random() > 0.62; // Mix of glowing sky lanterns & floating marigold petals
-        this.x = Math.random() * width;
-        this.y = init ? Math.random() * height : (this.isPetal ? -20 : height + 40);
-        this.scale = 0.5 + Math.random() * 0.85;
-        this.speedY = (0.35 + Math.random() * 0.6) * this.scale;
+        this.x = Math.random() * w;
+        this.y = init ? Math.random() * h : h + 40;
+        this.z = 0.45 + Math.random() * 0.9; // Depth scale
+        this.vy = (0.35 + Math.random() * 0.65) * this.z;
         this.phase = Math.random() * Math.PI * 2;
-        this.rot = Math.random() * Math.PI * 2;
       }
-      update() {
-        if (this.isPetal) {
-          this.y += this.speedY * 1.15;
-          this.x += Math.sin(this.phase) * 0.65;
-          this.rot += 0.025;
-          if (this.y > height + 25) this.reset(false);
-        } else {
-          this.y -= this.speedY;
-          this.x += Math.sin(this.phase) * 0.25;
-          if (this.y < -45) this.reset(false);
-        }
-        this.phase += 0.016;
+      step() {
+        this.y -= this.vy;
+        this.x += Math.sin(this.phase) * 0.28;
+        this.phase += 0.015;
+        if (this.y < -50) this.reset(false);
       }
-      draw() {
+      render() {
+        const lw = 18 * this.z;
+        const lh = 25 * this.z;
         ctx.save();
         ctx.translate(this.x, this.y);
-        if (this.isPetal) {
-          ctx.rotate(this.rot);
-          ctx.fillStyle = Math.random() > 0.4 ? "rgba(255, 166, 38, 0.82)" : "rgba(255, 208, 66, 0.85)";
-          ctx.beginPath();
-          ctx.ellipse(0, 0, 5 * this.scale, 2.8 * this.scale, 0, 0, Math.PI * 2);
-          ctx.fill();
-        } else {
-          const w = 15 * this.scale;
-          const h = 21 * this.scale;
-          const glow = ctx.createRadialGradient(0, 0, 1, 0, 0, w * 2.8);
-          glow.addColorStop(0, "rgba(255, 232, 163, 0.8)");
-          glow.addColorStop(0.5, "rgba(255, 152, 48, 0.22)");
-          glow.addColorStop(1, "rgba(255, 140, 40, 0)");
-          ctx.fillStyle = glow;
-          ctx.beginPath();
-          ctx.arc(0, 0, w * 2.8, 0, Math.PI * 2);
-          ctx.fill();
 
-          ctx.fillStyle = "#ffd37a";
-          ctx.beginPath();
-          ctx.roundRect(-w / 2, -h / 2, w, h, 4 * this.scale);
-          ctx.fill();
+        const halo = ctx.createRadialGradient(0, 0, 1, 0, 0, lw * 2.5);
+        halo.addColorStop(0, "rgba(255, 214, 112, 0.85)");
+        halo.addColorStop(0.55, "rgba(255, 136, 28, 0.28)");
+        halo.addColorStop(1, "rgba(255, 120, 20, 0)");
+        ctx.fillStyle = halo;
+        ctx.beginPath();
+        ctx.arc(0, 0, lw * 2.5, 0, Math.PI * 2);
+        ctx.fill();
 
-          ctx.fillStyle = "#fff9e6";
-          ctx.beginPath();
-          ctx.arc(0, h * 0.14, w * 0.22, 0, Math.PI * 2);
-          ctx.fill();
-        }
+        ctx.fillStyle = "#ffae2b";
+        ctx.beginPath();
+        ctx.roundRect(-lw / 2, -lh / 2, lw, lh, 4 * this.z);
+        ctx.fill();
+
+        ctx.fillStyle = "#fff5cc";
+        ctx.beginPath();
+        ctx.arc(0, lh * 0.16, lw * 0.26, 0, Math.PI * 2);
+        ctx.fill();
         ctx.restore();
       }
     }
 
-    const count = window.innerWidth < 600 ? 34 : 52;
-    for (let i = 0; i < count; i++) particles.push(new AtmosphericParticle(true));
+    for (let i = 0; i < 34; i++) lanterns.push(new SkyLantern(true));
+    (function loop() {
+      ctx.clearRect(0, 0, w, h);
+      lanterns.forEach(l => { l.step(); l.render(); });
+      requestAnimationFrame(loop);
+    })();
 
-    function renderLoop() {
-      ctx.clearRect(0, 0, width, height);
-      particles.forEach(p => { p.update(); p.draw(); });
-      requestAnimationFrame(renderLoop);
-    }
-    renderLoop();
-
-    /* ================= GSAP SCROLL-SCRUBBED WADA DESCENT ================= */
+    /* ================= GSAP SCROLL CHOREOGRAPHY ================= */
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to("#wadaArt", {
-      scale: 1.42,
-      y: 48,
+    gsap.to("#courtyardPan img", {
+      scale: 1.18,
+      y: 28,
       ease: "none",
       scrollTrigger: {
-        trigger: "#heroSection",
-        start: "top top",
-        end: "bottom bottom",
+        trigger: "#courtyardPan",
+        start: "top bottom",
+        end: "bottom top",
         scrub: 1
       }
     });
 
-    gsap.to("#heroText", {
-      y: -75,
-      opacity: 0.1,
-      ease: "none",
-      scrollTrigger: {
-        trigger: "#heroSection",
-        start: "top top",
-        end: "62% top",
-        scrub: 1
-      }
-    });
-
-    gsap.utils.toArray(".reveal-up").forEach((el) => {
+    gsap.utils.toArray(".reveal").forEach(el => {
       gsap.from(el, {
-        y: 34,
+        y: 28,
         opacity: 0,
         duration: 0.85,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 86%",
-          once: true
-        }
+        ease: "power2.out",
+        scrollTrigger: { trigger: el, start: "top 88%", once: true }
       });
     });
 
-    /* ================= LIVE MUHURTA COUNTDOWN ================= */
-    const muhurtaTime = new Date(INVITE_CONFIG.weddingISO).getTime();
-    function tickCountdown() {
-      const diff = Math.max(0, muhurtaTime - Date.now());
-      document.getElementById("cdDays").textContent = String(Math.floor(diff / 86400000)).padStart(2, "0");
-      document.getElementById("cdHours").textContent = String(Math.floor((diff / 3600000) % 24)).padStart(2, "0");
-      document.getElementById("cdMins").textContent = String(Math.floor((diff / 60000) % 60)).padStart(2, "0");
-      document.getElementById("cdSecs").textContent = String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
+    /* ================= LIVE COUNTDOWN (00D 00H 00M 00S format from video) ================= */
+    const target = new Date(INVITE_CONFIG.weddingISO).getTime();
+    function updateTimer() {
+      const diff = Math.max(0, target - Date.now());
+      const d = String(Math.floor(diff / 86400000)).padStart(2, "0");
+      const h = String(Math.floor((diff / 3600000) % 24)).padStart(2, "0");
+      const m = String(Math.floor((diff / 60000) % 60)).padStart(2, "0");
+      const s = String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
+      document.getElementById("countdownText").textContent = `${d}D ${h}H ${m}M ${s}S`;
     }
-    setInterval(tickCountdown, 1000);
-    tickCountdown();
+    setInterval(updateTimer, 1000);
+    updateTimer();
 
-    /* ================= MUSIC TOGGLE ================= */
-    const musicBtn = document.getElementById("musicToggle");
-    const bgMusic = document.getElementById("bgMusic");
-    let playing = false;
+    /* ================= MUSIC FAB ================= */
+    const audio = document.getElementById("bgMusic");
+    const musicBtn = document.getElementById("musicBtn");
+    const playIcon = document.getElementById("playIcon");
+    let isPlaying = false;
 
-    musicBtn.addEventListener("click", () => {
-      if (playing) {
-        bgMusic.pause();
-        musicBtn.classList.remove("playing");
+    musicBtn.onclick = () => {
+      if (isPlaying) {
+        audio.pause();
+        playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
       } else {
-        bgMusic.play().catch(() => {});
-        musicBtn.classList.add("playing");
+        audio.play().catch(() => {});
+        playIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
       }
-      playing = !playing;
-    });
+      isPlaying = !isPlaying;
+    };
 
-    /* ================= WHATSAPP RSVP MODAL ================= */
-    const rsvpModal = document.getElementById("rsvpModal");
-    document.getElementById("openRsvpBtn").onclick = () => rsvpModal.classList.add("open");
-    document.getElementById("closeRsvpBtn").onclick = () => rsvpModal.classList.remove("open");
-    rsvpModal.onclick = (e) => { if (e.target === rsvpModal) rsvpModal.classList.remove("open"); };
+    /* ================= WHATSAPP RSVP & CALENDAR ================= */
+    const modal = document.getElementById("rsvpModal");
+    document.getElementById("openRsvpBtn").onclick = () => modal.classList.add("open");
+    document.getElementById("openRsvpFooter").onclick = () => modal.classList.add("open");
+    document.getElementById("closeRsvpBtn").onclick = () => modal.classList.remove("open");
+    modal.onclick = (e) => { if (e.target === modal) modal.classList.remove("open"); };
 
-    document.getElementById("rsvpForm").addEventListener("submit", (e) => {
+    document.getElementById("rsvpForm").onsubmit = (e) => {
       e.preventDefault();
-      const name = document.getElementById("guestName").value.trim();
-      const status = document.getElementById("guestStatus").value;
-      const count = document.getElementById("guestCount").value;
-      const side = document.getElementById("guestSide").value;
+      const name = document.getElementById("gName").value.trim();
+      const status = document.getElementById("gStatus").value;
+      const count = document.getElementById("gCount").value;
+      const msg = `॥ शुभमंगल सावधान ॥%0A*Wedding RSVP — ${INVITE_CONFIG.groomFull} & ${INVITE_CONFIG.brideFull}*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Status:* ${encodeURIComponent(status)}%0A*Guests:* ${encodeURIComponent(count)}`;
+      window.open(`https://wa.me/${INVITE_CONFIG.whatsappNumber}?text=${msg}`, "_blank");
+      modal.classList.remove("open");
+    };
 
-      const text = `॥ शुभमंगल सावधान ॥%0A` +
-                   `✨ *Wedding RSVP — ${INVITE_CONFIG.groomFirst} & ${INVITE_CONFIG.brideFirst}* ✨%0A%0A` +
-                   `👤 *Name:* ${encodeURIComponent(name)}%0A` +
-                   `💌 *Status:* ${encodeURIComponent(status)}%0A` +
-                   `👥 *Guests:* ${encodeURIComponent(count)}%0A` +
-                   `🎊 *Family Side:* ${encodeURIComponent(side)}`;
-
-      window.open(`https://wa.me/${INVITE_CONFIG.whatsappNumber}?text=${text}`, "_blank");
-      rsvpModal.classList.remove("open");
-    });
-
-    /* ================= .ICS CALENDAR DOWNLOAD ================= */
-    document.getElementById("saveCalendarBtn").addEventListener("click", () => {
+    document.getElementById("saveCalBtn").onclick = () => {
       const start = new Date(INVITE_CONFIG.weddingISO);
       const end = new Date(start.getTime() + 4 * 3600000);
-      const fmt = (d) => d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
-
-      const ics = [
-        "BEGIN:VCALENDAR",
-        "VERSION:2.0",
-        "BEGIN:VEVENT",
-        `DTSTART:${fmt(start)}`,
-        `DTEND:${fmt(end)}`,
-        `SUMMARY:${INVITE_CONFIG.groomFirst} & ${INVITE_CONFIG.brideFirst} Shubh Vivah`,
-        `DESCRIPTION:${INVITE_CONFIG.inviteNote} (${INVITE_CONFIG.hashtag})`,
-        "END:VEVENT",
-        "END:VCALENDAR"
-      ].join("\r\n");
-
-      const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+      const fmt = d => d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+      const ics = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nDTSTART:${fmt(start)}\r\nDTEND:${fmt(end)}\r\nSUMMARY:${INVITE_CONFIG.groomFull} & ${INVITE_CONFIG.brideFull} Wedding\r\nEND:VEVENT\r\nEND:VCALENDAR`;
       const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = `${INVITE_CONFIG.groomFirst}-Weds-${INVITE_CONFIG.brideFirst}.ics`;
+      a.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar" }));
+      a.download = "Wedding-Invite.ics";
       a.click();
-    });
+    };
   </script>
 </body>
 </html>
