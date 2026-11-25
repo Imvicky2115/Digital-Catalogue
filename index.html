@@ -4,41 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="robots" content="noindex, nofollow" />
-  <meta name="theme-color" content="#FAF6F1" />
-  <title>Crumb &amp; Whisk — Artisan Bakery, Custom Cakes &amp; Event Catering | Pune</title>
-  <meta name="description" content="Handcrafted eggless & classic cakes, brownies, cupcakes, and bulk event dessert tables in Pune. Check live slots, build your order bag, and confirm on WhatsApp." />
+  <meta name="theme-color" content="#FBF7F2" />
+  <title>Crumb &amp; Whisk — Artisan Cake &amp; Dessert Catalogue | Pune</title>
+  <meta name="description" content="Handcrafted eggless & classic cakes, brownies, cupcakes, and event dessert tables in Pune. Configure weight, quantity, and delivery slots for instant WhatsApp ordering." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #FAF6F1;
-      --bg-elevated: #FFFFFF;
-      --bg-subtle: #F2EBE2;
-      --bg-press: #E7DDD0;
-      --ink: #1D130F;
-      --ink-secondary: #5C4B43;
-      --ink-muted: #87766D;
-      --accent: #9E422B;
-      --accent-hover: #81321E;
-      --accent-soft: #FAF0EC;
-      --veg: #197A32;
-      --veg-soft: #E8F6EC;
-      --egg: #9A5B13;
-      --egg-soft: #FDF3E6;
-      --wa: #1B9349;
-      --wa-hover: #14773A;
-      --border: rgba(29, 19, 15, 0.08);
-      --border-strong: rgba(29, 19, 15, 0.14);
-      --shadow-xs: 0 2px 10px rgba(29, 19, 15, 0.04);
-      --shadow-sm: 0 10px 28px -6px rgba(29, 19, 15, 0.07);
-      --shadow-modal: 0 -12px 44px rgba(18, 11, 8, 0.24);
-      --radius-xl: 24px;
-      --radius-lg: 18px;
-      --radius-md: 14px;
-      --radius-pill: 999px;
-      --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
-      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --bg: #FBF7F2;
+      --surface: #FFFFFF;
+      --surface-warm: #F4EDE4;
+      --surface-press: #E8DEC9;
+      --espresso: #1B110D;
+      --espresso-soft: #2D1D17;
+      --ink: #1B110D;
+      --ink-body: #594941;
+      --ink-muted: #8B7A71;
+      --terracotta: #A24129;
+      --terracotta-dark: #82301C;
+      --terracotta-tint: #FBF0EC;
+      --veg: #187932;
+      --veg-tint: #E8F6EC;
+      --egg: #9E5A10;
+      --egg-tint: #FDF2E4;
+      --wa: #1A8F46;
+      --wa-dark: #137237;
+      --line: rgba(27, 17, 13, 0.08);
+      --line-strong: rgba(27, 17, 13, 0.14);
+      --shadow-card: 0 10px 30px -10px rgba(27, 17, 13, 0.08), 0 2px 6px rgba(27, 17, 13, 0.03);
+      --shadow-hover: 0 18px 38px -12px rgba(27, 17, 13, 0.14);
+      --shadow-sheet: 0 -14px 48px rgba(16, 10, 7, 0.26);
+      --r-xl: 24px;
+      --r-lg: 20px;
+      --r-md: 14px;
+      --r-pill: 999px;
+      --spring: cubic-bezier(0.22, 1, 0.36, 1);
+      --safe-b: env(safe-area-inset-bottom, 0px);
     }
 
     *, *::before, *::after {
@@ -55,11 +57,11 @@
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg);
+      background: var(--bg);
       color: var(--ink);
       line-height: 1.5;
       overflow-x: hidden;
-      padding-bottom: calc(104px + var(--safe-bottom));
+      padding-bottom: calc(98px + var(--safe-b));
       -webkit-font-smoothing: antialiased;
     }
 
@@ -68,45 +70,34 @@
       letter-spacing: -0.015em;
     }
 
-    /* Concept Strip */
-    .concept-bar {
-      background: var(--ink);
-      color: #EAE0D5;
+    /* Top Concept Strip */
+    .concept-strip {
+      background: var(--espresso);
+      color: #E5D9CC;
       font-size: 0.72rem;
       font-weight: 500;
       text-align: center;
       padding: 8px 16px;
-      letter-spacing: 0.025em;
+      letter-spacing: 0.02em;
     }
+    .concept-strip strong { color: #E8B874; font-weight: 600; }
 
-    .concept-bar strong {
-      color: #E5B472;
-      font-weight: 600;
-    }
-
-    /* Layout Container */
     .wrap {
-      max-width: 1140px;
+      max-width: 1160px;
       margin: 0 auto;
-      padding-left: 18px;
-      padding-right: 18px;
+      padding: 0 18px;
     }
-
     @media (min-width: 768px) {
-      .wrap {
-        padding-left: 32px;
-        padding-right: 32px;
-      }
+      .wrap { padding: 0 32px; }
     }
 
-    /* Spacious Header */
+    /* Breathing Editorial Header */
     header {
-      padding-top: 22px;
-      padding-bottom: 18px;
+      padding: 22px 0 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
+      gap: 16px;
     }
 
     .brand {
@@ -116,232 +107,200 @@
       min-width: 0;
     }
 
-    .brand-monogram {
+    .brand-seal {
       width: 50px;
       height: 50px;
       border-radius: 16px;
-      background: linear-gradient(145deg, #2B1A14, #632D1E);
+      background: linear-gradient(145deg, #281812, #612B1D);
       color: #FDF7F0;
       display: grid;
       place-items: center;
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.45rem;
       font-weight: 700;
-      letter-spacing: 0.02em;
-      box-shadow: 0 8px 20px rgba(43, 26, 20, 0.18);
+      box-shadow: 0 8px 20px rgba(40, 24, 18, 0.18);
       flex-shrink: 0;
-      transition: transform 0.3s var(--ease-spring);
     }
 
-    .brand:hover .brand-monogram {
-      transform: rotate(-4deg) scale(1.04);
-    }
-
-    .brand-copy {
+    .brand-text {
       display: flex;
       flex-direction: column;
       gap: 4px;
       min-width: 0;
     }
 
-    .brand-copy h1 {
+    .brand-text h1 {
       font-size: 1.65rem;
       font-weight: 700;
       line-height: 1.05;
-      color: var(--ink);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    .brand-sub {
+    .brand-loc {
       display: flex;
       align-items: center;
       gap: 7px;
-      font-size: 0.76rem;
+      font-size: 0.77rem;
       font-weight: 500;
-      color: var(--ink-secondary);
-      line-height: 1.2;
+      color: var(--ink-body);
     }
 
-    .pulse-dot {
+    .live-dot {
       width: 7px;
       height: 7px;
       border-radius: 50%;
       background: var(--veg);
-      box-shadow: 0 0 0 0 rgba(25, 122, 50, 0.45);
-      animation: statusPulse 2.2s infinite ease-out;
+      animation: pulseRing 2.2s infinite ease-out;
       flex-shrink: 0;
     }
 
-    @keyframes statusPulse {
-      0% { box-shadow: 0 0 0 0 rgba(25, 122, 50, 0.45); }
-      70% { box-shadow: 0 0 0 6px rgba(25, 122, 50, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(25, 122, 50, 0); }
+    @keyframes pulseRing {
+      0% { box-shadow: 0 0 0 0 rgba(24, 121, 50, 0.45); }
+      70% { box-shadow: 0 0 0 6px rgba(24, 121, 50, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(24, 121, 50, 0); }
     }
 
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-
-    /* Tactile Pill Button */
-    .btn-ghost {
+    .btn-pill-outline {
       height: 44px;
-      padding: 0 15px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-strong);
-      background: var(--bg-elevated);
+      padding: 0 16px;
+      border-radius: var(--r-pill);
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
       color: var(--ink);
       font-family: inherit;
-      font-size: 0.8rem;
+      font-size: 0.81rem;
       font-weight: 600;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 7px;
       cursor: pointer;
-      box-shadow: var(--shadow-xs);
-      transition: transform 0.18s var(--ease-spring), background-color 0.18s ease;
-      flex-shrink: 0;
       text-decoration: none;
+      box-shadow: 0 2px 8px rgba(27, 17, 13, 0.04);
+      transition: transform 0.18s var(--spring), background 0.18s ease;
+      flex-shrink: 0;
     }
+    .btn-pill-outline:hover { background: var(--surface-warm); }
+    .btn-pill-outline:active { transform: scale(0.95); }
 
-    .btn-ghost:hover { background: var(--bg-subtle); }
-    .btn-ghost:active { transform: scale(0.95); background: var(--bg-press); }
-
-    /* Live Slot Availability Strip */
-    .slot-strip {
-      margin-bottom: 16px;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 12px 16px;
+    /* Live Kitchen Slot Bar */
+    .slot-bar {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 13px 16px;
+      margin-bottom: 18px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      box-shadow: var(--shadow-xs);
+      box-shadow: 0 2px 10px rgba(27, 17, 13, 0.03);
     }
 
-    .slot-status {
+    .slot-left {
       display: flex;
       align-items: center;
       gap: 10px;
       font-size: 0.81rem;
-      color: var(--ink);
     }
 
-    .slot-badge {
-      background: var(--veg-soft);
-      color: #125C25;
+    .slot-pill {
+      background: var(--veg-tint);
+      color: #125E26;
       font-size: 0.71rem;
       font-weight: 700;
       padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      white-space: nowrap;
+      border-radius: var(--r-pill);
     }
 
-    .slot-times {
+    .slot-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       font-size: 0.72rem;
-      color: var(--ink-secondary);
     }
 
-    .time-chip {
+    .s-chip {
       background: var(--bg);
-      border: 1px solid var(--border);
+      border: 1px solid var(--line);
       padding: 4px 9px;
       border-radius: 8px;
       font-weight: 600;
+      color: var(--ink-body);
     }
-
-    .time-chip.full {
+    .s-chip.closed {
       text-decoration: line-through;
-      opacity: 0.5;
+      opacity: 0.48;
     }
 
-    /* Editorial Hero Card */
-    .hero {
-      margin-bottom: 18px;
-    }
-
-    .hero-surface {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
-      padding: 22px 20px;
-      box-shadow: var(--shadow-sm);
+    /* Hero Card */
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-xl);
+      padding: 24px 22px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-card);
       display: grid;
-      gap: 18px;
-      animation: heroReveal 0.45s var(--ease-spring) both;
-    }
-
-    @keyframes heroReveal {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      gap: 20px;
     }
 
     @media (min-width: 840px) {
-      .hero-surface {
-        grid-template-columns: 1.4fr 0.9fr;
+      .hero-card {
+        grid-template-columns: 1.45fr 0.85fr;
         align-items: center;
-        padding: 28px 34px;
+        padding: 32px 36px;
         gap: 32px;
       }
     }
 
-    .hero-eyebrow {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      font-size: 0.72rem;
+      gap: 6px;
+      font-size: 0.71rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--accent);
-      background: var(--accent-soft);
+      color: var(--terracotta);
+      background: var(--terracotta-tint);
       padding: 6px 12px;
-      border-radius: var(--radius-pill);
+      border-radius: var(--r-pill);
       width: fit-content;
     }
 
-    .hero-main h2 {
-      font-size: 1.92rem;
+    .hero-card h2 {
+      font-size: 1.95rem;
       line-height: 1.08;
       font-weight: 700;
       margin-top: 12px;
-      color: var(--ink);
     }
-
     @media (min-width: 768px) {
-      .hero-main h2 { font-size: 2.5rem; }
+      .hero-card h2 { font-size: 2.55rem; }
     }
 
-    .hero-main p {
+    .hero-card p {
       font-size: 0.86rem;
-      color: var(--ink-secondary);
+      color: var(--ink-body);
       margin-top: 8px;
       max-width: 520px;
     }
 
-    .hero-actions {
+    .hero-cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 18px;
     }
 
-    .btn-primary {
+    .btn-dark {
       height: 46px;
       padding: 0 22px;
-      border-radius: var(--radius-pill);
-      background: var(--ink);
+      border-radius: var(--r-pill);
+      background: var(--espresso);
       color: #FFF9F3;
       font-family: inherit;
       font-size: 0.84rem;
@@ -353,158 +312,118 @@
       gap: 8px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(29, 19, 15, 0.16);
-      transition: transform 0.18s var(--ease-spring), background-color 0.18s ease;
+      box-shadow: 0 8px 20px rgba(27, 17, 13, 0.16);
+      transition: transform 0.18s var(--spring), background 0.18s ease;
     }
+    .btn-dark:hover { background: var(--espresso-soft); }
+    .btn-dark:active { transform: scale(0.96); }
 
-    .btn-primary:hover { background: #33221B; }
-    .btn-primary:active { transform: scale(0.96); }
-
-    .trust-grid {
+    .stats-panel {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8px;
       background: var(--bg);
-      padding: 14px 10px;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-    }
-
-    .trust-item {
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 16px 10px;
       text-align: center;
-      padding: 2px;
     }
-
-    .trust-item strong {
+    .stats-panel strong {
       display: block;
-      font-size: 0.94rem;
+      font-size: 0.96rem;
       font-weight: 700;
       color: var(--ink);
     }
-
-    .trust-item span {
+    .stats-panel span {
       display: block;
       font-size: 0.7rem;
       color: var(--ink-muted);
       margin-top: 2px;
     }
 
-    /* Customer Reviews Social Proof Section */
-    .reviews-section {
-      margin-bottom: 20px;
+    /* Customer Reviews Strip */
+    .reviews-wrap {
+      margin-bottom: 22px;
     }
-
-    .reviews-head {
+    .reviews-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
       margin-bottom: 12px;
     }
-
-    .rating-pill {
+    .rating-chip {
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
+      background: var(--surface);
+      border: 1px solid var(--line);
       padding: 6px 13px;
-      border-radius: var(--radius-pill);
+      border-radius: var(--r-pill);
       font-size: 0.78rem;
       font-weight: 700;
-      box-shadow: var(--shadow-xs);
     }
+    .rating-chip .stars { color: #D98A1C; }
 
-    .stars {
-      color: #D98A1C;
-      letter-spacing: 1px;
-    }
-
-    .reviews-rail {
+    .reviews-grid {
       display: grid;
       grid-auto-flow: column;
-      grid-auto-columns: minmax(265px, 1fr);
+      grid-auto-columns: minmax(270px, 1fr);
       gap: 12px;
       overflow-x: auto;
       scroll-snap-type: x proximity;
       scrollbar-width: none;
-      padding-bottom: 4px;
     }
-
-    .reviews-rail::-webkit-scrollbar { display: none; }
-
+    .reviews-grid::-webkit-scrollbar { display: none; }
     @media (min-width: 840px) {
-      .reviews-rail {
+      .reviews-grid {
         grid-auto-flow: row;
         grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    .review-card {
+    .rev-card {
       scroll-snap-align: start;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 15px 16px;
-      box-shadow: var(--shadow-xs);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      padding: 16px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: 10px;
     }
-
-    .review-card p {
-      font-size: 0.8rem;
-      color: var(--ink-secondary);
-      line-height: 1.48;
-    }
-
-    .reviewer-meta {
+    .rev-card p { font-size: 0.8rem; color: var(--ink-body); }
+    .rev-author {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       font-size: 0.72rem;
     }
+    .rev-author strong { color: var(--ink); }
+    .rev-author span { color: var(--ink-muted); }
 
-    .reviewer-meta strong {
-      color: var(--ink);
-      font-weight: 700;
-    }
-
-    .reviewer-meta span {
-      color: var(--ink-muted);
-    }
-
-    /* Sticky Filter Dock */
-    .filter-dock {
+    /* Sticky Filter Bar */
+    .filter-bar {
       position: sticky;
       top: 0;
       z-index: 30;
-      background: rgba(250, 246, 241, 0.94);
+      background: rgba(251, 247, 242, 0.94);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 0 13px;
+      border-bottom: 1px solid var(--line);
+      padding: 12px 0;
     }
 
-    .dock-stack {
+    .filter-stack {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
 
-    .search-bar-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .search-wrap {
+    .search-field {
       position: relative;
-      flex: 1;
+      width: 100%;
     }
-
-    .search-wrap svg {
+    .search-field svg {
       position: absolute;
       left: 15px;
       top: 50%;
@@ -512,73 +431,60 @@
       color: var(--ink-muted);
       pointer-events: none;
     }
-
-    .search-input {
+    .search-field input {
       width: 100%;
       height: 44px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-strong);
-      background: var(--bg-elevated);
+      border-radius: var(--r-pill);
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
       padding: 0 16px 0 42px;
       font-family: inherit;
       font-size: 0.86rem;
       color: var(--ink);
       outline: none;
-      box-shadow: var(--shadow-xs);
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .search-field input:focus {
+      border-color: var(--terracotta);
+      box-shadow: 0 0 0 3px rgba(162, 65, 41, 0.12);
     }
 
-    .search-input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(158, 66, 43, 0.12);
-    }
-
-    /* 3-Way Dietary Filter Pills */
-    .diet-rail {
+    .rails-row {
       display: flex;
-      gap: 7px;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .scroll-rail {
+      display: flex;
+      gap: 8px;
       overflow-x: auto;
       scrollbar-width: none;
+      padding: 1px 0;
     }
-    .diet-rail::-webkit-scrollbar { display: none; }
+    .scroll-rail::-webkit-scrollbar { display: none; }
 
-    .diet-filter-btn {
+    .diet-pill {
       height: 36px;
       padding: 0 13px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-strong);
-      background: var(--bg-elevated);
+      border-radius: var(--r-pill);
+      border: 1px solid var(--line-strong);
+      background: var(--surface);
       font-family: inherit;
       font-size: 0.77rem;
       font-weight: 600;
-      color: var(--ink-secondary);
+      color: var(--ink-body);
       display: inline-flex;
       align-items: center;
       gap: 6px;
       cursor: pointer;
       white-space: nowrap;
-      transition: all 0.16s ease;
+      transition: all 0.15s ease;
     }
+    .diet-pill.active[data-diet="all"] { background: var(--espresso); color: #FFF9F3; border-color: var(--espresso); }
+    .diet-pill.active[data-diet="eggless"] { background: var(--veg-tint); color: #125E26; border-color: var(--veg); }
+    .diet-pill.active[data-diet="egg"] { background: var(--egg-tint); color: #7C4408; border-color: var(--egg); }
 
-    .diet-filter-btn.active[data-diet-filter="all"] {
-      background: var(--ink);
-      color: #FFF9F3;
-      border-color: var(--ink);
-    }
-
-    .diet-filter-btn.active[data-diet-filter="eggless"] {
-      background: var(--veg-soft);
-      color: #125C25;
-      border-color: var(--veg);
-    }
-
-    .diet-filter-btn.active[data-diet-filter="egg"] {
-      background: var(--egg-soft);
-      color: #7A4409;
-      border-color: var(--egg);
-    }
-
-    .diet-dot {
+    .dot-ind {
       width: 12px;
       height: 12px;
       border-radius: 3px;
@@ -586,471 +492,434 @@
       place-items: center;
       flex-shrink: 0;
     }
+    .dot-ind.veg { border: 1.5px solid var(--veg); }
+    .dot-ind.veg::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--veg); }
+    .dot-ind.egg { border: 1.5px solid var(--egg); }
+    .dot-ind.egg::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--egg); }
 
-    .diet-dot.veg { border: 1.5px solid var(--veg); }
-    .diet-dot.veg::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--veg); }
-
-    .diet-dot.egg { border: 1.5px solid var(--egg); }
-    .diet-dot.egg::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--egg); }
-
-    /* Category Rail */
-    .pill-rail {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      scroll-snap-type: x proximity;
-      scrollbar-width: none;
-      padding: 2px 0;
-    }
-
-    .pill-rail::-webkit-scrollbar { display: none; }
-
-    .cat-btn {
-      scroll-snap-align: start;
-      height: 39px;
+    .cat-pill {
+      height: 38px;
       padding: 0 15px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border);
-      background: var(--bg-elevated);
-      color: var(--ink-secondary);
+      border-radius: var(--r-pill);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink-body);
       font-family: inherit;
       font-size: 0.8rem;
       font-weight: 600;
       white-space: nowrap;
       cursor: pointer;
-      transition: transform 0.16s var(--ease-spring), background-color 0.18s ease, color 0.18s ease;
+      transition: all 0.16s ease;
     }
-
-    .cat-btn:active { transform: scale(0.95); }
-
-    .cat-btn.active {
-      background: var(--ink);
+    .cat-pill.active {
+      background: var(--espresso);
       color: #FFF9F3;
-      border-color: var(--ink);
-      box-shadow: 0 4px 12px rgba(29, 19, 15, 0.16);
+      border-color: var(--espresso);
     }
 
-    /* Catalogue Section */
-    main {
-      padding-top: 22px;
-    }
+    /* Upgraded Gallery-Style Product Cards */
+    main { padding-top: 24px; }
 
-    .catalog-header {
+    .sec-head {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      margin-bottom: 16px;
-      gap: 12px;
+      margin-bottom: 18px;
     }
-
-    .catalog-header h3 {
-      font-size: 1.65rem;
-      font-weight: 700;
-      line-height: 1.1;
-    }
-
-    .count-badge {
+    .sec-head h3 { font-size: 1.7rem; font-weight: 700; }
+    .sec-count {
       font-size: 0.76rem;
       font-weight: 600;
       color: var(--ink-muted);
-      background: var(--bg-subtle);
+      background: var(--surface-warm);
       padding: 5px 11px;
-      border-radius: var(--radius-pill);
+      border-radius: var(--r-pill);
     }
 
-    /* Product Grid */
-    .product-grid {
+    /* 1-col on small phones for luxury card breathing room, 2-col on wide phones, 3-col desktop */
+    .cards-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      grid-template-columns: 1fr;
+      gap: 18px;
     }
-
-    @media (min-width: 720px) {
-      .product-grid {
+    @media (min-width: 520px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+    }
+    @media (min-width: 960px) {
+      .cards-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 20px;
+        gap: 24px;
       }
     }
 
-    @media (min-width: 1040px) {
-      .product-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 22px;
-      }
-    }
-
-    .item-card {
-      background: var(--bg-elevated);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
+    .p-card {
+      background: var(--surface);
+      border-radius: var(--r-xl);
+      border: 1px solid var(--line);
       overflow: hidden;
-      box-shadow: var(--shadow-xs);
+      box-shadow: var(--shadow-card);
       display: flex;
       flex-direction: column;
       cursor: pointer;
-      content-visibility: auto;
-      contain-intrinsic-size: 330px;
-      opacity: 0;
-      animation: cardIn 0.36s var(--ease-spring) forwards;
-      transition: transform 0.24s var(--ease-spring), box-shadow 0.24s var(--ease-spring), border-color 0.24s ease;
+      transition: transform 0.25s var(--spring), box-shadow 0.25s var(--spring);
     }
-
-    @keyframes cardIn {
-      from { opacity: 0; transform: translateY(12px) scale(0.985); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-
     @media (hover: hover) {
-      .item-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-sm);
-        border-color: var(--border-strong);
+      .p-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
       }
     }
+    .p-card:active { transform: scale(0.985); }
 
-    .item-card:active { transform: scale(0.98); }
-
-    .thumb-box {
+    .p-media {
       position: relative;
-      aspect-ratio: 4 / 4.1;
-      background: linear-gradient(110deg, #EFE7DD 30%, #F7F2EC 50%, #EFE7DD 70%);
-      background-size: 200% 100%;
-      animation: shimmer 1.4s infinite linear;
+      aspect-ratio: 16 / 11;
+      background: var(--surface-warm);
       overflow: hidden;
     }
-
-    @keyframes shimmer {
-      to { background-position-x: -200%; }
-    }
-
-    .thumb-box img {
+    .p-media img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.45s var(--ease-spring);
+      transition: transform 0.5s var(--spring);
     }
-
     @media (hover: hover) {
-      .item-card:hover .thumb-box img { transform: scale(1.05); }
+      .p-card:hover .p-media img { transform: scale(1.05); }
     }
 
-    .tag-pill {
+    .p-tag {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(29, 19, 15, 0.85);
-      backdrop-filter: blur(6px);
+      top: 12px;
+      left: 12px;
+      background: rgba(27, 17, 13, 0.86);
+      backdrop-filter: blur(8px);
       color: #FFF8F1;
-      font-size: 0.64rem;
+      font-size: 0.68rem;
       font-weight: 700;
-      letter-spacing: 0.03em;
-      padding: 4px 9px;
-      border-radius: var(--radius-pill);
+      padding: 5px 11px;
+      border-radius: var(--r-pill);
+      letter-spacing: 0.02em;
     }
+    .p-tag.festive { background: var(--terracotta); }
 
-    .tag-pill.festive { background: var(--accent); }
-
-    .diet-badges {
+    .p-diet-chip {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      display: flex;
-      gap: 4px;
+      top: 12px;
+      right: 12px;
       background: rgba(255, 255, 255, 0.95);
-      padding: 4px 6px;
-      border-radius: 7px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+      backdrop-filter: blur(6px);
+      padding: 5px 9px;
+      border-radius: var(--r-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.67rem;
+      font-weight: 700;
+      color: var(--ink);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     }
 
-    .item-content {
-      padding: 13px 13px 14px;
+    .p-body {
+      padding: 18px 18px 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       flex: 1;
-      gap: 12px;
+      gap: 16px;
     }
 
-    .item-kicker {
-      font-size: 0.65rem;
+    .p-meta-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.7rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--accent);
+      color: var(--terracotta);
     }
 
-    .item-name {
+    .p-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.24rem;
+      font-size: 1.42rem;
       font-weight: 700;
       line-height: 1.15;
       color: var(--ink);
-      margin-top: 3px;
+      margin-top: 4px;
     }
 
-    .item-summary {
-      font-size: 0.76rem;
-      color: var(--ink-secondary);
-      margin-top: 5px;
+    .p-desc {
+      font-size: 0.82rem;
+      color: var(--ink-body);
+      margin-top: 6px;
+      line-height: 1.48;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
 
-    .item-bottom {
+    .p-actions {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 8px;
-      padding-top: 10px;
-      border-top: 1px solid var(--border);
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
     }
 
-    .price-stack {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .price-sub {
-      font-size: 0.65rem;
+    .p-price-box small {
+      display: block;
+      font-size: 0.7rem;
       color: var(--ink-muted);
       font-weight: 500;
     }
-
-    .price-num {
-      font-size: 1rem;
+    .p-price-box strong {
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--ink);
     }
 
-    .btn-customize {
-      height: 36px;
-      padding: 0 13px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(158, 66, 43, 0.25);
-      background: var(--accent-soft);
-      color: var(--accent);
+    .btn-card-cta {
+      height: 42px;
+      padding: 0 18px;
+      border-radius: var(--r-pill);
+      background: var(--espresso);
+      color: #FFF9F3;
+      border: none;
       font-family: inherit;
-      font-size: 0.76rem;
+      font-size: 0.8rem;
       font-weight: 700;
       cursor: pointer;
-      transition: background-color 0.18s ease, color 0.18s ease, transform 0.15s ease;
-    }
-
-    @media (hover: hover) {
-      .item-card:hover .btn-customize {
-        background: var(--accent);
-        color: #FFFFFF;
-        border-color: var(--accent);
-      }
-    }
-
-    /* High-Ticket Events & Party Bulk Section */
-    .events-section {
-      margin-top: 34px;
-      background: linear-gradient(135deg, #241611 0%, #3E2218 65%, #5C2B1C 100%);
-      color: #FFF8F2;
-      border-radius: var(--radius-xl);
-      padding: 24px 20px;
-      box-shadow: 0 14px 34px rgba(29, 19, 15, 0.18);
-    }
-
-    @media (min-width: 768px) {
-      .events-section {
-        padding: 32px 34px;
-      }
-    }
-
-    .events-top {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      max-width: 640px;
-    }
-
-    .events-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      transition: transform 0.16s var(--spring), background 0.18s ease;
+    }
+    .btn-card-cta:hover { background: var(--terracotta); }
+    .btn-card-cta:active { transform: scale(0.95); }
+
+    /* Events & Bulk Catering Section */
+    .events-box {
+      margin-top: 38px;
+      background: linear-gradient(135deg, #22140F 0%, #3C2017 65%, #5B2A1B 100%);
+      color: #FFF8F2;
+      border-radius: var(--r-xl);
+      padding: 26px 22px;
+      box-shadow: 0 16px 36px rgba(27, 17, 13, 0.18);
+    }
+    @media (min-width: 768px) {
+      .events-box { padding: 34px 36px; }
+    }
+
+    .events-badge {
+      display: inline-block;
       background: rgba(255, 255, 255, 0.12);
       color: #F4C88A;
       font-size: 0.71rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      padding: 5px 11px;
-      border-radius: var(--radius-pill);
-      width: fit-content;
+      padding: 5px 12px;
+      border-radius: var(--r-pill);
     }
 
-    .events-top h3 {
-      font-size: 1.85rem;
+    .events-box h3 {
+      font-size: 1.9rem;
       line-height: 1.1;
-      font-weight: 700;
+      margin-top: 10px;
     }
-
-    .events-top p {
+    .events-box > p {
       font-size: 0.85rem;
       color: rgba(255, 248, 242, 0.82);
+      margin-top: 6px;
+      max-width: 620px;
     }
 
-    .event-packages {
+    .pkg-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 12px;
-      margin-top: 20px;
+      gap: 14px;
+      margin-top: 22px;
     }
-
     @media (min-width: 768px) {
-      .event-packages {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-      }
+      .pkg-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
     }
 
-    .pkg-card {
+    .pkg-item {
       background: rgba(255, 255, 255, 0.07);
       border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius-lg);
-      padding: 16px;
+      border-radius: var(--r-lg);
+      padding: 18px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 12px;
+      gap: 14px;
     }
-
-    .pkg-card h4 {
+    .pkg-item h4 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
+      font-size: 1.38rem;
       font-weight: 700;
-      color: #FFF8F2;
     }
-
-    .pkg-card p {
-      font-size: 0.78rem;
+    .pkg-item p {
+      font-size: 0.8rem;
       color: rgba(255, 248, 242, 0.78);
       margin-top: 4px;
     }
-
-    .pkg-footer {
+    .pkg-bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 10px;
+      padding-top: 12px;
       border-top: 1px solid rgba(255, 255, 255, 0.12);
     }
-
-    .pkg-price {
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: #F4C88A;
-    }
-
-    .btn-pkg {
-      height: 36px;
-      padding: 0 13px;
-      border-radius: var(--radius-pill);
+    .pkg-bottom strong { color: #F4C88A; font-size: 0.94rem; }
+    .btn-pkg-wa {
+      height: 38px;
+      padding: 0 14px;
+      border-radius: var(--r-pill);
       background: #25D366;
       color: #0B2615;
-      font-size: 0.76rem;
+      font-size: 0.77rem;
       font-weight: 700;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: transform 0.15s ease;
     }
 
-    .btn-pkg:active { transform: scale(0.95); }
-
-    /* Empty Search State */
-    .empty-box {
-      display: none;
-      text-align: center;
-      padding: 48px 20px;
-      background: var(--bg-elevated);
-      border: 1px dashed var(--border-strong);
-      border-radius: var(--radius-xl);
+    /* Upgraded Boutique Footer */
+    .site-footer {
+      margin-top: 44px;
+      background: var(--espresso);
+      color: #E7DBD0;
+      padding: 40px 0 32px;
     }
 
-    /* Footer */
-    footer {
-      margin-top: 32px;
-      padding: 20px 16px;
-      border-top: 1px solid var(--border);
-      text-align: center;
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 36px;
+      }
+    }
+
+    .footer-brand h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      color: #FFF8F2;
+      line-height: 1.1;
+    }
+    .footer-brand p {
+      font-size: 0.82rem;
+      color: rgba(231, 219, 208, 0.76);
+      margin-top: 8px;
+      max-width: 340px;
+    }
+    .fssai-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 14px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.72rem;
+      color: #F4C88A;
+      font-weight: 600;
+    }
+
+    .footer-col h5 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #F4C88A;
+      margin-bottom: 12px;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      font-size: 0.82rem;
+    }
+    .footer-col a {
+      color: rgba(231, 219, 208, 0.85);
+      text-decoration: none;
+    }
+    .footer-col a:hover { color: #FFFFFF; text-decoration: underline; }
+
+    .footer-bottom {
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
       font-size: 0.76rem;
-      color: var(--ink-muted);
+      color: rgba(231, 219, 208, 0.65);
     }
-
-    footer a {
-      color: var(--ink);
+    .footer-bottom a {
+      color: #F4C88A;
       font-weight: 700;
       text-decoration: none;
-      border-bottom: 1px solid var(--border-strong);
     }
 
-    /* Thumb-Friendly Floating Order Bag Dock */
-    .bottom-dock {
+    /* Floating Order Bag Dock */
+    .bag-dock {
       position: fixed;
-      bottom: calc(14px + var(--safe-bottom));
+      bottom: calc(14px + var(--safe-b));
       left: 50%;
       transform: translateX(-50%);
       width: calc(100% - 28px);
-      max-width: 480px;
-      background: rgba(29, 19, 15, 0.96);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      max-width: 490px;
+      background: rgba(27, 17, 13, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       color: #FAF4ED;
       padding: 8px 8px 8px 18px;
-      border-radius: var(--radius-pill);
+      border-radius: var(--r-pill);
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      box-shadow: 0 14px 34px rgba(18, 11, 8, 0.32);
+      box-shadow: 0 14px 36px rgba(16, 10, 7, 0.34);
       z-index: 40;
     }
-
-    .dock-text {
-      font-size: 0.81rem;
-      font-weight: 500;
-      line-height: 1.25;
-    }
-
-    .dock-text strong {
-      color: #F2C382;
-      font-weight: 700;
-    }
-
-    .dock-cta {
+    .bag-dock-info { font-size: 0.82rem; font-weight: 500; }
+    .bag-dock-info strong { color: #F4C88A; font-weight: 700; }
+    .bag-dock-btn {
       height: 42px;
-      padding: 0 16px;
-      border-radius: var(--radius-pill);
+      padding: 0 17px;
+      border-radius: var(--r-pill);
       background: #25D366;
       color: #0B2615;
+      border: none;
       font-family: inherit;
       font-size: 0.8rem;
       font-weight: 700;
-      border: none;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
       white-space: nowrap;
-      flex-shrink: 0;
-      transition: transform 0.16s var(--ease-spring);
+      transition: transform 0.16s var(--spring);
     }
+    .bag-dock-btn:active { transform: scale(0.95); }
 
-    .dock-cta:active { transform: scale(0.95); }
-
-    /* Bottom Sheet Modal (Item Customizer & Order Bag Drawer) */
-    .sheet-overlay {
+    /* Bottom Sheet Modals */
+    .overlay {
       position: fixed;
       inset: 0;
-      background: rgba(18, 11, 8, 0.58);
+      background: rgba(16, 10, 7, 0.6);
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
       z-index: 60;
@@ -1058,61 +927,39 @@
       align-items: flex-end;
       justify-content: center;
     }
-
-    .sheet-overlay.open {
-      display: flex;
-      animation: fadeBg 0.22s ease forwards;
-    }
-
+    .overlay.open { display: flex; }
     @media (min-width: 640px) {
-      .sheet-overlay {
-        align-items: center;
-        padding: 20px;
-      }
+      .overlay { align-items: center; padding: 20px; }
     }
 
-    @keyframes fadeBg {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .sheet-panel {
-      background: var(--bg-elevated);
+    .sheet {
+      background: var(--surface);
       width: 100%;
       max-width: 490px;
       max-height: 92dvh;
       border-radius: 26px 26px 0 0;
-      box-shadow: var(--shadow-modal);
+      box-shadow: var(--shadow-sheet);
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      animation: riseUp 0.3s var(--ease-spring) forwards;
+      animation: sheetUp 0.28s var(--spring) forwards;
     }
-
     @media (min-width: 640px) {
-      .sheet-panel { border-radius: 26px; }
+      .sheet { border-radius: 26px; }
     }
-
-    @keyframes riseUp {
-      from { transform: translateY(40px); opacity: 0.75; }
+    @keyframes sheetUp {
+      from { transform: translateY(36px); opacity: 0.7; }
       to { transform: translateY(0); opacity: 1; }
     }
 
-    .sheet-media {
+    .sheet-banner {
       position: relative;
       height: 185px;
       flex-shrink: 0;
-      background: var(--bg-subtle);
+      background: var(--surface-warm);
     }
-
-    .sheet-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .sheet-close {
+    .sheet-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .btn-x {
       position: absolute;
       top: 14px;
       right: 14px;
@@ -1125,77 +972,57 @@
       display: grid;
       place-items: center;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.16);
     }
 
-    .sheet-scroll {
-      padding: 18px 20px 18px;
+    .sheet-body {
+      padding: 18px 20px;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
 
-    .sheet-head {
+    .sheet-title-row {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 12px;
     }
-
-    .sheet-head h3 {
-      font-size: 1.55rem;
-      line-height: 1.1;
-      margin-top: 2px;
-    }
-
-    .sheet-price {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--accent);
-      white-space: nowrap;
-    }
-
-    .sheet-desc {
-      font-size: 0.82rem;
-      color: var(--ink-secondary);
-      margin-top: -8px;
-    }
-
-    .lead-notice {
+    .sheet-title-row h3 { font-size: 1.58rem; line-height: 1.1; margin-top: 2px; }
+    .sheet-unit-price { font-size: 1.28rem; font-weight: 700; color: var(--terracotta); white-space: nowrap; }
+    .sheet-desc { font-size: 0.82rem; color: var(--ink-body); margin-top: -6px; }
+    .lead-pill {
       font-size: 0.74rem;
       font-weight: 600;
-      color: var(--accent-hover);
-      background: var(--accent-soft);
+      color: var(--terracotta-dark);
+      background: var(--terracotta-tint);
       padding: 7px 11px;
       border-radius: 10px;
     }
 
-    .control-label {
+    .lbl {
       display: block;
       font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: var(--ink-secondary);
+      color: var(--ink-body);
       margin-bottom: 7px;
     }
 
-    .seg-grid {
+    .seg-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8px;
     }
+    .seg-row.two { grid-template-columns: repeat(2, 1fr); }
 
-    .seg-grid.cols-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .seg-btn {
+    .opt-tile {
       min-height: 48px;
       padding: 7px 6px;
-      border-radius: var(--radius-md);
-      border: 1.5px solid var(--border-strong);
+      border-radius: var(--r-md);
+      border: 1.5px solid var(--line-strong);
       background: var(--bg);
       font-family: inherit;
       font-size: 0.81rem;
@@ -1203,28 +1030,67 @@
       color: var(--ink);
       cursor: pointer;
       text-align: center;
-      transition: transform 0.15s var(--ease-spring), border-color 0.18s ease, background-color 0.18s ease;
     }
-
-    .seg-btn small {
+    .opt-tile small {
       display: block;
       font-size: 0.69rem;
       font-weight: 500;
-      color: var(--ink-secondary);
+      color: var(--ink-body);
       margin-top: 2px;
     }
-
-    .seg-btn.selected {
-      border-color: var(--accent);
-      background: var(--accent-soft);
-      color: var(--accent-hover);
+    .opt-tile.selected {
+      border-color: var(--terracotta);
+      background: var(--terracotta-tint);
+      color: var(--terracotta-dark);
     }
 
-    .field-input {
+    /* Tactile Quantity Stepper (- 1 +) */
+    .qty-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--r-md);
+      padding: 8px 12px;
+    }
+    .qty-row span { font-size: 0.84rem; font-weight: 700; color: var(--ink); }
+    .stepper {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--r-pill);
+      padding: 4px 6px;
+    }
+    .step-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: none;
+      background: var(--surface-warm);
+      color: var(--ink);
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: transform 0.14s var(--spring), background 0.15s ease;
+    }
+    .step-btn:active { transform: scale(0.9); background: var(--espresso); color: #fff; }
+    .step-val {
+      font-size: 0.95rem;
+      font-weight: 700;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .txt-input {
       width: 100%;
       height: 45px;
-      border-radius: var(--radius-md);
-      border: 1.5px solid var(--border-strong);
+      border-radius: var(--r-md);
+      border: 1.5px solid var(--line-strong);
       background: var(--bg);
       padding: 0 13px;
       font-family: inherit;
@@ -1232,34 +1098,27 @@
       color: var(--ink);
       outline: none;
     }
+    .txt-input:focus { border-color: var(--terracotta); background: #FFFFFF; }
 
-    .field-input:focus {
-      border-color: var(--accent);
-      background: #FFFFFF;
-    }
-
-    .split-row {
+    .two-cols {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
 
-    .sheet-footer {
-      padding: 12px 20px calc(14px + var(--safe-bottom));
-      background: var(--bg-elevated);
-      border-top: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
+    .sheet-foot {
+      padding: 12px 20px calc(14px + var(--safe-b));
+      background: var(--surface);
+      border-top: 1px solid var(--line);
       flex-shrink: 0;
     }
 
-    .btn-add-bag {
+    .btn-full-dark {
       width: 100%;
       height: 50px;
       border: none;
-      border-radius: var(--radius-pill);
-      background: var(--ink);
+      border-radius: var(--r-pill);
+      background: var(--espresso);
       color: #FFF9F3;
       font-family: inherit;
       font-size: 0.92rem;
@@ -1269,20 +1128,14 @@
       justify-content: center;
       gap: 8px;
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(29, 19, 15, 0.2);
-      transition: transform 0.16s var(--ease-spring);
     }
 
-    .btn-add-bag:active { transform: scale(0.97); }
-
-    .btn-order-submit {
-      position: relative;
-      overflow: hidden;
+    .btn-full-wa {
       width: 100%;
       height: 52px;
       border: none;
-      border-radius: var(--radius-pill);
-      background: linear-gradient(135deg, #23AB57 0%, var(--wa) 100%);
+      border-radius: var(--r-pill);
+      background: linear-gradient(135deg, #22A855 0%, var(--wa) 100%);
       color: #FFFFFF;
       font-family: inherit;
       font-size: 0.94rem;
@@ -1292,179 +1145,128 @@
       justify-content: center;
       gap: 10px;
       cursor: pointer;
-      box-shadow: 0 10px 26px rgba(27, 147, 73, 0.32);
+      box-shadow: 0 10px 26px rgba(26, 143, 70, 0.32);
     }
 
-    .btn-order-submit::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -120%;
-      width: 65%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.26), transparent);
-      transform: skewX(-20deg);
-      animation: ctaSheen 3.4s infinite ease-in-out;
-    }
-
-    @keyframes ctaSheen {
-      0%, 55% { left: -120%; }
-      100% { left: 160%; }
-    }
-
-    .wa-icon {
-      width: 19px;
-      height: 19px;
-      flex-shrink: 0;
-    }
-
-    /* Order Bag Items List */
-    .bag-header {
+    /* Bag Line Items with Inline Stepper */
+    .bag-top {
       padding: 18px 20px 14px;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--line);
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+    .bag-top h3 { font-size: 1.55rem; font-weight: 700; }
 
-    .bag-header h3 {
-      font-size: 1.55rem;
-      font-weight: 700;
-    }
-
-    .bag-item {
+    .bag-row {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
       gap: 12px;
       padding: 12px;
       background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
     }
+    .bag-row-details strong { display: block; font-size: 0.88rem; color: var(--ink); }
+    .bag-row-details span { display: block; font-size: 0.74rem; color: var(--ink-body); margin-top: 2px; }
 
-    .bag-item-info strong {
-      display: block;
-      font-size: 0.88rem;
-      color: var(--ink);
+    .mini-stepper {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--r-pill);
+      padding: 3px 5px;
     }
-
-    .bag-item-info span {
-      display: block;
-      font-size: 0.75rem;
-      color: var(--ink-secondary);
-      margin-top: 2px;
-    }
-
-    .bag-item-right {
-      text-align: right;
-      flex-shrink: 0;
-    }
-
-    .bag-item-right strong {
-      display: block;
-      font-size: 0.92rem;
-      color: var(--ink);
-    }
-
-    .btn-remove {
-      background: none;
+    .mini-stepper button {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
       border: none;
-      color: var(--accent);
-      font-size: 0.72rem;
+      background: var(--surface-warm);
       font-weight: 700;
       cursor: pointer;
-      margin-top: 4px;
-      text-decoration: underline;
     }
+    .mini-stepper span { font-size: 0.82rem; font-weight: 700; min-width: 16px; text-align: center; }
 
     .toast {
       position: fixed;
       top: 18px;
       left: 50%;
       transform: translateX(-50%) translateY(-90px);
-      background: var(--ink);
+      background: var(--espresso);
       color: #FFFFFF;
       padding: 11px 18px;
-      border-radius: var(--radius-pill);
+      border-radius: var(--r-pill);
       font-size: 0.8rem;
       font-weight: 600;
       z-index: 90;
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
-      transition: transform 0.28s var(--ease-spring);
+      transition: transform 0.28s var(--spring);
       pointer-events: none;
     }
-
-    .toast.show {
-      transform: translateX(-50%) translateY(0);
-    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
   </style>
 </head>
 <body>
 
-  <div class="concept-bar">
-    Interactive Bakery Catalogue Concept • Crafted by <strong>NoahStudio</strong>
+  <div class="concept-strip">
+    Interactive Digital Catalogue Concept • Built by <strong>NoahStudio</strong>
   </div>
 
   <header class="wrap">
     <div class="brand">
-      <div class="brand-monogram" aria-hidden="true">C&amp;W</div>
-      <div class="brand-copy">
+      <div class="brand-seal" aria-hidden="true">C&amp;W</div>
+      <div class="brand-text">
         <h1>Crumb &amp; Whisk</h1>
-        <div class="brand-sub">
-          <span class="pulse-dot"></span>
+        <div class="brand-loc">
+          <span class="live-dot"></span>
           <span>Artisan Bakery • Hadapsar &amp; Magarpatta, Pune</span>
         </div>
       </div>
     </div>
-    <div class="header-right">
-      <button type="button" class="btn-ghost" id="shareBtn" aria-label="Share Menu Link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-        <span>Share</span>
-      </button>
-    </div>
+    <button type="button" class="btn-pill-outline" id="shareBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      <span>Share</span>
+    </button>
   </header>
 
-  <!-- Live Slot Availability Strip (Saves Baker Back-and-Forth Time) -->
   <div class="wrap">
-    <div class="slot-strip" aria-label="Live baking slot status">
-      <div class="slot-status">
-        <span class="slot-badge">Today: 2 Slots Left</span>
+    <div class="slot-bar">
+      <div class="slot-left">
+        <span class="slot-pill">Today: 2 Slots Left</span>
         <span>Tomorrow &amp; Weekend: <strong>Open</strong></span>
       </div>
-      <div class="slot-times">
-        <span class="time-chip full">10 AM–1 PM (Full)</span>
-        <span class="time-chip">1 PM–5 PM</span>
-        <span class="time-chip">5 PM–9 PM</span>
+      <div class="slot-chips">
+        <span class="s-chip closed">10 AM–1 PM (Full)</span>
+        <span class="s-chip">1 PM–5 PM</span>
+        <span class="s-chip">5 PM–9 PM</span>
       </div>
     </div>
   </div>
 
-  <section class="wrap hero">
-    <div class="hero-surface">
-      <div class="hero-main">
-        <span class="hero-eyebrow">100% Eggless &amp; Classic Bakes • Pune</span>
-        <h2>Build your multi-item cake &amp; dessert box and order on WhatsApp.</h2>
-        <p>Select multiple cakes, cupcakes, brownies, or hampers into one order bag, pick your live delivery slot, and send a ready-to-bake ticket in seconds.</p>
-        <div class="hero-actions">
-          <a href="#menuSection" class="btn-primary">
-            <span>Browse Menu</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-          </a>
-          <a href="#eventsSection" class="btn-ghost">Events &amp; Bulk Orders</a>
+  <section class="wrap">
+    <div class="hero-card">
+      <div>
+        <span class="eyebrow">100% Eggless &amp; Classic Bakes • Pune</span>
+        <h2>Configure weight, quantity &amp; slots—send your order in one tap.</h2>
+        <p>Add multiple cakes, brownie boxes, cupcakes, or festive hampers into a single Order Bag with live pricing and direct WhatsApp confirmation.</p>
+        <div class="hero-cta-row">
+          <a href="#menuSection" class="btn-dark">Explore Catalogue ↓</a>
+          <a href="#eventsSection" class="btn-pill-outline">Events &amp; Bulk Orders</a>
         </div>
       </div>
-
-      <div class="trust-grid" aria-label="Bakery highlights">
-        <div class="trust-item">
+      <div class="stats-panel">
+        <div>
           <strong>4.9 ★</strong>
           <span>320+ Pune Orders</span>
         </div>
-        <div class="trust-item">
+        <div>
           <strong>Veg &amp; Egg</strong>
           <span>Separate Bakes</span>
         </div>
-        <div class="trust-item">
+        <div>
           <strong>Events</strong>
           <span>20–150 Guests</span>
         </div>
@@ -1472,34 +1274,33 @@
     </div>
   </section>
 
-  <!-- Customer Reviews Strip for Instant Trust -->
-  <section class="wrap reviews-section" aria-label="Customer reviews">
-    <div class="reviews-head">
-      <div class="rating-pill">
+  <section class="wrap reviews-wrap">
+    <div class="reviews-top">
+      <div class="rating-chip">
         <span class="stars">★★★★★</span>
-        <span>4.9/5 from Pune Customers</span>
+        <span>4.9/5 Verified Pune Reviews</span>
       </div>
-      <a href="#eventsSection" style="font-size: 0.77rem; font-weight: 700; color: var(--accent); text-decoration: none;">Party Orders →</a>
+      <a href="#eventsSection" style="font-size: 0.78rem; font-weight: 700; color: var(--terracotta); text-decoration: none;">Bulk Orders →</a>
     </div>
 
-    <div class="reviews-rail">
-      <article class="review-card">
-        <p>"Ordered a 1.5kg Eggless Rose Rasmalai cake + 12 Nutella brownies for my daughter's birthday in Magarpatta. Delivered right on the 5 PM slot!"</p>
-        <div class="reviewer-meta">
+    <div class="reviews-grid">
+      <article class="rev-card">
+        <p>"Ordered a 1.5kg Eggless Rose Rasmalai cake + 2 boxes of Nutella brownies in Magarpatta. Delivered right on the 5 PM slot!"</p>
+        <div class="rev-author">
           <strong>Sneha Kulkarni</strong>
-          <span>Magarpatta City • Verified Order</span>
+          <span>Magarpatta City</span>
         </div>
       </article>
-      <article class="review-card">
-        <p>"The Belgian Dark Chocolate Truffle (with egg) is genuinely bakery-grade—super moist and not overly sweet. Ordering via WhatsApp took 30 seconds."</p>
-        <div class="reviewer-meta">
+      <article class="rev-card">
+        <p>"The Classic Tiramisu Gateau (with egg) is genuinely bakery-grade—super moist and balanced. Selecting quantity and slots took 30 seconds."</p>
+        <div class="rev-author">
           <strong>Rohan Deshmukh</strong>
-          <span>Kharadi • Verified Order</span>
+          <span>Kharadi, Pune</span>
         </div>
       </article>
-      <article class="review-card">
-        <p>"Booked 35 festive dessert hampers for our office Diwali &amp; year-end gifting. Custom ribbon tags and punctual delivery across Hadapsar."</p>
-        <div class="reviewer-meta">
+      <article class="rev-card">
+        <p>"Booked 35 festive dessert hampers for our corporate year-end gifting. Custom ribbon tags and punctual delivery across Hadapsar."</p>
+        <div class="rev-author">
           <strong>Priya Nair</strong>
           <span>Corporate Bulk Order</span>
         </div>
@@ -1507,180 +1308,203 @@
     </div>
   </section>
 
-  <div class="filter-dock" id="menuSection">
-    <div class="wrap dock-stack">
-      <div class="search-bar-row">
-        <div class="search-wrap">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Search truffle, eggless, brownies, tiramisu, hampers..." autocomplete="off" />
+  <div class="filter-bar" id="menuSection">
+    <div class="wrap filter-stack">
+      <div class="search-field">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" id="searchInput" placeholder="Search truffle, tiramisu, eggless, brownies, hampers..." autocomplete="off" />
+      </div>
+
+      <div class="rails-row">
+        <div class="scroll-rail" id="dietRail">
+          <button type="button" class="diet-pill active" data-diet="all">All Bakes</button>
+          <button type="button" class="diet-pill" data-diet="eggless"><span class="dot-ind veg"></span>100% Eggless (Veg)</button>
+          <button type="button" class="diet-pill" data-diet="egg"><span class="dot-ind egg"></span>Classic (With Egg)</button>
         </div>
-      </div>
 
-      <!-- 3-Way Dietary Filter (All | 100% Eggless | With Egg) -->
-      <div class="diet-rail" id="dietFilterRail">
-        <button type="button" class="diet-filter-btn active" data-diet-filter="all">All Bakes</button>
-        <button type="button" class="diet-filter-btn" data-diet-filter="eggless">
-          <span class="diet-dot veg"></span>
-          <span>100% Eggless (Veg)</span>
-        </button>
-        <button type="button" class="diet-filter-btn" data-diet-filter="egg">
-          <span class="diet-dot egg"></span>
-          <span>Classic (With Egg)</span>
-        </button>
-      </div>
-
-      <div class="pill-rail" id="categoryRail" role="tablist" aria-label="Bakery categories">
-        <button type="button" class="cat-btn active" data-cat="All">All Categories</button>
-        <button type="button" class="cat-btn" data-cat="Celebration Cakes">Celebration Cakes</button>
-        <button type="button" class="cat-btn" data-cat="Bento & Cupcakes">Bento &amp; Cupcakes</button>
-        <button type="button" class="cat-btn" data-cat="Brownies & Tubs">Brownies &amp; Tubs</button>
-        <button type="button" class="cat-btn" data-cat="Tea Cakes & Cookies">Tea Cakes &amp; Cookies</button>
-        <button type="button" class="cat-btn" data-cat="Festive Hampers">Festive Hampers</button>
+        <div class="scroll-rail" id="catRail">
+          <button type="button" class="cat-pill active" data-cat="All">All Categories</button>
+          <button type="button" class="cat-pill" data-cat="Celebration Cakes">Celebration Cakes</button>
+          <button type="button" class="cat-pill" data-cat="Bento & Cupcakes">Bento &amp; Cupcakes</button>
+          <button type="button" class="cat-pill" data-cat="Brownies & Tubs">Brownies &amp; Tubs</button>
+          <button type="button" class="cat-pill" data-cat="Tea Cakes & Cookies">Tea Cakes &amp; Cookies</button>
+          <button type="button" class="cat-pill" data-cat="Festive Hampers">Festive Hampers</button>
+        </div>
       </div>
     </div>
   </div>
 
   <main class="wrap">
-    <div class="catalog-header">
-      <h3 id="sectionTitle">Signature Menu</h3>
-      <span class="count-badge" id="itemCounter">11 items</span>
+    <div class="sec-head">
+      <h3 id="secTitle">Signature Menu</h3>
+      <span class="sec-count" id="secCount">11 items</span>
     </div>
 
-    <div class="product-grid" id="productGrid"></div>
+    <div class="cards-grid" id="cardsGrid"></div>
 
-    <div class="empty-box" id="emptyBox">
-      <h4>No matching bakes found</h4>
-      <p>Try a different flavour keyword or reset your active filters.</p>
-      <button type="button" class="btn-ghost" id="resetFiltersBtn" style="margin-top: 12px;">Reset Filters</button>
-    </div>
+    <section class="events-box" id="eventsSection">
+      <span class="events-badge">High-Ticket Events &amp; Bulk Catering</span>
+      <h3>Planning a Birthday Party, Wedding, or Corporate Event?</h3>
+      <p>Custom tiered centerpieces, dessert grazing tables, and branded return-gift hampers for 20 to 150+ guests.</p>
 
-    <!-- High-Revenue Events, Weddings & Corporate Bulk Section -->
-    <section class="events-section" id="eventsSection">
-      <div class="events-top">
-        <span class="events-pill">High-Value Events &amp; Bulk Catering</span>
-        <h3>Planning a Birthday Party, Wedding, or Corporate Event?</h3>
-        <p>Boost your celebration with custom tiered cakes, dessert grazing tables, and branded return-gift boxes—with special bulk pricing for 20 to 150+ guests.</p>
-      </div>
-
-      <div class="event-packages">
-        <article class="pkg-card">
+      <div class="pkg-grid">
+        <article class="pkg-item">
           <div>
             <h4>Kids &amp; Milestone Birthday Table</h4>
-            <p>2kg Custom Theme Cake + 18 matching cupcakes + 12 cake pops or brownie bites.</p>
+            <p>2kg Custom Theme Cake + 18 matching cupcakes + 12 brownie bites.</p>
           </div>
-          <div class="pkg-footer">
-            <span class="pkg-price">From ₹3,800</span>
-            <a class="btn-pkg" href="#" data-event-pkg="Kids & Milestone Birthday Table (2kg Theme Cake + 18 Cupcakes + 12 Brownie Bites)">Enquire →</a>
+          <div class="pkg-bottom">
+            <strong>From ₹3,800</strong>
+            <a class="btn-pkg-wa" href="#" data-pkg="Kids & Milestone Birthday Table (2kg Theme Cake + 18 Cupcakes + 12 Brownies)">Enquire →</a>
           </div>
         </article>
 
-        <article class="pkg-card">
+        <article class="pkg-item">
           <div>
             <h4>Engagement &amp; Tiered Celebration</h4>
-            <p>2-Tier or 3-Tier fondant/buttercream centerpiece cake with tasting box included.</p>
+            <p>2-Tier or 3-Tier fondant/buttercream centerpiece with complimentary tasting box.</p>
           </div>
-          <div class="pkg-footer">
-            <span class="pkg-price">From ₹5,500</span>
-            <a class="btn-pkg" href="#" data-event-pkg="Engagement / Tiered Celebration Cake (3kg+ with Tasting Box)">Enquire →</a>
+          <div class="pkg-bottom">
+            <strong>From ₹5,500</strong>
+            <a class="btn-pkg-wa" href="#" data-pkg="Engagement / Tiered Celebration Cake (3kg+ with Tasting Box)">Enquire →</a>
           </div>
         </article>
 
-        <article class="pkg-card">
+        <article class="pkg-item">
           <div>
-            <h4>Corporate &amp; Return Gift Hampers</h4>
-            <p>Minimum 15 boxes • Custom logo sticker, brownies, tea loaves &amp; cookie jars.</p>
+            <h4>Corporate &amp; Return Gift Boxes</h4>
+            <p>Min. 15 boxes • Custom logo sticker, brownies, tea loaves &amp; cookie jars.</p>
           </div>
-          <div class="pkg-footer">
-            <span class="pkg-price">₹320 / box</span>
-            <a class="btn-pkg" href="#" data-event-pkg="Corporate / Event Return Gift Hampers (Bulk 15+ Boxes)">Bulk Quote →</a>
+          <div class="pkg-bottom">
+            <strong>₹320 / box</strong>
+            <a class="btn-pkg-wa" href="#" data-pkg="Corporate / Event Return Gift Boxes (Bulk 15+ Boxes)">Bulk Quote →</a>
           </div>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="wrap">
-    <p><strong>Crumb &amp; Whisk Artisan Bakes</strong> • FSSAI Reg. Demo • Hadapsar, Pune</p>
-    <p style="margin-top: 5px;">Digital Catalogue crafted by <a href="https://imvicky2115.github.io/MyNewPortfolio/" target="_blank" rel="noopener">NoahStudio</a></p>
+  <!-- Structured Boutique Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Crumb &amp; Whisk</h4>
+          <p>Small-batch celebration cakes, brownies, and event dessert tables baked fresh to order in Hadapsar, Pune.</p>
+          <div class="fssai-pill">FSSAI Reg. Demo • Separate Veg &amp; Egg Prep</div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Menu</h5>
+          <ul>
+            <li><a href="#menuSection">Celebration Cakes</a></li>
+            <li><a href="#menuSection">Bento &amp; Cupcake Boxes</a></li>
+            <li><a href="#menuSection">Brownies &amp; Fudge Tubs</a></li>
+            <li><a href="#eventsSection">Events &amp; Corporate Bulk</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Kitchen &amp; Orders</h5>
+          <ul>
+            <li>Pickup: Satavnagar / Hadapsar, Pune</li>
+            <li>Hours: 10:00 AM – 9:00 PM Daily</li>
+            <li>Delivery: Magarpatta, Kharadi &amp; Pune-wide</li>
+            <li><a href="https://wa.me/918788337049" target="_blank" rel="noopener">WhatsApp Concierge →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Crumb &amp; Whisk Artisan Bakes • Demo Catalogue</span>
+        <span>Designed &amp; Built by <a href="https://imvicky2115.github.io/MyNewPortfolio/" target="_blank" rel="noopener">NoahStudio</a></span>
+      </div>
+    </div>
   </footer>
 
-  <!-- Bottom Floating Order Bag Dock -->
-  <div class="bottom-dock">
-    <div class="dock-text" id="dockSummary">
-      Your Order Bag is <strong>empty</strong>
-    </div>
-    <button type="button" class="dock-cta" id="openBagBtn">
-      <span id="dockBtnLabel">View Bag (0)</span>
-    </button>
+  <!-- Floating Order Bag Bar -->
+  <div class="bag-dock">
+    <div class="bag-dock-info" id="dockInfo">Your Order Bag is <strong>empty</strong></div>
+    <button type="button" class="bag-dock-btn" id="openBagBtn">View Bag (0)</button>
   </div>
 
-  <!-- Product Customizer Modal -->
-  <div class="sheet-overlay" id="sheetOverlay" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
-    <div class="sheet-panel">
-      <div class="sheet-media">
-        <img src="" alt="" id="sheetImg" />
-        <button type="button" class="sheet-close" id="closeSheetBtn" aria-label="Close">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
+  <!-- Product Customizer Modal with Quantity Stepper -->
+  <div class="overlay" id="itemOverlay" role="dialog" aria-modal="true">
+    <div class="sheet">
+      <div class="sheet-banner">
+        <img src="" alt="" id="mImg" />
+        <button type="button" class="btn-x" id="closeItemBtn" aria-label="Close">×</button>
       </div>
 
-      <div class="sheet-scroll">
-        <div class="sheet-head">
+      <div class="sheet-body">
+        <div class="sheet-title-row">
           <div>
-            <span class="item-kicker" id="sheetCat"></span>
-            <h3 id="sheetTitle"></h3>
+            <span class="p-meta-line" id="mCat"></span>
+            <h3 id="mTitle"></h3>
           </div>
-          <div class="sheet-price" id="sheetPrice">₹650</div>
+          <div class="sheet-unit-price" id="mUnitPrice">₹650</div>
         </div>
-        <p class="sheet-desc" id="sheetDesc"></p>
-        <div class="lead-notice" id="leadNotice">⏱ Same-day slots available before 4 PM</div>
+        <p class="sheet-desc" id="mDesc"></p>
+        <div class="lead-pill" id="mLead"></div>
 
         <div>
-          <label class="control-label">Select Weight / Pack Size</label>
-          <div class="seg-grid" id="variantGroup"></div>
+          <label class="lbl">1. Select Weight / Pack Size</label>
+          <div class="seg-row" id="mVariants"></div>
         </div>
 
         <div>
-          <label class="control-label">Dietary Base</label>
-          <div class="seg-grid cols-2" id="dietGroup">
-            <button type="button" class="seg-btn selected" data-diet="100% Eggless">100% Eggless<small>Pure Veg</small></button>
-            <button type="button" class="seg-btn" data-diet="Classic (With Egg)">Classic (With Egg)<small>Traditional Bake</small></button>
+          <label class="lbl">2. Dietary Preference</label>
+          <div class="seg-row two" id="mDiets">
+            <button type="button" class="opt-tile selected" data-diet="100% Eggless">100% Eggless<small>Pure Veg</small></button>
+            <button type="button" class="opt-tile" data-diet="Classic (With Egg)">Classic (With Egg)<small>Traditional Bake</small></button>
           </div>
         </div>
 
         <div>
-          <label class="control-label" id="noteFieldLabel" for="cakeMsgInput">Message on Cake (Optional)</label>
-          <input type="text" id="cakeMsgInput" class="field-input" maxlength="45" placeholder="e.g. Happy Birthday Ananya!" />
+          <label class="lbl">3. Quantity</label>
+          <div class="qty-row">
+            <span>Number of Packs / Cakes</span>
+            <div class="stepper">
+              <button type="button" class="step-btn" id="qtyMinus" aria-label="Decrease quantity">−</button>
+              <span class="step-val" id="qtyDisplay">1</span>
+              <button type="button" class="step-btn" id="qtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="lbl" id="mNoteLbl" for="mNoteInput">4. Message on Cake (Optional)</label>
+          <input type="text" id="mNoteInput" class="txt-input" maxlength="45" placeholder="e.g. Happy Birthday Ananya!" />
         </div>
       </div>
 
-      <div class="sheet-footer">
-        <button type="button" class="btn-add-bag" id="addToBagBtn">
-          <span>+ Add to Order Bag</span> • <span id="submitPrice">₹650</span>
+      <div class="sheet-foot">
+        <button type="button" class="btn-full-dark" id="confirmAddBtn">
+          <span>+ Add <span id="ctaQty">1</span> to Order Bag</span> • <span id="ctaSubtotal">₹650</span>
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Multi-Item Order Bag & Slot Checkout Modal -->
-  <div class="sheet-overlay" id="bagOverlay" role="dialog" aria-modal="true" aria-labelledby="bagTitle">
-    <div class="sheet-panel">
-      <div class="bag-header">
-        <h3 id="bagTitle">Your Order Bag</h3>
-        <button type="button" class="btn-ghost" id="closeBagBtn" style="height: 36px; padding: 0 12px;">Close</button>
+  <!-- Order Bag & Slot Checkout Modal -->
+  <div class="overlay" id="bagOverlay" role="dialog" aria-modal="true">
+    <div class="sheet">
+      <div class="bag-top">
+        <h3>Your Order Bag</h3>
+        <button type="button" class="btn-pill-outline" id="closeBagBtn" style="height: 36px; padding: 0 13px;">Close</button>
       </div>
 
-      <div class="sheet-scroll">
-        <div id="bagItemsList" style="display: flex; flex-direction: column; gap: 10px;"></div>
+      <div class="sheet-body">
+        <div id="bagList" style="display: flex; flex-direction: column; gap: 10px;"></div>
 
-        <div class="split-row">
+        <div class="two-cols">
           <div>
-            <label class="control-label" for="bagDateInput">Delivery / Pickup Date</label>
-            <input type="date" id="bagDateInput" class="field-input" />
+            <label class="lbl" for="bagDate">Delivery / Pickup Date</label>
+            <input type="date" id="bagDate" class="txt-input" />
           </div>
           <div>
-            <label class="control-label" for="bagSlotSelect">Available Time Slot</label>
-            <select id="bagSlotSelect" class="field-input">
+            <label class="lbl" for="bagSlot">Available Time Slot</label>
+            <select id="bagSlot" class="txt-input">
               <option value="1:00 PM – 5:00 PM">1:00 PM – 5:00 PM</option>
               <option value="5:00 PM – 9:00 PM">5:00 PM – 9:00 PM</option>
               <option value="10:00 AM – 1:00 PM (Tomorrow+)">10:00 AM – 1:00 PM</option>
@@ -1689,8 +1513,8 @@
         </div>
 
         <div>
-          <label class="control-label" for="bagModeSelect">Fulfilment &amp; Area</label>
-          <select id="bagModeSelect" class="field-input">
+          <label class="lbl" for="bagMode">Fulfilment &amp; Area</label>
+          <select id="bagMode" class="txt-input">
             <option value="Self Pickup (Hadapsar Kitchen)">Self Pickup (Hadapsar Kitchen)</option>
             <option value="Pune Delivery (Magarpatta / Kharadi / Hadapsar)">Pune Delivery (Magarpatta / Kharadi / Hadapsar)</option>
             <option value="Pune Wide Delivery (Porter / Dunzo)">Pune Wide Delivery (Porter / Dunzo)</option>
@@ -1698,12 +1522,10 @@
         </div>
       </div>
 
-      <div class="sheet-footer">
-        <button type="button" class="btn-order-submit" id="sendBagWaBtn">
-          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.01c-.24.68-1.41 1.3-1.95 1.38-.5.07-1.13.1-1.82-.12-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.59-.36.79-.36.2 0 .4 0 .57.01.18.01.43-.07.67.51.24.59.82 2.01.89 2.16.07.15.12.32.02.51-.1.19-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.15.46.12.63-.07.17-.19.74-.86.94-1.15.2-.29.4-.24.67-.14.27.1 1.73.82 2.03.96.3.15.5.22.57.34.07.12.07.7-.17 1.38z"/></svg>
-          <span>Send Complete Order on WhatsApp</span>
-          <span>•</span>
-          <span id="bagTotalText">₹0</span>
+      <div class="sheet-foot">
+        <button type="button" class="btn-full-wa" id="sendWaBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.01c-.24.68-1.41 1.3-1.95 1.38-.5.07-1.13.1-1.82-.12-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.59-.36.79-.36.2 0 .4 0 .57.01.18.01.43-.07.67.51.24.59.82 2.01.89 2.16.07.15.12.32.02.51-.1.19-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.15.46.12.63-.07.17-.19.74-.86.94-1.15.2-.29.4-.24.67-.14.27.1 1.73.82 2.03.96.3.15.5.22.57.34.07.12.07.7-.17 1.38z"/></svg>
+          <span>Send Order on WhatsApp</span> • <span id="bagGrandTotal">₹0</span>
         </button>
       </div>
     </div>
@@ -1715,7 +1537,6 @@
     const BAKER_PHONE = "918788337049";
     const BRAND_NAME = "Crumb & Whisk";
 
-    // dietMode: "both" (Eggless & With Egg), "eggless" (100% Eggless), "egg" (Classic With Egg)
     const CATALOG = [
       {
         id: 1,
@@ -1728,7 +1549,7 @@
         noteLabel: "Message on Cake (Optional)",
         notePlaceholder: "e.g. Happy Birthday Ananya!",
         desc: "Moist dark cocoa sponge layered with 54% couverture chocolate ganache and silky truffle glaze.",
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "500g", sub: "Serves 4–6", price: 650 },
           { label: "1 kg", sub: "Serves 10–12", price: 1200 },
@@ -1746,7 +1567,7 @@
         noteLabel: "Message on Cake (Optional)",
         notePlaceholder: "e.g. Cheers to New Beginnings!",
         desc: "Authentic espresso-soaked sponge layered with rich egg-yolk zabaglione mascarpone cream and Dutch cocoa.",
-        image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "500g", sub: "Serves 4–6", price: 820 },
           { label: "1 kg", sub: "Serves 10–12", price: 1550 }
@@ -1763,7 +1584,7 @@
         noteLabel: "Message on Cake (Optional)",
         notePlaceholder: "e.g. Happy Anniversary Mom & Dad",
         desc: "Cardamom vanilla sponge soaked in saffron milk, topped with soft rasmalai and roasted pistachios.",
-        image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "500g", sub: "Serves 4–6", price: 750 },
           { label: "1 kg", sub: "Serves 10–12", price: 1400 },
@@ -1781,7 +1602,7 @@
         noteLabel: "Berry Compote / Note",
         notePlaceholder: "e.g. Add side of strawberry compote",
         desc: "Caramelized crustless Spanish cheesecake with a velvety, custard-like cream cheese center.",
-        image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "550g", sub: "Serves 5–6", price: 890 },
           { label: "1.1 kg", sub: "Serves 10–12", price: 1680 }
@@ -1798,7 +1619,7 @@
         noteLabel: "Short Text on Bento (Max 3 Words)",
         notePlaceholder: "e.g. Happy 21st! or Congrats",
         desc: "Minimalist 4-inch lunchbox cake with custom piping. Pick chocolate, berry, or biscoff flavour.",
-        image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "300g Bento", sub: "Serves 2", price: 380 },
           { label: "Bento + 2 Cupcakes", sub: "Combo Box", price: 580 }
@@ -1815,7 +1636,7 @@
         noteLabel: "Flavour Mix / Gift Note",
         notePlaceholder: "e.g. 3 Chocolate + 3 Red Velvet",
         desc: "Assorted Belgian chocolate, Madagascar vanilla bean, and red velvet cupcakes with silky buttercream.",
-        image: "https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "Box of 4", sub: "4 Cupcakes", price: 360 },
           { label: "Box of 6", sub: "6 Cupcakes", price: 520 },
@@ -1833,7 +1654,7 @@
         noteLabel: "Gift Tag Note (Optional)",
         notePlaceholder: "e.g. Warm slightly before serving!",
         desc: "Crinkle-top dark chocolate brownies swirled with roasted hazelnut Nutella and sea salt flakes.",
-        image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "Box of 4", sub: "4 Pieces", price: 420 },
           { label: "Box of 6", sub: "6 Pieces", price: 600 },
@@ -1851,7 +1672,7 @@
         noteLabel: "Custom Note / Spoon Count",
         notePlaceholder: "e.g. Add 2 wooden spoons",
         desc: "Ultra-moist dark chocolate sponge drenched in warm milk-chocolate fudge sauce inside a reusable tub.",
-        image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "250ml Tub", sub: "Single Indulgence", price: 260 },
           { label: "500ml Tub", sub: "Share Pack", price: 490 }
@@ -1868,7 +1689,7 @@
         noteLabel: "Slice Preference / Gift Note",
         notePlaceholder: "e.g. Pre-sliced for office tea",
         desc: "Caramelized ripe banana loaf studded with toasted Kashmiri walnuts, cinnamon, and brown butter.",
-        image: "https://images.unsplash.com/photo-1605286978633-2dec93ff88a2?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1605286978633-2dec93ff88a2?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "350g Loaf", sub: "8 Slices", price: 340 },
           { label: "650g Loaf", sub: "14 Slices", price: 620 }
@@ -1885,7 +1706,7 @@
         noteLabel: "Gift Note (Optional)",
         notePlaceholder: "e.g. Thank you for hosting!",
         desc: "Soft-centered brown-butter cookies loaded with 60% dark chocolate chunks and roasted almonds.",
-        image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "Pack of 4", sub: "Large Cookies", price: 240 },
           { label: "Gift Tin (8)", sub: "8 Cookies", price: 460 }
@@ -1902,7 +1723,7 @@
         noteLabel: "Greeting Card Message",
         notePlaceholder: "e.g. Merry Christmas & Happy New Year!",
         desc: "Rich dark fruit cake loaded with candied orange peel, cranberries, cashews, and warm winter spices.",
-        image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=700&q=80",
+        image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "450g Loaf", sub: "Gift Tin", price: 590 },
           { label: "900g Round", sub: "Family Pack", price: 1120 }
@@ -1910,122 +1731,110 @@
       }
     ];
 
-    // State
     let activeCat = "All";
-    let activeDietFilter = "all"; // all | eggless | egg
+    let activeDiet = "all";
     let query = "";
     let currentItem = null;
     let variantIdx = 0;
     let dietChoice = "100% Eggless";
-    let orderBag = [];
+    let qty = 1;
+    let bag = [];
 
-    // DOM Refs
-    const gridEl = document.getElementById("productGrid");
-    const emptyEl = document.getElementById("emptyBox");
-    const titleEl = document.getElementById("sectionTitle");
-    const counterEl = document.getElementById("itemCounter");
-    const searchEl = document.getElementById("searchInput");
-    const railEl = document.getElementById("categoryRail");
-    const dietFilterRail = document.getElementById("dietFilterRail");
+    const cardsGrid = document.getElementById("cardsGrid");
+    const secTitle = document.getElementById("secTitle");
+    const secCount = document.getElementById("secCount");
+    const searchInput = document.getElementById("searchInput");
+    const dietRail = document.getElementById("dietRail");
+    const catRail = document.getElementById("catRail");
 
-    // Item Modal Refs
-    const overlayEl = document.getElementById("sheetOverlay");
-    const sheetImg = document.getElementById("sheetImg");
-    const sheetCat = document.getElementById("sheetCat");
-    const sheetTitle = document.getElementById("sheetTitle");
-    const sheetDesc = document.getElementById("sheetDesc");
-    const leadNotice = document.getElementById("leadNotice");
-    const sheetPrice = document.getElementById("sheetPrice");
-    const submitPrice = document.getElementById("submitPrice");
-    const variantGroup = document.getElementById("variantGroup");
-    const dietGroup = document.getElementById("dietGroup");
-    const noteFieldLabel = document.getElementById("noteFieldLabel");
-    const cakeMsgInput = document.getElementById("cakeMsgInput");
+    const itemOverlay = document.getElementById("itemOverlay");
+    const mImg = document.getElementById("mImg");
+    const mCat = document.getElementById("mCat");
+    const mTitle = document.getElementById("mTitle");
+    const mUnitPrice = document.getElementById("mUnitPrice");
+    const mDesc = document.getElementById("mDesc");
+    const mLead = document.getElementById("mLead");
+    const mVariants = document.getElementById("mVariants");
+    const mDiets = document.getElementById("mDiets");
+    const mNoteLbl = document.getElementById("mNoteLbl");
+    const mNoteInput = document.getElementById("mNoteInput");
+    const qtyDisplay = document.getElementById("qtyDisplay");
+    const ctaQty = document.getElementById("ctaQty");
+    const ctaSubtotal = document.getElementById("ctaSubtotal");
 
-    // Bag Modal Refs
     const bagOverlay = document.getElementById("bagOverlay");
-    const bagItemsList = document.getElementById("bagItemsList");
-    const bagTotalText = document.getElementById("bagTotalText");
-    const bagDateInput = document.getElementById("bagDateInput");
-    const bagSlotSelect = document.getElementById("bagSlotSelect");
-    const bagModeSelect = document.getElementById("bagModeSelect");
-    const dockSummary = document.getElementById("dockSummary");
-    const dockBtnLabel = document.getElementById("dockBtnLabel");
+    const bagList = document.getElementById("bagList");
+    const bagGrandTotal = document.getElementById("bagGrandTotal");
+    const bagDate = document.getElementById("bagDate");
+    const bagSlot = document.getElementById("bagSlot");
+    const bagMode = document.getElementById("bagMode");
+    const dockInfo = document.getElementById("dockInfo");
+    const openBagBtn = document.getElementById("openBagBtn");
 
-    // Default date = tomorrow
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    bagDateInput.value = tomorrow.toISOString().split("T")[0];
-    bagDateInput.min = new Date().toISOString().split("T")[0];
+    const tmr = new Date();
+    tmr.setDate(tmr.getDate() + 1);
+    bagDate.value = tmr.toISOString().split("T")[0];
+    bagDate.min = new Date().toISOString().split("T")[0];
 
-    // Wire Event Package WhatsApp links
-    document.querySelectorAll("[data-event-pkg]").forEach((btn) => {
-      const pkg = btn.dataset.eventPkg;
-      btn.href = `https://wa.me/${BAKER_PHONE}?text=${encodeURIComponent(
-        `Hi ${BRAND_NAME}! I'd like to enquire about an Event / Bulk Order:\n\n• *Package:* ${pkg}\n• *Event Date:* \n• *Approx Guest Count:* \n• *Eggless / With Egg:* \n\nPlease share availability & pricing details!`
+    document.querySelectorAll("[data-pkg]").forEach((el) => {
+      el.href = `https://wa.me/${BAKER_PHONE}?text=${encodeURIComponent(
+        `Hi ${BRAND_NAME}! I'd like to enquire about an Event / Bulk Order:\n\n• *Package:* ${el.dataset.pkg}\n• *Event Date:* \n• *Guest Count:* \n• *Eggless / With Egg:* \n\nPlease share availability & quote!`
       )}`;
-      btn.target = "_blank";
-      btn.rel = "noopener";
+      el.target = "_blank";
+      el.rel = "noopener";
     });
 
-    function getDietBadgesHtml(dietMode) {
-      if (dietMode === "eggless") {
-        return `<span class="diet-badges" title="100% Eggless"><span class="diet-dot veg"></span></span>`;
+    function dietBadgeHTML(mode) {
+      if (mode === "eggless") {
+        return `<span class="p-diet-chip"><span class="dot-ind veg"></span>Eggless</span>`;
       }
-      if (dietMode === "egg") {
-        return `<span class="diet-badges" title="Contains Egg"><span class="diet-dot egg"></span></span>`;
+      if (mode === "egg") {
+        return `<span class="p-diet-chip"><span class="dot-ind egg"></span>With Egg</span>`;
       }
-      return `<span class="diet-badges" title="Available in Eggless & With Egg"><span class="diet-dot veg"></span><span class="diet-dot egg"></span></span>`;
+      return `<span class="p-diet-chip"><span class="dot-ind veg"></span><span class="dot-ind egg"></span>Veg &amp; Egg</span>`;
     }
 
-    function renderGrid() {
+    function renderCards() {
       const q = query.trim().toLowerCase();
-      const items = CATALOG.filter((p) => {
+      const filtered = CATALOG.filter((p) => {
         const catOk = activeCat === "All" || p.category === activeCat;
         const dietOk =
-          activeDietFilter === "all" ||
-          (activeDietFilter === "eggless" && (p.dietMode === "eggless" || p.dietMode === "both")) ||
-          (activeDietFilter === "egg" && (p.dietMode === "egg" || p.dietMode === "both"));
-        const textOk =
-          !q ||
-          p.name.toLowerCase().includes(q) ||
-          p.desc.toLowerCase().includes(q) ||
-          p.category.toLowerCase().includes(q);
+          activeDiet === "all" ||
+          (activeDiet === "eggless" && (p.dietMode === "eggless" || p.dietMode === "both")) ||
+          (activeDiet === "egg" && (p.dietMode === "egg" || p.dietMode === "both"));
+        const textOk = !q || p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
         return catOk && dietOk && textOk;
       });
 
-      titleEl.textContent = activeCat === "All" ? "Signature Menu" : activeCat;
-      counterEl.textContent = `${items.length} ${items.length === 1 ? "item" : "items"}`;
+      secTitle.textContent = activeCat === "All" ? "Signature Menu" : activeCat;
+      secCount.textContent = `${filtered.length} ${filtered.length === 1 ? "item" : "items"}`;
 
-      if (!items.length) {
-        gridEl.innerHTML = "";
-        emptyEl.style.display = "block";
+      if (!filtered.length) {
+        cardsGrid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:44px 16px; background:var(--surface); border-radius:var(--r-xl); border:1px dashed var(--line-strong);"><strong>No matching bakes found</strong><p style="font-size:0.84rem; color:var(--ink-body); margin-top:4px;">Try another search or switch back to All Bakes.</p></div>`;
         return;
       }
 
-      emptyEl.style.display = "none";
-      gridEl.innerHTML = items.map((p, index) => {
+      cardsGrid.innerHTML = filtered.map((p) => {
         const base = p.variants[0];
-        const delay = Math.min(index * 40, 260);
         return `
-          <article class="item-card" data-id="${p.id}" style="animation-delay: ${delay}ms">
-            <div class="thumb-box">
+          <article class="p-card" data-id="${p.id}">
+            <div class="p-media">
               <img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async" />
-              <span class="tag-pill ${p.festive ? "festive" : ""}">${p.tag}</span>
-              ${getDietBadgesHtml(p.dietMode)}
+              <span class="p-tag ${p.festive ? "festive" : ""}">${p.tag}</span>
+              ${dietBadgeHTML(p.dietMode)}
             </div>
-            <div class="item-content">
+            <div class="p-body">
               <div>
-                <div class="item-kicker">${p.category}</div>
-                <h4 class="item-name">${p.name}</h4>
-                <p class="item-summary">${p.desc}</p>
+                <div class="p-meta-line"><span>${p.category}</span></div>
+                <h4 class="p-title">${p.name}</h4>
+                <p class="p-desc">${p.desc}</p>
               </div>
-              <div class="item-bottom">
-                <div class="price-stack">
-                  <span class="price-sub">From ${base.label}</span>
-                  <span class="price-num">₹${base.price}</span>
+              <div class="p-actions">
+                <div class="p-price-box">
+                  <small>Starts • ${base.label}</small>
+                  <strong>₹${base.price}</strong>
                 </div>
-                <button type="button" class="btn-customize">+ Add</button>
+                <button type="button" class="btn-card-cta">Customize +</button>
               </div>
             </div>
           </article>
@@ -2033,31 +1842,32 @@
       }).join("");
     }
 
-    function openSheet(id) {
+    function openItemModal(id) {
       currentItem = CATALOG.find((x) => x.id === id);
       if (!currentItem) return;
 
       variantIdx = 0;
-      cakeMsgInput.value = "";
-      noteFieldLabel.textContent = currentItem.noteLabel || "Custom Note (Optional)";
-      cakeMsgInput.placeholder = currentItem.notePlaceholder || "Add any special request...";
-      leadNotice.textContent = `⏱ ${currentItem.leadTime}`;
+      qty = 1;
+      mNoteInput.value = "";
+      mNoteLbl.textContent = `4. ${currentItem.noteLabel || "Custom Note (Optional)"}`;
+      mNoteInput.placeholder = currentItem.notePlaceholder || "Add note...";
 
-      sheetImg.src = currentItem.image;
-      sheetImg.alt = currentItem.name;
-      sheetCat.textContent = currentItem.category;
-      sheetTitle.textContent = currentItem.name;
-      sheetDesc.textContent = currentItem.desc;
+      mImg.src = currentItem.image;
+      mImg.alt = currentItem.name;
+      mCat.textContent = currentItem.category;
+      mTitle.textContent = currentItem.name;
+      mDesc.textContent = currentItem.desc;
+      mLead.textContent = `⏱ ${currentItem.leadTime}`;
 
-      variantGroup.className = `seg-grid ${currentItem.variants.length === 2 ? "cols-2" : ""}`;
-      variantGroup.innerHTML = currentItem.variants.map((v, i) => `
-        <button type="button" class="seg-btn ${i === 0 ? "selected" : ""}" data-idx="${i}">
+      mVariants.className = `seg-row ${currentItem.variants.length === 2 ? "two" : ""}`;
+      mVariants.innerHTML = currentItem.variants.map((v, idx) => `
+        <button type="button" class="opt-tile ${idx === 0 ? "selected" : ""}" data-idx="${idx}">
           ${v.label}
           <small>₹${v.price} • ${v.sub}</small>
         </button>
       `).join("");
 
-      const dietBtns = dietGroup.querySelectorAll(".seg-btn");
+      const dietBtns = mDiets.querySelectorAll(".opt-tile");
       if (currentItem.dietMode === "egg") {
         dietChoice = "Classic (With Egg)";
         dietBtns[0].style.display = "none";
@@ -2071,222 +1881,226 @@
         dietBtns[0].classList.add("selected");
         dietBtns[1].classList.remove("selected");
       } else {
-        dietChoice = activeDietFilter === "egg" ? "Classic (With Egg)" : "100% Eggless";
+        dietChoice = activeDiet === "egg" ? "Classic (With Egg)" : "100% Eggless";
         dietBtns[0].style.display = "block";
         dietBtns[1].style.display = "block";
         dietBtns.forEach((b) => b.classList.toggle("selected", b.dataset.diet === dietChoice));
       }
 
-      syncPrice();
-      overlayEl.classList.add("open");
+      syncModalNumbers();
+      itemOverlay.classList.add("open");
       document.body.style.overflow = "hidden";
     }
 
-    function closeSheet() {
-      overlayEl.classList.remove("open");
+    function syncModalNumbers() {
+      if (!currentItem) return;
+      const unit = currentItem.variants[variantIdx].price;
+      mUnitPrice.textContent = `₹${unit}`;
+      qtyDisplay.textContent = qty;
+      ctaQty.textContent = qty;
+      ctaSubtotal.textContent = `₹${unit * qty}`;
+    }
+
+    function closeModals() {
+      itemOverlay.classList.remove("open");
+      bagOverlay.classList.remove("open");
       document.body.style.overflow = "";
     }
 
-    function syncPrice() {
-      if (!currentItem) return;
-      const val = currentItem.variants[variantIdx].price;
-      sheetPrice.textContent = `₹${val}`;
-      submitPrice.textContent = `₹${val}`;
-    }
-
-    function updateDock() {
-      const count = orderBag.length;
-      const total = orderBag.reduce((sum, item) => sum + item.price, 0);
-      if (count === 0) {
-        dockSummary.innerHTML = `Your Order Bag is <strong>empty</strong>`;
-        dockBtnLabel.textContent = `View Bag (0)`;
+    function syncDock() {
+      const totalQty = bag.reduce((acc, x) => acc + x.qty, 0);
+      const totalAmt = bag.reduce((acc, x) => acc + x.unitPrice * x.qty, 0);
+      if (totalQty === 0) {
+        dockInfo.innerHTML = `Your Order Bag is <strong>empty</strong>`;
+        openBagBtn.textContent = `View Bag (0)`;
       } else {
-        dockSummary.innerHTML = `<strong>${count} ${count === 1 ? "item" : "items"}</strong> • Total <strong>₹${total}</strong>`;
-        dockBtnLabel.textContent = `Review & Send (${count})`;
+        dockInfo.innerHTML = `<strong>${totalQty} ${totalQty === 1 ? "item" : "items"}</strong> • Total <strong>₹${totalAmt}</strong>`;
+        openBagBtn.textContent = `Review & Send (${totalQty})`;
       }
     }
 
-    function renderBagModal() {
-      const total = orderBag.reduce((sum, item) => sum + item.price, 0);
-      bagTotalText.textContent = `₹${total}`;
+    function renderBag() {
+      const totalAmt = bag.reduce((acc, x) => acc + x.unitPrice * x.qty, 0);
+      bagGrandTotal.textContent = `₹${totalAmt}`;
 
-      if (orderBag.length === 0) {
-        bagItemsList.innerHTML = `
-          <div style="text-align: center; padding: 24px 12px; color: var(--ink-secondary); font-size: 0.85rem;">
-            Your bag is empty. Tap any cake, cupcake, brownie, or hamper on the menu to add it here!
-          </div>
-        `;
+      if (!bag.length) {
+        bagList.innerHTML = `<div style="text-align:center; padding:24px 12px; color:var(--ink-body); font-size:0.85rem;">Your bag is empty. Tap any cake, cupcake, brownie, or hamper to add it here!</div>`;
         return;
       }
 
-      bagItemsList.innerHTML = orderBag.map((entry, idx) => `
-        <div class="bag-item">
-          <div class="bag-item-info">
-            <strong>${idx + 1}. ${entry.name}</strong>
-            <span>${entry.variant} • ${entry.diet}</span>
-            ${entry.note !== "None" ? `<span>Note: "${entry.note}"</span>` : ""}
+      bagList.innerHTML = bag.map((item, idx) => `
+        <div class="bag-row">
+          <div class="bag-row-details">
+            <strong>${item.name}</strong>
+            <span>${item.variant} • ${item.diet} • ₹${item.unitPrice} each</span>
+            ${item.note !== "None" ? `<span>Note: "${item.note}"</span>` : ""}
           </div>
-          <div class="bag-item-right">
-            <strong>₹${entry.price}</strong>
-            <button type="button" class="btn-remove" data-remove-idx="${idx}">Remove</button>
+          <div style="display:flex; flex-direction:column; align-items:flex-end; gap:6px;">
+            <strong style="font-size:0.94rem;">₹${item.unitPrice * item.qty}</strong>
+            <div class="mini-stepper">
+              <button type="button" data-bag-dec="${idx}">−</button>
+              <span>${item.qty}</span>
+              <button type="button" data-bag-inc="${idx}">+</button>
+            </div>
           </div>
         </div>
       `).join("");
     }
 
-    function showToast(text) {
-      const t = document.getElementById("toast");
-      t.textContent = text;
-      t.classList.add("show");
-      setTimeout(() => t.classList.remove("show"), 2200);
+    function toast(msg) {
+      const el = document.getElementById("toast");
+      el.textContent = msg;
+      el.classList.add("show");
+      setTimeout(() => el.classList.remove("show"), 2200);
     }
 
-    // Event Listeners
-    gridEl.addEventListener("click", (e) => {
-      const card = e.target.closest(".item-card");
-      if (card) openSheet(Number(card.dataset.id));
+    cardsGrid.addEventListener("click", (e) => {
+      const card = e.target.closest(".p-card");
+      if (card) openItemModal(Number(card.dataset.id));
     });
 
-    railEl.addEventListener("click", (e) => {
-      const btn = e.target.closest(".cat-btn");
+    dietRail.addEventListener("click", (e) => {
+      const btn = e.target.closest(".diet-pill");
       if (!btn) return;
-      railEl.querySelectorAll(".cat-btn").forEach((b) => b.classList.remove("active"));
+      dietRail.querySelectorAll(".diet-pill").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeDiet = btn.dataset.diet;
+      renderCards();
+    });
+
+    catRail.addEventListener("click", (e) => {
+      const btn = e.target.closest(".cat-pill");
+      if (!btn) return;
+      catRail.querySelectorAll(".cat-pill").forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       activeCat = btn.dataset.cat;
-      btn.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-      renderGrid();
+      renderCards();
     });
 
-    dietFilterRail.addEventListener("click", (e) => {
-      const btn = e.target.closest(".diet-filter-btn");
-      if (!btn) return;
-      dietFilterRail.querySelectorAll(".diet-filter-btn").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      activeDietFilter = btn.dataset.dietFilter;
-      renderGrid();
-    });
-
-    searchEl.addEventListener("input", (e) => {
+    searchInput.addEventListener("input", (e) => {
       query = e.target.value;
-      renderGrid();
+      renderCards();
     });
 
-    document.getElementById("resetFiltersBtn").addEventListener("click", () => {
-      activeCat = "All";
-      activeDietFilter = "all";
-      query = "";
-      searchEl.value = "";
-      railEl.querySelectorAll(".cat-btn").forEach((b) => b.classList.toggle("active", b.dataset.cat === "All"));
-      dietFilterRail.querySelectorAll(".diet-filter-btn").forEach((b) => b.classList.toggle("active", b.dataset.dietFilter === "all"));
-      renderGrid();
-    });
-
-    variantGroup.addEventListener("click", (e) => {
-      const btn = e.target.closest(".seg-btn");
+    mVariants.addEventListener("click", (e) => {
+      const btn = e.target.closest(".opt-tile");
       if (!btn) return;
-      variantGroup.querySelectorAll(".seg-btn").forEach((b) => b.classList.remove("selected"));
+      mVariants.querySelectorAll(".opt-tile").forEach((b) => b.classList.remove("selected"));
       btn.classList.add("selected");
       variantIdx = Number(btn.dataset.idx);
-      syncPrice();
+      syncModalNumbers();
     });
 
-    dietGroup.addEventListener("click", (e) => {
-      const btn = e.target.closest(".seg-btn");
+    mDiets.addEventListener("click", (e) => {
+      const btn = e.target.closest(".opt-tile");
       if (!btn) return;
-      dietGroup.querySelectorAll(".seg-btn").forEach((b) => b.classList.remove("selected"));
+      mDiets.querySelectorAll(".opt-tile").forEach((b) => b.classList.remove("selected"));
       btn.classList.add("selected");
       dietChoice = btn.dataset.diet;
     });
 
-    document.getElementById("addToBagBtn").addEventListener("click", () => {
-      if (!currentItem) return;
-      const v = currentItem.variants[variantIdx];
-      orderBag.push({
-        name: currentItem.name,
-        variant: v.label,
-        price: v.price,
-        diet: dietChoice,
-        note: cakeMsgInput.value.trim() || "None"
-      });
-      updateDock();
-      closeSheet();
-      showToast(`Added ${currentItem.name} to Order Bag`);
+    document.getElementById("qtyMinus").addEventListener("click", () => {
+      if (qty > 1) {
+        qty -= 1;
+        syncModalNumbers();
+      }
     });
 
-    document.getElementById("openBagBtn").addEventListener("click", () => {
-      renderBagModal();
+    document.getElementById("qtyPlus").addEventListener("click", () => {
+      if (qty < 25) {
+        qty += 1;
+        syncModalNumbers();
+      }
+    });
+
+    document.getElementById("confirmAddBtn").addEventListener("click", () => {
+      if (!currentItem) return;
+      const v = currentItem.variants[variantIdx];
+      bag.push({
+        name: currentItem.name,
+        variant: v.label,
+        unitPrice: v.price,
+        qty,
+        diet: dietChoice,
+        note: mNoteInput.value.trim() || "None"
+      });
+      syncDock();
+      closeModals();
+      toast(`Added ${qty} × ${currentItem.name} to Bag`);
+    });
+
+    openBagBtn.addEventListener("click", () => {
+      renderBag();
       bagOverlay.classList.add("open");
       document.body.style.overflow = "hidden";
     });
 
-    document.getElementById("closeBagBtn").addEventListener("click", () => {
-      bagOverlay.classList.remove("open");
-      document.body.style.overflow = "";
+    bagList.addEventListener("click", (e) => {
+      const dec = e.target.closest("[data-bag-dec]");
+      const inc = e.target.closest("[data-bag-inc]");
+      if (dec) {
+        const i = Number(dec.dataset.bagDec);
+        if (bag[i].qty > 1) bag[i].qty -= 1;
+        else bag.splice(i, 1);
+        syncDock();
+        renderBag();
+      }
+      if (inc) {
+        const i = Number(inc.dataset.bagInc);
+        bag[i].qty += 1;
+        syncDock();
+        renderBag();
+      }
     });
 
-    bagItemsList.addEventListener("click", (e) => {
-      const btn = e.target.closest("[data-remove-idx]");
-      if (!btn) return;
-      orderBag.splice(Number(btn.dataset.removeIdx), 1);
-      updateDock();
-      renderBagModal();
-    });
-
-    document.getElementById("sendBagWaBtn").addEventListener("click", () => {
-      if (orderBag.length === 0) {
-        showToast("Please add at least one item first");
+    document.getElementById("sendWaBtn").addEventListener("click", () => {
+      if (!bag.length) {
+        toast("Please add at least one item first");
         return;
       }
-
-      const total = orderBag.reduce((sum, item) => sum + item.price, 0);
-      const itemLines = orderBag.map(
-        (it, i) =>
-          `${i + 1}. *${it.name}* (${it.variant} • ${it.diet}) — ₹${it.price}${it.note !== "None" ? `\n   _Note: ${it.note}_` : ""}`
+      const grand = bag.reduce((s, x) => s + x.unitPrice * x.qty, 0);
+      const lines = bag.map(
+        (x, i) =>
+          `${i + 1}. *${x.qty} × ${x.name}* (${x.variant} • ${x.diet}) — ₹${x.unitPrice * x.qty}${x.note !== "None" ? `\n   _Note: ${x.note}_` : ""}`
       );
 
-      const msg = [
-        `Hi *${BRAND_NAME}*! I'd like to confirm this order from your Digital Catalogue:`,
+      const text = [
+        `Hi *${BRAND_NAME}*! I'd like to place this order from your Digital Catalogue:`,
         ``,
-        ...itemLines,
+        ...lines,
         ``,
-        `💰 *Estimated Total:* ₹${total}`,
-        `📅 *Date:* ${bagDateInput.value || "Flexible"}`,
-        `⏰ *Time Slot:* ${bagSlotSelect.value}`,
-        `🛵 *Mode:* ${bagModeSelect.value}`,
+        `💰 *Estimated Total:* ₹${grand}`,
+        `📅 *Date:* ${bagDate.value || "Flexible"}`,
+        `⏰ *Time Slot:* ${bagSlot.value}`,
+        `🛵 *Mode:* ${bagMode.value}`,
         ``,
         `Please confirm slot availability & UPI details!`
       ].join("\n");
 
-      window.open(`https://wa.me/${BAKER_PHONE}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
+      window.open(`https://wa.me/${BAKER_PHONE}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
     });
 
-    document.getElementById("closeSheetBtn").addEventListener("click", closeSheet);
-    overlayEl.addEventListener("click", (e) => {
-      if (e.target === overlayEl) closeSheet();
-    });
-    bagOverlay.addEventListener("click", (e) => {
-      if (e.target === bagOverlay) {
-        bagOverlay.classList.remove("open");
-        document.body.style.overflow = "";
-      }
-    });
+    document.getElementById("closeItemBtn").addEventListener("click", closeModals);
+    document.getElementById("closeBagBtn").addEventListener("click", closeModals);
+    itemOverlay.addEventListener("click", (e) => { if (e.target === itemOverlay) closeModals(); });
+    bagOverlay.addEventListener("click", (e) => { if (e.target === bagOverlay) closeModals(); });
 
     document.getElementById("shareBtn").addEventListener("click", async () => {
-      const data = {
-        title: `${BRAND_NAME} — Digital Bakery Catalogue`,
-        text: "Check live slots, browse cakes & brownies, and order directly on WhatsApp:",
+      const shareData = {
+        title: `${BRAND_NAME} — Digital Cake & Dessert Catalogue`,
+        text: "Browse cakes, brownies & hampers with live slots and WhatsApp ordering:",
         url: window.location.href
       };
       if (navigator.share) {
-        try { await navigator.share(data); } catch (_) {}
+        try { await navigator.share(shareData); } catch (_) {}
       } else {
         navigator.clipboard?.writeText(window.location.href);
-        showToast("Menu link copied to clipboard");
+        toast("Catalogue link copied!");
       }
     });
 
-    renderGrid();
-    updateDock();
+    renderCards();
+    syncDock();
   </script>
 </body>
 </html>
