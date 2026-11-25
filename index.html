@@ -4,42 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="robots" content="noindex, nofollow" />
-  <meta name="theme-color" content="#FBF7F2" />
-  <title>Crumb &amp; Whisk — Artisan Cake &amp; Dessert Catalogue | Pune</title>
-  <meta name="description" content="Handcrafted eggless & classic cakes, brownies, cupcakes, and event dessert tables in Pune. Configure weight, quantity, and delivery slots for instant WhatsApp ordering." />
+  <meta name="theme-color" content="#F9F5F0" />
+  <title>Crumb &amp; Whisk — Digital Bakery Catalogue | Pune</title>
+  <meta name="description" content="Handcrafted eggless & classic cakes, brownies, cupcakes, and hampers in Pune. Configure weight, quantity, and send your order directly on WhatsApp." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #FBF7F2;
+      --bg: #F9F5F0;
       --surface: #FFFFFF;
-      --surface-warm: #F4EDE4;
-      --surface-press: #E8DEC9;
-      --espresso: #1B110D;
-      --espresso-soft: #2D1D17;
-      --ink: #1B110D;
-      --ink-body: #594941;
-      --ink-muted: #8B7A71;
-      --terracotta: #A24129;
-      --terracotta-dark: #82301C;
-      --terracotta-tint: #FBF0EC;
-      --veg: #187932;
-      --veg-tint: #E8F6EC;
-      --egg: #9E5A10;
-      --egg-tint: #FDF2E4;
-      --wa: #1A8F46;
-      --wa-dark: #137237;
-      --line: rgba(27, 17, 13, 0.08);
-      --line-strong: rgba(27, 17, 13, 0.14);
-      --shadow-card: 0 10px 30px -10px rgba(27, 17, 13, 0.08), 0 2px 6px rgba(27, 17, 13, 0.03);
-      --shadow-hover: 0 18px 38px -12px rgba(27, 17, 13, 0.14);
-      --shadow-sheet: 0 -14px 48px rgba(16, 10, 7, 0.26);
-      --r-xl: 24px;
-      --r-lg: 20px;
-      --r-md: 14px;
-      --r-pill: 999px;
-      --spring: cubic-bezier(0.22, 1, 0.36, 1);
+      --surface-2: #F2EBE2;
+      --espresso: #18100C;
+      --espresso-2: #2B1D16;
+      --ink: #18100C;
+      --ink-sub: #5D4E46;
+      --ink-mute: #8D7D74;
+      --accent: #A43E26;
+      --accent-dark: #842E1A;
+      --accent-soft: #FBF0EC;
+      --veg: #15803D;
+      --veg-bg: #DCFCE7;
+      --egg: #B45309;
+      --egg-bg: #FEF3C7;
+      --wa: #16A34A;
+      --wa-dark: #15803D;
+      --border: rgba(24, 16, 12, 0.08);
+      --border-strong: rgba(24, 16, 12, 0.14);
+      --shadow-sm: 0 2px 8px rgba(24, 16, 12, 0.04);
+      --shadow-md: 0 12px 32px -8px rgba(24, 16, 12, 0.09), 0 2px 6px rgba(24, 16, 12, 0.03);
+      --shadow-lg: 0 24px 48px -12px rgba(24, 16, 12, 0.18);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
       --safe-b: env(safe-area-inset-bottom, 0px);
     }
 
@@ -61,29 +56,17 @@
       color: var(--ink);
       line-height: 1.5;
       overflow-x: hidden;
-      padding-bottom: calc(98px + var(--safe-b));
+      padding-bottom: calc(96px + var(--safe-b));
       -webkit-font-smoothing: antialiased;
     }
 
-    h1, h2, h3, .serif {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      letter-spacing: -0.015em;
+    h1, h2, h3, .display {
+      font-family: 'Fraunces', Georgia, serif;
+      letter-spacing: -0.02em;
     }
-
-    /* Top Concept Strip */
-    .concept-strip {
-      background: var(--espresso);
-      color: #E5D9CC;
-      font-size: 0.72rem;
-      font-weight: 500;
-      text-align: center;
-      padding: 8px 16px;
-      letter-spacing: 0.02em;
-    }
-    .concept-strip strong { color: #E8B874; font-weight: 600; }
 
     .wrap {
-      max-width: 1160px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 0 18px;
     }
@@ -91,165 +74,112 @@
       .wrap { padding: 0 32px; }
     }
 
-    /* Breathing Editorial Header */
+    /* Minimal Concept Micro-Bar */
+    .top-note {
+      background: var(--espresso);
+      color: rgba(255, 248, 240, 0.78);
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-align: center;
+      padding: 7px 14px;
+      letter-spacing: 0.03em;
+    }
+    .top-note strong { color: #F3C483; font-weight: 600; }
+
+    /* Crisp App-Style Header */
     header {
-      padding: 22px 0 18px;
+      padding: 18px 0 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       min-width: 0;
+      text-decoration: none;
+      color: inherit;
     }
 
-    .brand-seal {
-      width: 50px;
-      height: 50px;
-      border-radius: 16px;
-      background: linear-gradient(145deg, #281812, #612B1D);
-      color: #FDF7F0;
+    .brand-emblem {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: var(--espresso);
+      color: #F7DEC0;
       display: grid;
       place-items: center;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.45rem;
-      font-weight: 700;
-      box-shadow: 0 8px 20px rgba(40, 24, 18, 0.18);
       flex-shrink: 0;
+      box-shadow: 0 6px 16px rgba(24, 16, 12, 0.16);
+      transition: transform 0.25s var(--ease);
     }
+    .brand:hover .brand-emblem { transform: scale(1.04) rotate(-3deg); }
 
-    .brand-text {
+    .brand-meta {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 2px;
       min-width: 0;
     }
-
-    .brand-text h1 {
-      font-size: 1.65rem;
+    .brand-meta h1 {
+      font-size: 1.42rem;
       font-weight: 700;
       line-height: 1.05;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-
-    .brand-loc {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 0.77rem;
+    .brand-meta span {
+      font-size: 0.75rem;
       font-weight: 500;
-      color: var(--ink-body);
+      color: var(--ink-sub);
     }
 
-    .live-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--veg);
-      animation: pulseRing 2.2s infinite ease-out;
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       flex-shrink: 0;
     }
 
-    @keyframes pulseRing {
-      0% { box-shadow: 0 0 0 0 rgba(24, 121, 50, 0.45); }
-      70% { box-shadow: 0 0 0 6px rgba(24, 121, 50, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(24, 121, 50, 0); }
-    }
-
-    .btn-pill-outline {
-      height: 44px;
-      padding: 0 16px;
-      border-radius: var(--r-pill);
-      border: 1px solid var(--line-strong);
+    .btn-icon-pill {
+      height: 42px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
       background: var(--surface);
       color: var(--ink);
       font-family: inherit;
-      font-size: 0.81rem;
+      font-size: 0.8rem;
       font-weight: 600;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 7px;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 2px 8px rgba(27, 17, 13, 0.04);
-      transition: transform 0.18s var(--spring), background 0.18s ease;
-      flex-shrink: 0;
-    }
-    .btn-pill-outline:hover { background: var(--surface-warm); }
-    .btn-pill-outline:active { transform: scale(0.95); }
-
-    /* Live Kitchen Slot Bar */
-    .slot-bar {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--r-lg);
-      padding: 13px 16px;
-      margin-bottom: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      box-shadow: 0 2px 10px rgba(27, 17, 13, 0.03);
-    }
-
-    .slot-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.81rem;
-    }
-
-    .slot-pill {
-      background: var(--veg-tint);
-      color: #125E26;
-      font-size: 0.71rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: var(--r-pill);
-    }
-
-    .slot-chips {
-      display: flex;
-      flex-wrap: wrap;
       gap: 6px;
-      font-size: 0.72rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.16s var(--ease), background 0.16s ease;
     }
+    .btn-icon-pill:hover { background: var(--surface-2); }
+    .btn-icon-pill:active { transform: scale(0.95); }
 
-    .s-chip {
-      background: var(--bg);
-      border: 1px solid var(--line);
-      padding: 4px 9px;
-      border-radius: 8px;
-      font-weight: 600;
-      color: var(--ink-body);
-    }
-    .s-chip.closed {
-      text-decoration: line-through;
-      opacity: 0.48;
-    }
-
-    /* Hero Card */
-    .hero-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--r-xl);
+    /* High-Contrast Editorial Catalogue Hero */
+    .hero-banner {
+      background: linear-gradient(135deg, #1E130E 0%, #372017 58%, #5B291B 100%);
+      color: #FFF9F2;
+      border-radius: 24px;
       padding: 24px 22px;
-      margin-bottom: 20px;
-      box-shadow: var(--shadow-card);
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
       display: grid;
-      gap: 20px;
+      gap: 18px;
     }
-
-    @media (min-width: 840px) {
-      .hero-card {
+    @media (min-width: 820px) {
+      .hero-banner {
         grid-template-columns: 1.45fr 0.85fr;
         align-items: center;
         padding: 32px 36px;
@@ -257,222 +187,256 @@
       }
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.71rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--terracotta);
-      background: var(--terracotta-tint);
-      padding: 6px 12px;
-      border-radius: var(--r-pill);
-      width: fit-content;
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -70px;
+      top: -90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(243, 196, 131, 0.18) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    .hero-card h2 {
-      font-size: 1.95rem;
-      line-height: 1.08;
+    .hero-banner h2 {
+      font-size: 1.85rem;
+      line-height: 1.1;
       font-weight: 700;
-      margin-top: 12px;
+      color: #FFF9F2;
     }
     @media (min-width: 768px) {
-      .hero-card h2 { font-size: 2.55rem; }
+      .hero-banner h2 { font-size: 2.35rem; }
     }
 
-    .hero-card p {
-      font-size: 0.86rem;
-      color: var(--ink-body);
+    .hero-banner p {
+      font-size: 0.85rem;
+      color: rgba(255, 249, 242, 0.78);
       margin-top: 8px;
-      max-width: 520px;
+      max-width: 490px;
     }
 
-    .hero-cta-row {
+    .hero-btns {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 18px;
     }
 
-    .btn-dark {
-      height: 46px;
-      padding: 0 22px;
-      border-radius: var(--r-pill);
-      background: var(--espresso);
-      color: #FFF9F3;
+    .btn-cream {
+      height: 44px;
+      padding: 0 20px;
+      border-radius: 999px;
+      background: #FFF8F0;
+      color: var(--espresso);
       font-family: inherit;
-      font-size: 0.84rem;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: transform 0.16s var(--ease), background 0.16s ease;
+    }
+    .btn-cream:active { transform: scale(0.96); }
+
+    .btn-glass {
+      height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #FFF9F2;
+      font-family: inherit;
+      font-size: 0.83rem;
       font-weight: 600;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(27, 17, 13, 0.16);
-      transition: transform 0.18s var(--spring), background 0.18s ease;
+      transition: transform 0.16s var(--ease), background 0.16s ease;
     }
-    .btn-dark:hover { background: var(--espresso-soft); }
-    .btn-dark:active { transform: scale(0.96); }
+    .btn-glass:hover { background: rgba(255, 255, 255, 0.16); }
 
-    .stats-panel {
+    .hero-kpis {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8px;
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: var(--r-lg);
-      padding: 16px 10px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 14px 10px;
       text-align: center;
     }
-    .stats-panel strong {
+    .hero-kpis strong {
       display: block;
-      font-size: 0.96rem;
+      font-size: 0.98rem;
       font-weight: 700;
-      color: var(--ink);
+      color: #F4C88A;
     }
-    .stats-panel span {
+    .hero-kpis span {
       display: block;
-      font-size: 0.7rem;
-      color: var(--ink-muted);
+      font-size: 0.69rem;
+      color: rgba(255, 249, 242, 0.72);
       margin-top: 2px;
     }
 
-    /* Customer Reviews Strip */
-    .reviews-wrap {
-      margin-bottom: 22px;
-    }
-    .reviews-top {
+    /* Single-Bar Rating & Progress Proof */
+    .rating-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 12px;
-    }
-    .rating-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      padding: 6px 13px;
-      border-radius: var(--r-pill);
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-    .rating-chip .stars { color: #D98A1C; }
-
-    .reviews-grid {
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: minmax(270px, 1fr);
       gap: 12px;
-      overflow-x: auto;
-      scroll-snap-type: x proximity;
-      scrollbar-width: none;
-    }
-    .reviews-grid::-webkit-scrollbar { display: none; }
-    @media (min-width: 840px) {
-      .reviews-grid {
-        grid-auto-flow: row;
-        grid-template-columns: repeat(3, 1fr);
-      }
     }
 
-    .rev-card {
-      scroll-snap-align: start;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--r-lg);
-      padding: 16px;
+    .rating-left {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
       gap: 10px;
     }
-    .rev-card p { font-size: 0.8rem; color: var(--ink-body); }
-    .rev-author {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.72rem;
-    }
-    .rev-author strong { color: var(--ink); }
-    .rev-author span { color: var(--ink-muted); }
 
-    /* Sticky Filter Bar */
-    .filter-bar {
+    .rating-score {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .rating-stars {
+      display: inline-flex;
+      gap: 2px;
+      color: #EAB308;
+    }
+
+    .rating-progress-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      min-width: 190px;
+      max-width: 340px;
+    }
+
+    .progress-track {
+      flex: 1;
+      height: 7px;
+      background: var(--surface-2);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 96%;
+      height: 100%;
+      background: linear-gradient(90deg, #D97706, #16A34A);
+      border-radius: 999px;
+    }
+
+    .rating-caption {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--ink-sub);
+      white-space: nowrap;
+    }
+
+    /* Sticky Search & Filter Bar */
+    .sticky-controls {
       position: sticky;
       top: 0;
       z-index: 30;
-      background: rgba(251, 247, 242, 0.94);
+      background: rgba(249, 245, 240, 0.94);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
-      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      padding: 11px 0 12px;
     }
 
-    .filter-stack {
+    .controls-stack {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
 
-    .search-field {
-      position: relative;
-      width: 100%;
+    .search-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .search-field svg {
+
+    .search-box {
+      position: relative;
+      flex: 1;
+    }
+    .search-box svg {
       position: absolute;
-      left: 15px;
+      left: 14px;
       top: 50%;
       transform: translateY(-50%);
-      color: var(--ink-muted);
+      color: var(--ink-mute);
       pointer-events: none;
     }
-    .search-field input {
+    .search-box input {
       width: 100%;
       height: 44px;
-      border-radius: var(--r-pill);
-      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
       background: var(--surface);
-      padding: 0 16px 0 42px;
+      padding: 0 16px 0 40px;
       font-family: inherit;
       font-size: 0.86rem;
       color: var(--ink);
       outline: none;
     }
-    .search-field input:focus {
-      border-color: var(--terracotta);
-      box-shadow: 0 0 0 3px rgba(162, 65, 41, 0.12);
+    .search-box input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(164, 62, 38, 0.12);
     }
 
-    .rails-row {
+    .filter-rails {
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
 
-    .scroll-rail {
+    .rail {
       display: flex;
-      gap: 8px;
+      gap: 7px;
       overflow-x: auto;
       scrollbar-width: none;
-      padding: 1px 0;
     }
-    .scroll-rail::-webkit-scrollbar { display: none; }
+    .rail::-webkit-scrollbar { display: none; }
 
-    .diet-pill {
-      height: 36px;
-      padding: 0 13px;
-      border-radius: var(--r-pill);
-      border: 1px solid var(--line-strong);
+    /* FSSAI Standard Square Icons */
+    .fssai-mark {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      display: inline-grid;
+      place-items: center;
+      background: #FFFFFF;
+      flex-shrink: 0;
+    }
+    .fssai-mark.veg { border: 1.5px solid var(--veg); }
+    .fssai-mark.veg::after { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--veg); }
+
+    .fssai-mark.egg { border: 1.5px solid var(--egg); }
+    .fssai-mark.egg::after { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--egg); }
+
+    .chip-diet {
+      height: 35px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
       background: var(--surface);
       font-family: inherit;
-      font-size: 0.77rem;
+      font-size: 0.76rem;
       font-weight: 600;
-      color: var(--ink-body);
+      color: var(--ink-sub);
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -480,181 +444,160 @@
       white-space: nowrap;
       transition: all 0.15s ease;
     }
-    .diet-pill.active[data-diet="all"] { background: var(--espresso); color: #FFF9F3; border-color: var(--espresso); }
-    .diet-pill.active[data-diet="eggless"] { background: var(--veg-tint); color: #125E26; border-color: var(--veg); }
-    .diet-pill.active[data-diet="egg"] { background: var(--egg-tint); color: #7C4408; border-color: var(--egg); }
+    .chip-diet.active[data-diet="all"] { background: var(--espresso); color: #FFF9F2; border-color: var(--espresso); }
+    .chip-diet.active[data-diet="eggless"] { background: var(--veg-bg); color: #14532D; border-color: var(--veg); }
+    .chip-diet.active[data-diet="egg"] { background: var(--egg-bg); color: #78350F; border-color: var(--egg); }
 
-    .dot-ind {
-      width: 12px;
-      height: 12px;
-      border-radius: 3px;
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-    }
-    .dot-ind.veg { border: 1.5px solid var(--veg); }
-    .dot-ind.veg::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--veg); }
-    .dot-ind.egg { border: 1.5px solid var(--egg); }
-    .dot-ind.egg::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--egg); }
-
-    .cat-pill {
-      height: 38px;
-      padding: 0 15px;
-      border-radius: var(--r-pill);
-      border: 1px solid var(--line);
+    .chip-cat {
+      height: 37px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
       background: var(--surface);
-      color: var(--ink-body);
+      color: var(--ink-sub);
       font-family: inherit;
-      font-size: 0.8rem;
+      font-size: 0.79rem;
       font-weight: 600;
       white-space: nowrap;
       cursor: pointer;
-      transition: all 0.16s ease;
+      transition: all 0.15s ease;
     }
-    .cat-pill.active {
+    .chip-cat.active {
       background: var(--espresso);
-      color: #FFF9F3;
+      color: #FFF9F2;
       border-color: var(--espresso);
     }
 
-    /* Upgraded Gallery-Style Product Cards */
-    main { padding-top: 24px; }
+    /* High-Craft Gallery Cards */
+    main { padding-top: 22px; }
 
-    .sec-head {
+    .grid-header {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
-    .sec-head h3 { font-size: 1.7rem; font-weight: 700; }
-    .sec-count {
-      font-size: 0.76rem;
+    .grid-header h3 { font-size: 1.65rem; font-weight: 700; }
+    .grid-count {
+      font-size: 0.75rem;
       font-weight: 600;
-      color: var(--ink-muted);
-      background: var(--surface-warm);
-      padding: 5px 11px;
-      border-radius: var(--r-pill);
+      color: var(--ink-mute);
+      background: var(--surface-2);
+      padding: 4px 11px;
+      border-radius: 999px;
     }
 
-    /* 1-col on small phones for luxury card breathing room, 2-col on wide phones, 3-col desktop */
-    .cards-grid {
+    .catalog-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 18px;
     }
-    @media (min-width: 520px) {
-      .cards-grid {
+    @media (min-width: 540px) {
+      .catalog-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 18px;
       }
     }
     @media (min-width: 960px) {
-      .cards-grid {
+      .catalog-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 24px;
       }
     }
 
-    .p-card {
+    .card {
       background: var(--surface);
-      border-radius: var(--r-xl);
-      border: 1px solid var(--line);
+      border-radius: 22px;
+      border: 1px solid var(--border);
       overflow: hidden;
-      box-shadow: var(--shadow-card);
+      box-shadow: var(--shadow-md);
       display: flex;
       flex-direction: column;
       cursor: pointer;
-      transition: transform 0.25s var(--spring), box-shadow 0.25s var(--spring);
+      transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
     }
     @media (hover: hover) {
-      .p-card:hover {
+      .card:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-hover);
+        box-shadow: var(--shadow-lg);
       }
     }
-    .p-card:active { transform: scale(0.985); }
+    .card:active { transform: scale(0.985); }
 
-    .p-media {
+    .card-img {
       position: relative;
-      aspect-ratio: 16 / 11;
-      background: var(--surface-warm);
+      aspect-ratio: 16 / 10.5;
+      background: var(--surface-2);
       overflow: hidden;
     }
-    .p-media img {
+    .card-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.5s var(--spring);
+      transition: transform 0.55s var(--ease);
     }
     @media (hover: hover) {
-      .p-card:hover .p-media img { transform: scale(1.05); }
+      .card:hover .card-img img { transform: scale(1.06); }
     }
 
-    .p-tag {
+    .card-badge {
       position: absolute;
       top: 12px;
       left: 12px;
-      background: rgba(27, 17, 13, 0.86);
+      background: rgba(24, 16, 12, 0.84);
       backdrop-filter: blur(8px);
-      color: #FFF8F1;
-      font-size: 0.68rem;
+      color: #FFF9F2;
+      font-size: 0.67rem;
       font-weight: 700;
-      padding: 5px 11px;
-      border-radius: var(--r-pill);
+      padding: 5px 10px;
+      border-radius: 999px;
       letter-spacing: 0.02em;
     }
-    .p-tag.festive { background: var(--terracotta); }
+    .card-badge.accent { background: var(--accent); }
 
-    .p-diet-chip {
+    /* Minimal Corner Veg/Non-Veg Symbol Only */
+    .card-symbols {
       position: absolute;
       top: 12px;
       right: 12px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(6px);
-      padding: 5px 9px;
-      border-radius: var(--r-pill);
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 0.67rem;
-      font-weight: 700;
-      color: var(--ink);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      display: flex;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 4px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
     }
 
-    .p-body {
+    .card-content {
       padding: 18px 18px 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       flex: 1;
-      gap: 16px;
+      gap: 14px;
     }
 
-    .p-meta-line {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.7rem;
+    .card-kicker {
+      font-size: 0.68rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--terracotta);
+      letter-spacing: 0.07em;
+      color: var(--accent);
     }
 
-    .p-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.42rem;
+    .card-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.32rem;
       font-weight: 700;
-      line-height: 1.15;
+      line-height: 1.18;
       color: var(--ink);
       margin-top: 4px;
     }
 
-    .p-desc {
-      font-size: 0.82rem;
-      color: var(--ink-body);
+    .card-desc {
+      font-size: 0.81rem;
+      color: var(--ink-sub);
       margin-top: 6px;
       line-height: 1.48;
       display: -webkit-box;
@@ -663,217 +606,144 @@
       overflow: hidden;
     }
 
-    .p-actions {
+    .card-bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
+      padding-top: 13px;
+      border-top: 1px solid var(--border);
     }
 
-    .p-price-box small {
+    .price-wrap small {
       display: block;
-      font-size: 0.7rem;
-      color: var(--ink-muted);
+      font-size: 0.69rem;
+      color: var(--ink-mute);
       font-weight: 500;
     }
-    .p-price-box strong {
-      font-size: 1.15rem;
+    .price-wrap strong {
+      font-size: 1.16rem;
       font-weight: 700;
       color: var(--ink);
     }
 
-    .btn-card-cta {
-      height: 42px;
-      padding: 0 18px;
-      border-radius: var(--r-pill);
+    .btn-select {
+      height: 40px;
+      padding: 0 17px;
+      border-radius: 999px;
       background: var(--espresso);
-      color: #FFF9F3;
+      color: #FFF9F2;
       border: none;
       font-family: inherit;
-      font-size: 0.8rem;
+      font-size: 0.79rem;
       font-weight: 700;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: transform 0.16s var(--spring), background 0.18s ease;
+      transition: transform 0.15s var(--ease), background 0.16s ease;
     }
-    .btn-card-cta:hover { background: var(--terracotta); }
-    .btn-card-cta:active { transform: scale(0.95); }
+    .btn-select:hover { background: var(--accent); }
+    .btn-select:active { transform: scale(0.95); }
 
-    /* Events & Bulk Catering Section */
-    .events-box {
-      margin-top: 38px;
-      background: linear-gradient(135deg, #22140F 0%, #3C2017 65%, #5B2A1B 100%);
-      color: #FFF8F2;
-      border-radius: var(--r-xl);
-      padding: 26px 22px;
-      box-shadow: 0 16px 36px rgba(27, 17, 13, 0.18);
+    /* High-Ticket Events & Bulk Section */
+    .bulk-card {
+      margin-top: 34px;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 24px;
+      padding: 24px 20px;
+      box-shadow: var(--shadow-md);
     }
     @media (min-width: 768px) {
-      .events-box { padding: 34px 36px; }
+      .bulk-card { padding: 30px 32px; }
     }
 
-    .events-badge {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.12);
-      color: #F4C88A;
+    .bulk-head {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .bulk-head span {
       font-size: 0.71rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      padding: 5px 12px;
-      border-radius: var(--r-pill);
+      color: var(--accent);
     }
+    .bulk-head h3 { font-size: 1.68rem; font-weight: 700; }
+    .bulk-head p { font-size: 0.84rem; color: var(--ink-sub); }
 
-    .events-box h3 {
-      font-size: 1.9rem;
-      line-height: 1.1;
-      margin-top: 10px;
-    }
-    .events-box > p {
-      font-size: 0.85rem;
-      color: rgba(255, 248, 242, 0.82);
-      margin-top: 6px;
-      max-width: 620px;
-    }
-
-    .pkg-grid {
+    .bulk-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 14px;
-      margin-top: 22px;
+      gap: 12px;
     }
     @media (min-width: 768px) {
-      .pkg-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .bulk-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
     }
 
-    .pkg-item {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--r-lg);
-      padding: 18px;
+    .bulk-tile {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 14px;
+      gap: 12px;
     }
-    .pkg-item h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.38rem;
+    .bulk-tile h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.18rem;
       font-weight: 700;
     }
-    .pkg-item p {
-      font-size: 0.8rem;
-      color: rgba(255, 248, 242, 0.78);
-      margin-top: 4px;
-    }
-    .pkg-bottom {
+    .bulk-tile p { font-size: 0.78rem; color: var(--ink-sub); margin-top: 4px; }
+    .bulk-tile-foot {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 12px;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
     }
-    .pkg-bottom strong { color: #F4C88A; font-size: 0.94rem; }
-    .btn-pkg-wa {
-      height: 38px;
-      padding: 0 14px;
-      border-radius: var(--r-pill);
-      background: #25D366;
-      color: #0B2615;
-      font-size: 0.77rem;
+    .bulk-tile-foot strong { font-size: 0.9rem; color: var(--ink); }
+    .bulk-link {
+      font-size: 0.78rem;
       font-weight: 700;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* Upgraded Boutique Footer */
-    .site-footer {
-      margin-top: 44px;
-      background: var(--espresso);
-      color: #E7DBD0;
-      padding: 40px 0 32px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    @media (min-width: 768px) {
-      .footer-grid {
-        grid-template-columns: 1.4fr 1fr 1fr;
-        gap: 36px;
-      }
-    }
-
-    .footer-brand h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.75rem;
-      color: #FFF8F2;
-      line-height: 1.1;
-    }
-    .footer-brand p {
-      font-size: 0.82rem;
-      color: rgba(231, 219, 208, 0.76);
-      margin-top: 8px;
-      max-width: 340px;
-    }
-    .fssai-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      margin-top: 14px;
-      padding: 6px 12px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      font-size: 0.72rem;
-      color: #F4C88A;
-      font-weight: 600;
-    }
-
-    .footer-col h5 {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: #F4C88A;
-      margin-bottom: 12px;
-    }
-    .footer-col ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-      font-size: 0.82rem;
-    }
-    .footer-col a {
-      color: rgba(231, 219, 208, 0.85);
+      color: var(--wa-dark);
       text-decoration: none;
     }
-    .footer-col a:hover { color: #FFFFFF; text-decoration: underline; }
 
-    .footer-bottom {
-      padding-top: 20px;
+    /* Compact Catalogue Colophon (Not a Website Footer) */
+    .catalogue-colophon {
+      margin-top: 34px;
+      padding: 20px 0 12px;
+      border-top: 1px solid var(--border-strong);
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      gap: 12px;
       font-size: 0.76rem;
-      color: rgba(231, 219, 208, 0.65);
+      color: var(--ink-sub);
     }
-    .footer-bottom a {
-      color: #F4C88A;
+    .colophon-left {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+    .fssai-chip {
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .colophon-right a {
+      color: var(--ink);
       font-weight: 700;
       text-decoration: none;
+      border-bottom: 1px solid var(--border-strong);
     }
 
     /* Floating Order Bag Dock */
@@ -883,13 +753,13 @@
       left: 50%;
       transform: translateX(-50%);
       width: calc(100% - 28px);
-      max-width: 490px;
-      background: rgba(27, 17, 13, 0.96);
+      max-width: 480px;
+      background: rgba(24, 16, 12, 0.96);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      color: #FAF4ED;
+      color: #FFF9F2;
       padding: 8px 8px 8px 18px;
-      border-radius: var(--r-pill);
+      border-radius: 999px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -897,23 +767,23 @@
       box-shadow: 0 14px 36px rgba(16, 10, 7, 0.34);
       z-index: 40;
     }
-    .bag-dock-info { font-size: 0.82rem; font-weight: 500; }
-    .bag-dock-info strong { color: #F4C88A; font-weight: 700; }
-    .bag-dock-btn {
+    .dock-label { font-size: 0.82rem; font-weight: 500; }
+    .dock-label strong { color: #F4C88A; font-weight: 700; }
+    .dock-btn {
       height: 42px;
       padding: 0 17px;
-      border-radius: var(--r-pill);
-      background: #25D366;
-      color: #0B2615;
+      border-radius: 999px;
+      background: #22C55E;
+      color: #052E16;
       border: none;
       font-family: inherit;
       font-size: 0.8rem;
       font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
-      transition: transform 0.16s var(--spring);
+      transition: transform 0.15s var(--ease);
     }
-    .bag-dock-btn:active { transform: scale(0.95); }
+    .dock-btn:active { transform: scale(0.95); }
 
     /* Bottom Sheet Modals */
     .overlay {
@@ -935,20 +805,20 @@
     .sheet {
       background: var(--surface);
       width: 100%;
-      max-width: 490px;
+      max-width: 480px;
       max-height: 92dvh;
       border-radius: 26px 26px 0 0;
-      box-shadow: var(--shadow-sheet);
+      box-shadow: 0 -14px 48px rgba(16, 10, 7, 0.28);
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      animation: sheetUp 0.28s var(--spring) forwards;
+      animation: rise 0.28s var(--ease) forwards;
     }
     @media (min-width: 640px) {
       .sheet { border-radius: 26px; }
     }
-    @keyframes sheetUp {
-      from { transform: translateY(36px); opacity: 0.7; }
+    @keyframes rise {
+      from { transform: translateY(34px); opacity: 0.7; }
       to { transform: translateY(0); opacity: 1; }
     }
 
@@ -956,26 +826,28 @@
       position: relative;
       height: 185px;
       flex-shrink: 0;
-      background: var(--surface-warm);
+      background: var(--surface-2);
     }
     .sheet-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .btn-x {
+    .btn-close {
       position: absolute;
       top: 14px;
       right: 14px;
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       border: none;
       background: rgba(255, 255, 255, 0.94);
       color: var(--ink);
+      font-size: 1.25rem;
+      font-weight: 700;
       display: grid;
       place-items: center;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.16);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
     }
 
-    .sheet-body {
+    .sheet-scroll {
       padding: 18px 20px;
       overflow-y: auto;
       display: flex;
@@ -983,31 +855,23 @@
       gap: 15px;
     }
 
-    .sheet-title-row {
+    .sheet-head {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       gap: 12px;
     }
-    .sheet-title-row h3 { font-size: 1.58rem; line-height: 1.1; margin-top: 2px; }
-    .sheet-unit-price { font-size: 1.28rem; font-weight: 700; color: var(--terracotta); white-space: nowrap; }
-    .sheet-desc { font-size: 0.82rem; color: var(--ink-body); margin-top: -6px; }
-    .lead-pill {
-      font-size: 0.74rem;
-      font-weight: 600;
-      color: var(--terracotta-dark);
-      background: var(--terracotta-tint);
-      padding: 7px 11px;
-      border-radius: 10px;
-    }
+    .sheet-head h3 { font-size: 1.5rem; line-height: 1.12; margin-top: 2px; }
+    .sheet-price { font-size: 1.25rem; font-weight: 700; color: var(--accent); white-space: nowrap; }
+    .sheet-desc { font-size: 0.82rem; color: var(--ink-sub); margin-top: -6px; }
 
     .lbl {
       display: block;
-      font-size: 0.72rem;
+      font-size: 0.71rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: var(--ink-body);
+      color: var(--ink-sub);
       margin-bottom: 7px;
     }
 
@@ -1021,8 +885,8 @@
     .opt-tile {
       min-height: 48px;
       padding: 7px 6px;
-      border-radius: var(--r-md);
-      border: 1.5px solid var(--line-strong);
+      border-radius: 14px;
+      border: 1.5px solid var(--border-strong);
       background: var(--bg);
       font-family: inherit;
       font-size: 0.81rem;
@@ -1035,33 +899,33 @@
       display: block;
       font-size: 0.69rem;
       font-weight: 500;
-      color: var(--ink-body);
+      color: var(--ink-sub);
       margin-top: 2px;
     }
     .opt-tile.selected {
-      border-color: var(--terracotta);
-      background: var(--terracotta-tint);
-      color: var(--terracotta-dark);
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent-dark);
     }
 
-    /* Tactile Quantity Stepper (- 1 +) */
-    .qty-row {
+    .qty-box {
       display: flex;
       align-items: center;
       justify-content: space-between;
       background: var(--bg);
-      border: 1px solid var(--line-strong);
-      border-radius: var(--r-md);
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
       padding: 8px 12px;
     }
-    .qty-row span { font-size: 0.84rem; font-weight: 700; color: var(--ink); }
+    .qty-box span { font-size: 0.84rem; font-weight: 700; }
+
     .stepper {
       display: inline-flex;
       align-items: center;
       gap: 14px;
       background: var(--surface);
-      border: 1px solid var(--line-strong);
-      border-radius: var(--r-pill);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
       padding: 4px 6px;
     }
     .step-btn {
@@ -1069,28 +933,22 @@
       height: 34px;
       border-radius: 50%;
       border: none;
-      background: var(--surface-warm);
+      background: var(--surface-2);
       color: var(--ink);
       font-size: 1.15rem;
       font-weight: 700;
       cursor: pointer;
       display: grid;
       place-items: center;
-      transition: transform 0.14s var(--spring), background 0.15s ease;
     }
-    .step-btn:active { transform: scale(0.9); background: var(--espresso); color: #fff; }
-    .step-val {
-      font-size: 0.95rem;
-      font-weight: 700;
-      min-width: 20px;
-      text-align: center;
-    }
+    .step-btn:active { background: var(--espresso); color: #fff; }
+    .step-val { font-size: 0.95rem; font-weight: 700; min-width: 20px; text-align: center; }
 
     .txt-input {
       width: 100%;
       height: 45px;
-      border-radius: var(--r-md);
-      border: 1.5px solid var(--line-strong);
+      border-radius: 14px;
+      border: 1.5px solid var(--border-strong);
       background: var(--bg);
       padding: 0 13px;
       font-family: inherit;
@@ -1098,7 +956,7 @@
       color: var(--ink);
       outline: none;
     }
-    .txt-input:focus { border-color: var(--terracotta); background: #FFFFFF; }
+    .txt-input:focus { border-color: var(--accent); background: #FFFFFF; }
 
     .two-cols {
       display: grid;
@@ -1109,17 +967,17 @@
     .sheet-foot {
       padding: 12px 20px calc(14px + var(--safe-b));
       background: var(--surface);
-      border-top: 1px solid var(--line);
+      border-top: 1px solid var(--border);
       flex-shrink: 0;
     }
 
-    .btn-full-dark {
+    .btn-dark-full {
       width: 100%;
       height: 50px;
       border: none;
-      border-radius: var(--r-pill);
+      border-radius: 999px;
       background: var(--espresso);
-      color: #FFF9F3;
+      color: #FFF9F2;
       font-family: inherit;
       font-size: 0.92rem;
       font-weight: 700;
@@ -1130,12 +988,14 @@
       cursor: pointer;
     }
 
-    .btn-full-wa {
+    .btn-wa-full {
+      position: relative;
+      overflow: hidden;
       width: 100%;
       height: 52px;
       border: none;
-      border-radius: var(--r-pill);
-      background: linear-gradient(135deg, #22A855 0%, var(--wa) 100%);
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22C55E 0%, var(--wa) 100%);
       color: #FFFFFF;
       font-family: inherit;
       font-size: 0.94rem;
@@ -1145,18 +1005,17 @@
       justify-content: center;
       gap: 10px;
       cursor: pointer;
-      box-shadow: 0 10px 26px rgba(26, 143, 70, 0.32);
+      box-shadow: 0 10px 26px rgba(22, 163, 74, 0.32);
     }
 
-    /* Bag Line Items with Inline Stepper */
     .bag-top {
       padding: 18px 20px 14px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    .bag-top h3 { font-size: 1.55rem; font-weight: 700; }
+    .bag-top h3 { font-size: 1.5rem; font-weight: 700; }
 
     .bag-row {
       display: flex;
@@ -1165,19 +1024,19 @@
       gap: 12px;
       padding: 12px;
       background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: var(--r-md);
+      border: 1px solid var(--border);
+      border-radius: 14px;
     }
-    .bag-row-details strong { display: block; font-size: 0.88rem; color: var(--ink); }
-    .bag-row-details span { display: block; font-size: 0.74rem; color: var(--ink-body); margin-top: 2px; }
+    .bag-row-details strong { display: block; font-size: 0.88rem; }
+    .bag-row-details span { display: block; font-size: 0.74rem; color: var(--ink-sub); margin-top: 2px; }
 
     .mini-stepper {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       background: var(--surface);
-      border: 1px solid var(--line-strong);
-      border-radius: var(--r-pill);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
       padding: 3px 5px;
     }
     .mini-stepper button {
@@ -1185,7 +1044,7 @@
       height: 26px;
       border-radius: 50%;
       border: none;
-      background: var(--surface-warm);
+      background: var(--surface-2);
       font-weight: 700;
       cursor: pointer;
     }
@@ -1199,11 +1058,11 @@
       background: var(--espresso);
       color: #FFFFFF;
       padding: 11px 18px;
-      border-radius: var(--r-pill);
+      border-radius: 999px;
       font-size: 0.8rem;
       font-weight: 600;
       z-index: 90;
-      transition: transform 0.28s var(--spring);
+      transition: transform 0.28s var(--ease);
       pointer-events: none;
     }
     .toast.show { transform: translateX(-50%) translateY(0); }
@@ -1211,258 +1070,214 @@
 </head>
 <body>
 
-  <div class="concept-strip">
-    Interactive Digital Catalogue Concept • Built by <strong>NoahStudio</strong>
+  <div class="top-note">
+    Interactive Digital Catalogue Concept • Crafted by <strong>NoahStudio</strong>
   </div>
 
   <header class="wrap">
-    <div class="brand">
-      <div class="brand-seal" aria-hidden="true">C&amp;W</div>
-      <div class="brand-text">
-        <h1>Crumb &amp; Whisk</h1>
-        <div class="brand-loc">
-          <span class="live-dot"></span>
-          <span>Artisan Bakery • Hadapsar &amp; Magarpatta, Pune</span>
-        </div>
+    <a href="#" class="brand">
+      <div class="brand-emblem" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3c2.5 0 4.5 2 4.5 4.5 0 3.5-4.5 8.5-4.5 8.5S7.5 11 7.5 7.5C7.5 5 9.5 3 12 3z"/>
+          <path d="M9.5 6.5c1.5 1 3.5 1 5 0"/>
+          <line x1="12" y1="16" x2="12" y2="21"/>
+          <line x1="9" y1="21" x2="15" y2="21"/>
+        </svg>
       </div>
+      <div class="brand-meta">
+        <h1>Crumb &amp; Whisk</h1>
+        <span>Artisan Bakery • Hadapsar &amp; Magarpatta, Pune</span>
+      </div>
+    </a>
+
+    <div class="header-actions">
+      <button type="button" class="btn-icon-pill" id="shareBtn" aria-label="Share Catalogue">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        <span>Share</span>
+      </button>
     </div>
-    <button type="button" class="btn-pill-outline" id="shareBtn">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-      <span>Share</span>
-    </button>
   </header>
 
-  <div class="wrap">
-    <div class="slot-bar">
-      <div class="slot-left">
-        <span class="slot-pill">Today: 2 Slots Left</span>
-        <span>Tomorrow &amp; Weekend: <strong>Open</strong></span>
-      </div>
-      <div class="slot-chips">
-        <span class="s-chip closed">10 AM–1 PM (Full)</span>
-        <span class="s-chip">1 PM–5 PM</span>
-        <span class="s-chip">5 PM–9 PM</span>
-      </div>
-    </div>
-  </div>
-
   <section class="wrap">
-    <div class="hero-card">
+    <div class="hero-banner">
       <div>
-        <span class="eyebrow">100% Eggless &amp; Classic Bakes • Pune</span>
-        <h2>Configure weight, quantity &amp; slots—send your order in one tap.</h2>
-        <p>Add multiple cakes, brownie boxes, cupcakes, or festive hampers into a single Order Bag with live pricing and direct WhatsApp confirmation.</p>
-        <div class="hero-cta-row">
-          <a href="#menuSection" class="btn-dark">Explore Catalogue ↓</a>
-          <a href="#eventsSection" class="btn-pill-outline">Events &amp; Bulk Orders</a>
+        <h2>Freshly baked cakes, brownies &amp; hampers—ordered in one tap.</h2>
+        <p>Select weight, quantity, and dietary preference across multiple items and send a structured order directly on WhatsApp.</p>
+        <div class="hero-btns">
+          <a href="#catalogueSection" class="btn-cream">Browse Catalogue ↓</a>
+          <a href="#eventsSection" class="btn-glass">Events &amp; Bulk Orders</a>
         </div>
       </div>
-      <div class="stats-panel">
+
+      <div class="hero-kpis">
         <div>
-          <strong>4.9 ★</strong>
-          <span>320+ Pune Orders</span>
+          <strong>₹240+</strong>
+          <span>Treats &amp; Cakes</span>
         </div>
         <div>
-          <strong>Veg &amp; Egg</strong>
-          <span>Separate Bakes</span>
+          <strong>320+</strong>
+          <span>Pune Orders</span>
         </div>
         <div>
-          <strong>Events</strong>
-          <span>20–150 Guests</span>
+          <strong>20–150</strong>
+          <span>Event Catering</span>
         </div>
+      </div>
+    </div>
+
+    <!-- Single Compact Rating + Progress Bar -->
+    <div class="rating-bar" aria-label="Customer Rating Summary">
+      <div class="rating-left">
+        <span class="rating-score">4.9</span>
+        <div class="rating-stars" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+      </div>
+
+      <div class="rating-progress-group">
+        <div class="progress-track" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-fill"></div>
+        </div>
+        <span class="rating-caption">96% Repeat Customers (320+ Reviews)</span>
       </div>
     </div>
   </section>
 
-  <section class="wrap reviews-wrap">
-    <div class="reviews-top">
-      <div class="rating-chip">
-        <span class="stars">★★★★★</span>
-        <span>4.9/5 Verified Pune Reviews</span>
-      </div>
-      <a href="#eventsSection" style="font-size: 0.78rem; font-weight: 700; color: var(--terracotta); text-decoration: none;">Bulk Orders →</a>
-    </div>
-
-    <div class="reviews-grid">
-      <article class="rev-card">
-        <p>"Ordered a 1.5kg Eggless Rose Rasmalai cake + 2 boxes of Nutella brownies in Magarpatta. Delivered right on the 5 PM slot!"</p>
-        <div class="rev-author">
-          <strong>Sneha Kulkarni</strong>
-          <span>Magarpatta City</span>
+  <div class="sticky-controls" id="catalogueSection">
+    <div class="wrap controls-stack">
+      <div class="search-row">
+        <div class="search-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" placeholder="Search truffle, tiramisu, brownies, hampers..." autocomplete="off" />
         </div>
-      </article>
-      <article class="rev-card">
-        <p>"The Classic Tiramisu Gateau (with egg) is genuinely bakery-grade—super moist and balanced. Selecting quantity and slots took 30 seconds."</p>
-        <div class="rev-author">
-          <strong>Rohan Deshmukh</strong>
-          <span>Kharadi, Pune</span>
-        </div>
-      </article>
-      <article class="rev-card">
-        <p>"Booked 35 festive dessert hampers for our corporate year-end gifting. Custom ribbon tags and punctual delivery across Hadapsar."</p>
-        <div class="rev-author">
-          <strong>Priya Nair</strong>
-          <span>Corporate Bulk Order</span>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <div class="filter-bar" id="menuSection">
-    <div class="wrap filter-stack">
-      <div class="search-field">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="search" id="searchInput" placeholder="Search truffle, tiramisu, eggless, brownies, hampers..." autocomplete="off" />
       </div>
 
-      <div class="rails-row">
-        <div class="scroll-rail" id="dietRail">
-          <button type="button" class="diet-pill active" data-diet="all">All Bakes</button>
-          <button type="button" class="diet-pill" data-diet="eggless"><span class="dot-ind veg"></span>100% Eggless (Veg)</button>
-          <button type="button" class="diet-pill" data-diet="egg"><span class="dot-ind egg"></span>Classic (With Egg)</button>
+      <div class="filter-rails">
+        <div class="rail" id="dietRail">
+          <button type="button" class="chip-diet active" data-diet="all">All</button>
+          <button type="button" class="chip-diet" data-diet="eggless"><span class="fssai-mark veg"></span>Eggless</button>
+          <button type="button" class="chip-diet" data-diet="egg"><span class="fssai-mark egg"></span>With Egg</button>
         </div>
 
-        <div class="scroll-rail" id="catRail">
-          <button type="button" class="cat-pill active" data-cat="All">All Categories</button>
-          <button type="button" class="cat-pill" data-cat="Celebration Cakes">Celebration Cakes</button>
-          <button type="button" class="cat-pill" data-cat="Bento & Cupcakes">Bento &amp; Cupcakes</button>
-          <button type="button" class="cat-pill" data-cat="Brownies & Tubs">Brownies &amp; Tubs</button>
-          <button type="button" class="cat-pill" data-cat="Tea Cakes & Cookies">Tea Cakes &amp; Cookies</button>
-          <button type="button" class="cat-pill" data-cat="Festive Hampers">Festive Hampers</button>
+        <div class="rail" id="catRail">
+          <button type="button" class="chip-cat active" data-cat="All">All Categories</button>
+          <button type="button" class="chip-cat" data-cat="Celebration Cakes">Celebration Cakes</button>
+          <button type="button" class="chip-cat" data-cat="Bento & Cupcakes">Bento &amp; Cupcakes</button>
+          <button type="button" class="chip-cat" data-cat="Brownies & Tubs">Brownies &amp; Tubs</button>
+          <button type="button" class="chip-cat" data-cat="Tea Cakes & Cookies">Tea Cakes &amp; Cookies</button>
+          <button type="button" class="chip-cat" data-cat="Festive Hampers">Festive Hampers</button>
         </div>
       </div>
     </div>
   </div>
 
   <main class="wrap">
-    <div class="sec-head">
-      <h3 id="secTitle">Signature Menu</h3>
-      <span class="sec-count" id="secCount">11 items</span>
+    <div class="grid-header">
+      <h3 id="secTitle">Signature Catalogue</h3>
+      <span class="grid-count" id="secCount">11 items</span>
     </div>
 
-    <div class="cards-grid" id="cardsGrid"></div>
+    <div class="catalog-grid" id="catalogGrid"></div>
 
-    <section class="events-box" id="eventsSection">
-      <span class="events-badge">High-Ticket Events &amp; Bulk Catering</span>
-      <h3>Planning a Birthday Party, Wedding, or Corporate Event?</h3>
-      <p>Custom tiered centerpieces, dessert grazing tables, and branded return-gift hampers for 20 to 150+ guests.</p>
+    <section class="bulk-card" id="eventsSection">
+      <div class="bulk-head">
+        <span>Events, Birthdays &amp; Corporate</span>
+        <h3>Bulk Party &amp; Gifting Packages</h3>
+        <p>Higher-volume custom orders for birthdays, engagements, and office gifting (20–150+ guests).</p>
+      </div>
 
-      <div class="pkg-grid">
-        <article class="pkg-item">
+      <div class="bulk-grid">
+        <article class="bulk-tile">
           <div>
-            <h4>Kids &amp; Milestone Birthday Table</h4>
+            <h4>Birthday Celebration Table</h4>
             <p>2kg Custom Theme Cake + 18 matching cupcakes + 12 brownie bites.</p>
           </div>
-          <div class="pkg-bottom">
+          <div class="bulk-tile-foot">
             <strong>From ₹3,800</strong>
-            <a class="btn-pkg-wa" href="#" data-pkg="Kids & Milestone Birthday Table (2kg Theme Cake + 18 Cupcakes + 12 Brownies)">Enquire →</a>
+            <a class="bulk-link" href="#" data-pkg="Birthday Celebration Table (2kg Theme Cake + 18 Cupcakes + 12 Brownies)">Enquire on WhatsApp →</a>
           </div>
         </article>
 
-        <article class="pkg-item">
+        <article class="bulk-tile">
           <div>
-            <h4>Engagement &amp; Tiered Celebration</h4>
-            <p>2-Tier or 3-Tier fondant/buttercream centerpiece with complimentary tasting box.</p>
+            <h4>Tiered Engagement &amp; Wedding</h4>
+            <p>2-Tier or 3-Tier centerpiece cake with complimentary flavour tasting box.</p>
           </div>
-          <div class="pkg-bottom">
+          <div class="bulk-tile-foot">
             <strong>From ₹5,500</strong>
-            <a class="btn-pkg-wa" href="#" data-pkg="Engagement / Tiered Celebration Cake (3kg+ with Tasting Box)">Enquire →</a>
+            <a class="bulk-link" href="#" data-pkg="Tiered Engagement / Wedding Cake (3kg+ with Tasting Box)">Enquire on WhatsApp →</a>
           </div>
         </article>
 
-        <article class="pkg-item">
+        <article class="bulk-tile">
           <div>
             <h4>Corporate &amp; Return Gift Boxes</h4>
-            <p>Min. 15 boxes • Custom logo sticker, brownies, tea loaves &amp; cookie jars.</p>
+            <p>Min. 15 boxes • Custom ribbon tag, brownies, tea loaves &amp; cookies.</p>
           </div>
-          <div class="pkg-bottom">
+          <div class="bulk-tile-foot">
             <strong>₹320 / box</strong>
-            <a class="btn-pkg-wa" href="#" data-pkg="Corporate / Event Return Gift Boxes (Bulk 15+ Boxes)">Bulk Quote →</a>
+            <a class="bulk-link" href="#" data-pkg="Corporate / Event Return Gift Boxes (Bulk 15+ Boxes)">Bulk Quote →</a>
           </div>
         </article>
       </div>
     </section>
+
+    <!-- Compact App-Like Catalogue Colophon -->
+    <footer class="catalogue-colophon">
+      <div class="colophon-left">
+        <span class="fssai-chip">FSSAI Reg. Demo</span>
+        <span>Pickup: Hadapsar • Delivery: Pune-wide</span>
+      </div>
+      <div class="colophon-right">
+        <span>Digital Catalogue by <a href="https://imvicky2115.github.io/MyNewPortfolio/" target="_blank" rel="noopener">NoahStudio</a></span>
+      </div>
+    </footer>
   </main>
 
-  <!-- Structured Boutique Footer -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h4>Crumb &amp; Whisk</h4>
-          <p>Small-batch celebration cakes, brownies, and event dessert tables baked fresh to order in Hadapsar, Pune.</p>
-          <div class="fssai-pill">FSSAI Reg. Demo • Separate Veg &amp; Egg Prep</div>
-        </div>
-
-        <div class="footer-col">
-          <h5>Quick Menu</h5>
-          <ul>
-            <li><a href="#menuSection">Celebration Cakes</a></li>
-            <li><a href="#menuSection">Bento &amp; Cupcake Boxes</a></li>
-            <li><a href="#menuSection">Brownies &amp; Fudge Tubs</a></li>
-            <li><a href="#eventsSection">Events &amp; Corporate Bulk</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h5>Kitchen &amp; Orders</h5>
-          <ul>
-            <li>Pickup: Satavnagar / Hadapsar, Pune</li>
-            <li>Hours: 10:00 AM – 9:00 PM Daily</li>
-            <li>Delivery: Magarpatta, Kharadi &amp; Pune-wide</li>
-            <li><a href="https://wa.me/918788337049" target="_blank" rel="noopener">WhatsApp Concierge →</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 Crumb &amp; Whisk Artisan Bakes • Demo Catalogue</span>
-        <span>Designed &amp; Built by <a href="https://imvicky2115.github.io/MyNewPortfolio/" target="_blank" rel="noopener">NoahStudio</a></span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating Order Bag Bar -->
+  <!-- Floating Order Bag Dock -->
   <div class="bag-dock">
-    <div class="bag-dock-info" id="dockInfo">Your Order Bag is <strong>empty</strong></div>
-    <button type="button" class="bag-dock-btn" id="openBagBtn">View Bag (0)</button>
+    <div class="dock-label" id="dockInfo">Your Order Bag is <strong>empty</strong></div>
+    <button type="button" class="dock-btn" id="openBagBtn">View Bag (0)</button>
   </div>
 
-  <!-- Product Customizer Modal with Quantity Stepper -->
+  <!-- Product Customizer Sheet -->
   <div class="overlay" id="itemOverlay" role="dialog" aria-modal="true">
     <div class="sheet">
       <div class="sheet-banner">
         <img src="" alt="" id="mImg" />
-        <button type="button" class="btn-x" id="closeItemBtn" aria-label="Close">×</button>
+        <button type="button" class="btn-close" id="closeItemBtn" aria-label="Close">×</button>
       </div>
 
-      <div class="sheet-body">
-        <div class="sheet-title-row">
+      <div class="sheet-scroll">
+        <div class="sheet-head">
           <div>
-            <span class="p-meta-line" id="mCat"></span>
+            <span class="card-kicker" id="mCat"></span>
             <h3 id="mTitle"></h3>
           </div>
-          <div class="sheet-unit-price" id="mUnitPrice">₹650</div>
+          <div class="sheet-price" id="mUnitPrice">₹650</div>
         </div>
         <p class="sheet-desc" id="mDesc"></p>
-        <div class="lead-pill" id="mLead"></div>
 
         <div>
-          <label class="lbl">1. Select Weight / Pack Size</label>
+          <label class="lbl">Select Weight / Pack Size</label>
           <div class="seg-row" id="mVariants"></div>
         </div>
 
         <div>
-          <label class="lbl">2. Dietary Preference</label>
+          <label class="lbl">Dietary Preference</label>
           <div class="seg-row two" id="mDiets">
             <button type="button" class="opt-tile selected" data-diet="100% Eggless">100% Eggless<small>Pure Veg</small></button>
-            <button type="button" class="opt-tile" data-diet="Classic (With Egg)">Classic (With Egg)<small>Traditional Bake</small></button>
+            <button type="button" class="opt-tile" data-diet="Classic (With Egg)">Classic (With Egg)<small>Contains Egg</small></button>
           </div>
         </div>
 
         <div>
-          <label class="lbl">3. Quantity</label>
-          <div class="qty-row">
+          <label class="lbl">Quantity</label>
+          <div class="qty-box">
             <span>Number of Packs / Cakes</span>
             <div class="stepper">
               <button type="button" class="step-btn" id="qtyMinus" aria-label="Decrease quantity">−</button>
@@ -1472,58 +1287,50 @@
           </div>
         </div>
 
-        <div>
-          <label class="lbl" id="mNoteLbl" for="mNoteInput">4. Message on Cake (Optional)</label>
+        <!-- Shown ONLY for Cakes & Bentos -->
+        <div id="cakeMsgBlock">
+          <label class="lbl" for="mNoteInput">Message on Cake (Optional)</label>
           <input type="text" id="mNoteInput" class="txt-input" maxlength="45" placeholder="e.g. Happy Birthday Ananya!" />
         </div>
       </div>
 
       <div class="sheet-foot">
-        <button type="button" class="btn-full-dark" id="confirmAddBtn">
+        <button type="button" class="btn-dark-full" id="confirmAddBtn">
           <span>+ Add <span id="ctaQty">1</span> to Order Bag</span> • <span id="ctaSubtotal">₹650</span>
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Order Bag & Slot Checkout Modal -->
+  <!-- Order Bag Checkout Sheet -->
   <div class="overlay" id="bagOverlay" role="dialog" aria-modal="true">
     <div class="sheet">
       <div class="bag-top">
         <h3>Your Order Bag</h3>
-        <button type="button" class="btn-pill-outline" id="closeBagBtn" style="height: 36px; padding: 0 13px;">Close</button>
+        <button type="button" class="btn-icon-pill" id="closeBagBtn" style="height: 36px; padding: 0 13px;">Close</button>
       </div>
 
-      <div class="sheet-body">
+      <div class="sheet-scroll">
         <div id="bagList" style="display: flex; flex-direction: column; gap: 10px;"></div>
 
         <div class="two-cols">
           <div>
-            <label class="lbl" for="bagDate">Delivery / Pickup Date</label>
+            <label class="lbl" for="bagDate">Required Date</label>
             <input type="date" id="bagDate" class="txt-input" />
           </div>
           <div>
-            <label class="lbl" for="bagSlot">Available Time Slot</label>
-            <select id="bagSlot" class="txt-input">
-              <option value="1:00 PM – 5:00 PM">1:00 PM – 5:00 PM</option>
-              <option value="5:00 PM – 9:00 PM">5:00 PM – 9:00 PM</option>
-              <option value="10:00 AM – 1:00 PM (Tomorrow+)">10:00 AM – 1:00 PM</option>
+            <label class="lbl" for="bagMode">Fulfilment</label>
+            <select id="bagMode" class="txt-input">
+              <option value="Self Pickup (Hadapsar)">Pickup (Hadapsar)</option>
+              <option value="Pune Delivery (Magarpatta / Kharadi)">Local Delivery</option>
+              <option value="Pune-Wide Porter Delivery">Pune-Wide Delivery</option>
             </select>
           </div>
-        </div>
-
-        <div>
-          <label class="lbl" for="bagMode">Fulfilment &amp; Area</label>
-          <select id="bagMode" class="txt-input">
-            <option value="Self Pickup (Hadapsar Kitchen)">Self Pickup (Hadapsar Kitchen)</option>
-            <option value="Pune Delivery (Magarpatta / Kharadi / Hadapsar)">Pune Delivery (Magarpatta / Kharadi / Hadapsar)</option>
-            <option value="Pune Wide Delivery (Porter / Dunzo)">Pune Wide Delivery (Porter / Dunzo)</option>
-          </select>
         </div>
       </div>
 
       <div class="sheet-foot">
-        <button type="button" class="btn-full-wa" id="sendWaBtn">
+        <button type="button" class="btn-wa-full" id="sendWaBtn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.01c-.24.68-1.41 1.3-1.95 1.38-.5.07-1.13.1-1.82-.12-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.59-.36.79-.36.2 0 .4 0 .57.01.18.01.43-.07.67.51.24.59.82 2.01.89 2.16.07.15.12.32.02.51-.1.19-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.15.46.12.63-.07.17-.19.74-.86.94-1.15.2-.29.4-.24.67-.14.27.1 1.73.82 2.03.96.3.15.5.22.57.34.07.12.07.7-.17 1.38z"/></svg>
           <span>Send Order on WhatsApp</span> • <span id="bagGrandTotal">₹0</span>
         </button>
@@ -1537,17 +1344,16 @@
     const BAKER_PHONE = "918788337049";
     const BRAND_NAME = "Crumb & Whisk";
 
+    // hasCakeMessage: true ONLY for cakes/bentos where piped text applies
     const CATALOG = [
       {
         id: 1,
         name: "Belgian Dark Chocolate Truffle",
         category: "Celebration Cakes",
         tag: "Bestseller",
-        festive: false,
+        accentTag: false,
         dietMode: "both",
-        leadTime: "Same-day slot available for 500g • 24h notice for 1kg+",
-        noteLabel: "Message on Cake (Optional)",
-        notePlaceholder: "e.g. Happy Birthday Ananya!",
+        hasCakeMessage: true,
         desc: "Moist dark cocoa sponge layered with 54% couverture chocolate ganache and silky truffle glaze.",
         image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80",
         variants: [
@@ -1560,13 +1366,11 @@
         id: 2,
         name: "Classic Italian Tiramisu Gateau",
         category: "Celebration Cakes",
-        tag: "Signature With Egg",
-        festive: false,
+        tag: "Chef Signature",
+        accentTag: false,
         dietMode: "egg",
-        leadTime: "Requires 12-hour chilling time for authentic mascarpone set",
-        noteLabel: "Message on Cake (Optional)",
-        notePlaceholder: "e.g. Cheers to New Beginnings!",
-        desc: "Authentic espresso-soaked sponge layered with rich egg-yolk zabaglione mascarpone cream and Dutch cocoa.",
+        hasCakeMessage: true,
+        desc: "Authentic espresso-soaked sponge layered with rich egg-yolk mascarpone cream and Dutch cocoa.",
         image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80",
         variants: [
           { label: "500g", sub: "Serves 4–6", price: 820 },
@@ -1578,11 +1382,9 @@
         name: "Rose & Pistachio Rasmalai",
         category: "Celebration Cakes",
         tag: "Pune Favourite",
-        festive: false,
+        accentTag: false,
         dietMode: "eggless",
-        leadTime: "Same-day slot available before 4 PM",
-        noteLabel: "Message on Cake (Optional)",
-        notePlaceholder: "e.g. Happy Anniversary Mom & Dad",
+        hasCakeMessage: true,
         desc: "Cardamom vanilla sponge soaked in saffron milk, topped with soft rasmalai and roasted pistachios.",
         image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80",
         variants: [
@@ -1593,14 +1395,12 @@
       },
       {
         id: 4,
-        name: "Classic Basque Burnt Cheesecake",
+        name: "Basque Burnt Cheesecake",
         category: "Celebration Cakes",
-        tag: "With Egg • Rich",
-        festive: false,
+        tag: "Rich & Creamy",
+        accentTag: false,
         dietMode: "egg",
-        leadTime: "Baked fresh daily • 6-hour cooling slot needed",
-        noteLabel: "Berry Compote / Note",
-        notePlaceholder: "e.g. Add side of strawberry compote",
+        hasCakeMessage: false,
         desc: "Caramelized crustless Spanish cheesecake with a velvety, custard-like cream cheese center.",
         image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80",
         variants: [
@@ -1612,12 +1412,10 @@
         id: 5,
         name: "Korean Pastel Bento Cake",
         category: "Bento & Cupcakes",
-        tag: "Express Same-Day",
-        festive: false,
+        tag: "Mini Cake",
+        accentTag: false,
         dietMode: "both",
-        leadTime: "Ready in 3 hours for same-day pickup/delivery",
-        noteLabel: "Short Text on Bento (Max 3 Words)",
-        notePlaceholder: "e.g. Happy 21st! or Congrats",
+        hasCakeMessage: true,
         desc: "Minimalist 4-inch lunchbox cake with custom piping. Pick chocolate, berry, or biscoff flavour.",
         image: "https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80",
         variants: [
@@ -1630,11 +1428,9 @@
         name: "Swirled Gourmet Cupcake Box",
         category: "Bento & Cupcakes",
         tag: "Party Hit",
-        festive: false,
+        accentTag: false,
         dietMode: "both",
-        leadTime: "Same-day slot available for Box of 4 & 6",
-        noteLabel: "Flavour Mix / Gift Note",
-        notePlaceholder: "e.g. 3 Chocolate + 3 Red Velvet",
+        hasCakeMessage: false,
         desc: "Assorted Belgian chocolate, Madagascar vanilla bean, and red velvet cupcakes with silky buttercream.",
         image: "https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=800&q=80",
         variants: [
@@ -1648,11 +1444,9 @@
         name: "Fudgy Nutella Brownie Box",
         category: "Brownies & Tubs",
         tag: "Bestseller Add-On",
-        festive: false,
+        accentTag: false,
         dietMode: "both",
-        leadTime: "In stock for today's 1 PM & 5 PM slots",
-        noteLabel: "Gift Tag Note (Optional)",
-        notePlaceholder: "e.g. Warm slightly before serving!",
+        hasCakeMessage: false,
         desc: "Crinkle-top dark chocolate brownies swirled with roasted hazelnut Nutella and sea salt flakes.",
         image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80",
         variants: [
@@ -1665,16 +1459,14 @@
         id: 8,
         name: "Matilda Chocolate Fudge Tub",
         category: "Brownies & Tubs",
-        tag: "100% Eggless",
-        festive: false,
+        tag: "Trending",
+        accentTag: false,
         dietMode: "eggless",
-        leadTime: "In stock for same-day slots",
-        noteLabel: "Custom Note / Spoon Count",
-        notePlaceholder: "e.g. Add 2 wooden spoons",
+        hasCakeMessage: false,
         desc: "Ultra-moist dark chocolate sponge drenched in warm milk-chocolate fudge sauce inside a reusable tub.",
         image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80",
         variants: [
-          { label: "250ml Tub", sub: "Single Indulgence", price: 260 },
+          { label: "250ml Tub", sub: "Single Pack", price: 260 },
           { label: "500ml Tub", sub: "Share Pack", price: 490 }
         ]
       },
@@ -1683,11 +1475,9 @@
         name: "Spiced Banana Walnut Tea Loaf",
         category: "Tea Cakes & Cookies",
         tag: "Chai Pairing",
-        festive: false,
+        accentTag: false,
         dietMode: "eggless",
-        leadTime: "Freshly baked every morning",
-        noteLabel: "Slice Preference / Gift Note",
-        notePlaceholder: "e.g. Pre-sliced for office tea",
+        hasCakeMessage: false,
         desc: "Caramelized ripe banana loaf studded with toasted Kashmiri walnuts, cinnamon, and brown butter.",
         image: "https://images.unsplash.com/photo-1605286978633-2dec93ff88a2?auto=format&fit=crop&w=800&q=80",
         variants: [
@@ -1700,11 +1490,9 @@
         name: "Chunky Choc-Chip Brookie Tin",
         category: "Tea Cakes & Cookies",
         tag: "Fresh Batch",
-        festive: false,
+        accentTag: false,
         dietMode: "both",
-        leadTime: "In stock for same-day dispatch",
-        noteLabel: "Gift Note (Optional)",
-        notePlaceholder: "e.g. Thank you for hosting!",
+        hasCakeMessage: false,
         desc: "Soft-centered brown-butter cookies loaded with 60% dark chocolate chunks and roasted almonds.",
         image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80",
         variants: [
@@ -1717,11 +1505,9 @@
         name: "Spiced Christmas Plum Cake",
         category: "Festive Hampers",
         tag: "Festive Drop",
-        festive: true,
+        accentTag: true,
         dietMode: "both",
-        leadTime: "Available in Rum-Soaked (With Egg) & Non-Alcoholic (Eggless)",
-        noteLabel: "Greeting Card Message",
-        notePlaceholder: "e.g. Merry Christmas & Happy New Year!",
+        hasCakeMessage: false,
         desc: "Rich dark fruit cake loaded with candied orange peel, cranberries, cashews, and warm winter spices.",
         image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=800&q=80",
         variants: [
@@ -1740,7 +1526,7 @@
     let qty = 1;
     let bag = [];
 
-    const cardsGrid = document.getElementById("cardsGrid");
+    const catalogGrid = document.getElementById("catalogGrid");
     const secTitle = document.getElementById("secTitle");
     const secCount = document.getElementById("secCount");
     const searchInput = document.getElementById("searchInput");
@@ -1753,10 +1539,9 @@
     const mTitle = document.getElementById("mTitle");
     const mUnitPrice = document.getElementById("mUnitPrice");
     const mDesc = document.getElementById("mDesc");
-    const mLead = document.getElementById("mLead");
     const mVariants = document.getElementById("mVariants");
     const mDiets = document.getElementById("mDiets");
-    const mNoteLbl = document.getElementById("mNoteLbl");
+    const cakeMsgBlock = document.getElementById("cakeMsgBlock");
     const mNoteInput = document.getElementById("mNoteInput");
     const qtyDisplay = document.getElementById("qtyDisplay");
     const ctaQty = document.getElementById("ctaQty");
@@ -1766,7 +1551,6 @@
     const bagList = document.getElementById("bagList");
     const bagGrandTotal = document.getElementById("bagGrandTotal");
     const bagDate = document.getElementById("bagDate");
-    const bagSlot = document.getElementById("bagSlot");
     const bagMode = document.getElementById("bagMode");
     const dockInfo = document.getElementById("dockInfo");
     const openBagBtn = document.getElementById("openBagBtn");
@@ -1778,20 +1562,20 @@
 
     document.querySelectorAll("[data-pkg]").forEach((el) => {
       el.href = `https://wa.me/${BAKER_PHONE}?text=${encodeURIComponent(
-        `Hi ${BRAND_NAME}! I'd like to enquire about an Event / Bulk Order:\n\n• *Package:* ${el.dataset.pkg}\n• *Event Date:* \n• *Guest Count:* \n• *Eggless / With Egg:* \n\nPlease share availability & quote!`
+        `Hi ${BRAND_NAME}! I'd like to enquire about a Bulk / Event Order:\n\n• *Package:* ${el.dataset.pkg}\n• *Event Date:* \n• *Guest Count:* \n• *Eggless / With Egg:* \n\nPlease share availability & pricing!`
       )}`;
       el.target = "_blank";
       el.rel = "noopener";
     });
 
-    function dietBadgeHTML(mode) {
+    function symbolsHTML(mode) {
       if (mode === "eggless") {
-        return `<span class="p-diet-chip"><span class="dot-ind veg"></span>Eggless</span>`;
+        return `<span class="card-symbols" title="100% Eggless"><span class="fssai-mark veg"></span></span>`;
       }
       if (mode === "egg") {
-        return `<span class="p-diet-chip"><span class="dot-ind egg"></span>With Egg</span>`;
+        return `<span class="card-symbols" title="Contains Egg"><span class="fssai-mark egg"></span></span>`;
       }
-      return `<span class="p-diet-chip"><span class="dot-ind veg"></span><span class="dot-ind egg"></span>Veg &amp; Egg</span>`;
+      return `<span class="card-symbols" title="Available in Eggless & With Egg"><span class="fssai-mark veg"></span><span class="fssai-mark egg"></span></span>`;
     }
 
     function renderCards() {
@@ -1806,35 +1590,35 @@
         return catOk && dietOk && textOk;
       });
 
-      secTitle.textContent = activeCat === "All" ? "Signature Menu" : activeCat;
+      secTitle.textContent = activeCat === "All" ? "Signature Catalogue" : activeCat;
       secCount.textContent = `${filtered.length} ${filtered.length === 1 ? "item" : "items"}`;
 
       if (!filtered.length) {
-        cardsGrid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:44px 16px; background:var(--surface); border-radius:var(--r-xl); border:1px dashed var(--line-strong);"><strong>No matching bakes found</strong><p style="font-size:0.84rem; color:var(--ink-body); margin-top:4px;">Try another search or switch back to All Bakes.</p></div>`;
+        catalogGrid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:44px 16px; background:var(--surface); border-radius:22px; border:1px dashed var(--border-strong);"><strong>No matching items found</strong><p style="font-size:0.84rem; color:var(--ink-sub); margin-top:4px;">Try another keyword or clear your active filter.</p></div>`;
         return;
       }
 
-      cardsGrid.innerHTML = filtered.map((p) => {
+      catalogGrid.innerHTML = filtered.map((p) => {
         const base = p.variants[0];
         return `
-          <article class="p-card" data-id="${p.id}">
-            <div class="p-media">
+          <article class="card" data-id="${p.id}">
+            <div class="card-img">
               <img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async" />
-              <span class="p-tag ${p.festive ? "festive" : ""}">${p.tag}</span>
-              ${dietBadgeHTML(p.dietMode)}
+              <span class="card-badge ${p.accentTag ? "accent" : ""}">${p.tag}</span>
+              ${symbolsHTML(p.dietMode)}
             </div>
-            <div class="p-body">
+            <div class="card-content">
               <div>
-                <div class="p-meta-line"><span>${p.category}</span></div>
-                <h4 class="p-title">${p.name}</h4>
-                <p class="p-desc">${p.desc}</p>
+                <div class="card-kicker">${p.category}</div>
+                <h4 class="card-title">${p.name}</h4>
+                <p class="card-desc">${p.desc}</p>
               </div>
-              <div class="p-actions">
-                <div class="p-price-box">
-                  <small>Starts • ${base.label}</small>
+              <div class="card-bottom">
+                <div class="price-wrap">
+                  <small>From ${base.label}</small>
                   <strong>₹${base.price}</strong>
                 </div>
-                <button type="button" class="btn-card-cta">Customize +</button>
+                <button type="button" class="btn-select">Select +</button>
               </div>
             </div>
           </article>
@@ -1849,15 +1633,15 @@
       variantIdx = 0;
       qty = 1;
       mNoteInput.value = "";
-      mNoteLbl.textContent = `4. ${currentItem.noteLabel || "Custom Note (Optional)"}`;
-      mNoteInput.placeholder = currentItem.notePlaceholder || "Add note...";
+
+      // Hide Cake Message input for non-cake items (brownies, cookies, tubs, loaves)
+      cakeMsgBlock.style.display = currentItem.hasCakeMessage ? "block" : "none";
 
       mImg.src = currentItem.image;
       mImg.alt = currentItem.name;
       mCat.textContent = currentItem.category;
       mTitle.textContent = currentItem.name;
       mDesc.textContent = currentItem.desc;
-      mLead.textContent = `⏱ ${currentItem.leadTime}`;
 
       mVariants.className = `seg-row ${currentItem.variants.length === 2 ? "two" : ""}`;
       mVariants.innerHTML = currentItem.variants.map((v, idx) => `
@@ -1924,7 +1708,7 @@
       bagGrandTotal.textContent = `₹${totalAmt}`;
 
       if (!bag.length) {
-        bagList.innerHTML = `<div style="text-align:center; padding:24px 12px; color:var(--ink-body); font-size:0.85rem;">Your bag is empty. Tap any cake, cupcake, brownie, or hamper to add it here!</div>`;
+        bagList.innerHTML = `<div style="text-align:center; padding:24px 12px; color:var(--ink-sub); font-size:0.85rem;">Your bag is empty. Tap any item on the catalogue to add it here!</div>`;
         return;
       }
 
@@ -1933,7 +1717,7 @@
           <div class="bag-row-details">
             <strong>${item.name}</strong>
             <span>${item.variant} • ${item.diet} • ₹${item.unitPrice} each</span>
-            ${item.note !== "None" ? `<span>Note: "${item.note}"</span>` : ""}
+            ${item.note ? `<span>Cake Message: "${item.note}"</span>` : ""}
           </div>
           <div style="display:flex; flex-direction:column; align-items:flex-end; gap:6px;">
             <strong style="font-size:0.94rem;">₹${item.unitPrice * item.qty}</strong>
@@ -1954,24 +1738,24 @@
       setTimeout(() => el.classList.remove("show"), 2200);
     }
 
-    cardsGrid.addEventListener("click", (e) => {
-      const card = e.target.closest(".p-card");
+    catalogGrid.addEventListener("click", (e) => {
+      const card = e.target.closest(".card");
       if (card) openItemModal(Number(card.dataset.id));
     });
 
     dietRail.addEventListener("click", (e) => {
-      const btn = e.target.closest(".diet-pill");
+      const btn = e.target.closest(".chip-diet");
       if (!btn) return;
-      dietRail.querySelectorAll(".diet-pill").forEach((b) => b.classList.remove("active"));
+      dietRail.querySelectorAll(".chip-diet").forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       activeDiet = btn.dataset.diet;
       renderCards();
     });
 
     catRail.addEventListener("click", (e) => {
-      const btn = e.target.closest(".cat-pill");
+      const btn = e.target.closest(".chip-cat");
       if (!btn) return;
-      catRail.querySelectorAll(".cat-pill").forEach((b) => b.classList.remove("active"));
+      catRail.querySelectorAll(".chip-cat").forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       activeCat = btn.dataset.cat;
       renderCards();
@@ -2016,13 +1800,14 @@
     document.getElementById("confirmAddBtn").addEventListener("click", () => {
       if (!currentItem) return;
       const v = currentItem.variants[variantIdx];
+      const cakeMsg = currentItem.hasCakeMessage ? mNoteInput.value.trim() : "";
       bag.push({
         name: currentItem.name,
         variant: v.label,
         unitPrice: v.price,
         qty,
         diet: dietChoice,
-        note: mNoteInput.value.trim() || "None"
+        note: cakeMsg
       });
       syncDock();
       closeModals();
@@ -2061,7 +1846,7 @@
       const grand = bag.reduce((s, x) => s + x.unitPrice * x.qty, 0);
       const lines = bag.map(
         (x, i) =>
-          `${i + 1}. *${x.qty} × ${x.name}* (${x.variant} • ${x.diet}) — ₹${x.unitPrice * x.qty}${x.note !== "None" ? `\n   _Note: ${x.note}_` : ""}`
+          `${i + 1}. *${x.qty} × ${x.name}* (${x.variant} • ${x.diet}) — ₹${x.unitPrice * x.qty}${x.note ? `\n   _Cake Message: ${x.note}_` : ""}`
       );
 
       const text = [
@@ -2070,11 +1855,10 @@
         ...lines,
         ``,
         `💰 *Estimated Total:* ₹${grand}`,
-        `📅 *Date:* ${bagDate.value || "Flexible"}`,
-        `⏰ *Time Slot:* ${bagSlot.value}`,
-        `🛵 *Mode:* ${bagMode.value}`,
+        `📅 *Required Date:* ${bagDate.value || "Flexible"}`,
+        `🛵 *Fulfilment:* ${bagMode.value}`,
         ``,
-        `Please confirm slot availability & UPI details!`
+        `Please confirm availability & payment details!`
       ].join("\n");
 
       window.open(`https://wa.me/${BAKER_PHONE}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
@@ -2087,8 +1871,8 @@
 
     document.getElementById("shareBtn").addEventListener("click", async () => {
       const shareData = {
-        title: `${BRAND_NAME} — Digital Cake & Dessert Catalogue`,
-        text: "Browse cakes, brownies & hampers with live slots and WhatsApp ordering:",
+        title: `${BRAND_NAME} — Digital Bakery Catalogue`,
+        text: "Browse cakes, brownies & hampers and order directly on WhatsApp:",
         url: window.location.href
       };
       if (navigator.share) {
